@@ -1,99 +1,86 @@
-Demontaža | NN -0058 degradaciju, degradacija, rudarstvo, mina funkcionisanje
-Rušenje | N. -0,0048 prestanka, nesreće, sudara, sudara
-Odricanje | NN -0.0048 ostavke
-Slabljenja | N. -0.0048 izolacioni elementi
-Otpad | N. -0,0048 pad, otpad, otpad, otpad
-Removal | NN -0.3367 odbacuje od sebe
-Ambis | N. -0,3465
-Zavisnost | NN -0.3653 zavisnosti
-Odbacivanje | NN -0.5118 Odbijena
-Distraction | NN -0.0435 ometanja
-Smanjenje | NN -0.0048 opada
-Ne sviđa mi se | NN -0.0048 otpremio
-Nosite | N. -0,0048
-Rušenje | N. -0,0048 pauze, pauze, rušenje, Abrisss
-Razlika u ceni | NN -0,0048 proklizavanja Abrutsche, Abrutsches, Abrutschs
-Ukidanje | NN -0058 Progon
-Odvraćanje | N. -0.0048 odvraćanje
-Amortizacija | N. -0,3345 amortizacija
-Launch | N. -0,0048
-Slabljenje | N. -0,1935 Slabljenje
-Spuštanje | N. -0.3434 smanjenje
-Cepanja | NN -0.0048 podela
-Barrier | NN -0.0048 barijere
-Descent | N. -0,3215 spuštanje, nagibi, nagibi, silazak
-Odvratan | N. -0,0048 Abstoßen, udarac sa gola, Abstoßs, cilj-Flick
-Bris | NN -0.3201 briseva, bris, bris, bris
-Nalaz | N. -0,0048
-Crash | N. -0.4739 nesreće, Absturzs, sudar, pao
-Apsurd | NN -0.0048 apsurdi
-Devijacija | NN -0.3462 odstupanja
-Odbacivanje | NN -0.0048 Odbijena
-Amortizacija | NN -0.3283 devalvacije
-Opadanje | N. -0,1941
-Rip | N. -0,0048
-Nebriga | N. -0,0048
-Affair | N. -0.1794 poslovi
-Agresija | N. -0,4889 agresija
-Agresivnost | N. -0,1958 agresivnost
-Aggressor | N. -0.3155 agresori, agresori
-Agitacija | NN -0.0048 agitacije
-Alert | N. -0.0048 alarmi, alarma, alarma, alarma
-Nightmare | N. -0.0048 noćne more, noćne more, noćna mora, mora
-Amateur | N. -0.0048 amateri, amateri, amaterski
-Ambivalentnost | NN -0.3266 dvosmislenosti
-Threat | NN -0.0048 pretnje
-Osetljivost | N. -0,0048
-Napadači | N. -0,0048 napadača napadača
-Napad | N. -0212 napada, napada, napad, napad
-Fear | NN -0514 strahovi, nemiri
-Optužnica | NN -0.3468 prijava
-Pretencioznost | NN -0.0048 pretenzije
-Otkazivanja | NN -0.0048 otkazivanja
-Anomalija | NN -0.0048 anomalije
-Zatezanje | NN -0.0048 tenzije
-Napor | NN -0.0048 napori
-Antipatija | NN -0.0048 antipatije
-Nezaposleni | N. -0,3549 nezaposlenih
-Nezaposlenost | N. -0,3654
-Siromaštvo | N. -0,2038
-Arogancija | N. -0,3289
-Asshole | N. -0.1901 seronje, seronjo, seronje, Arschloches
-Attack | NN -0.47 napadi
-Ukidanje | NN -0.0048 suspenzije
-Rezolucija | NN -0.0048 rezolucije
-Uzbuđenje | NN -0.0386 uzbuđenja
-Riot | NN -0.0048 neredi, pobune, neredi, nemir
-Negodovanja | N. -0,0048 plač, negodovanja, vrišti, Aufschreies
-Ustanak | N. -0,0048 pobuna, ustanak, pobuna, pobuna, nemiri, pobuna
-Prinos | NN -0.1894 prinosi
-Eksploatatora | N. -0,0048 ekploiter, eksploatatora
-Eksploatacije | NN -0.0048 eksploatacija
-Outbreak | N. -0,0048 izbijanja, erupcija, erupcije, erupcije
-Diskusija | NN -0.0603 sukoba
-Gubitak | N. -0.2164 neuspehe, propuste, neuspeh, neuspeh
-Isključenje | N. -0626
-Ektinction | NN -0.0048 izumiranja
-Iskorjenjivanja | NN -0.0048 izumiranja
-Isključenje | N. -0.0048 izuzimanja
-Suspension | NN -0.0048 suspenzije
-Banaliti | NN -0.0048 banalnosti
-Stečajni | N. -0,0048 stečaja, stečajni, stečaj, stečaja
-Barrier | NN -0.0048 barijere
-Insignificance | N. -0,0048
-Threat | NN -0.0048 pretnje
-Ugnjetavanje | ugnjetavanja N. -0,0048
-Ugnjetavanje | ugnjetavanja N. -0,0435
-Needi | N. -0,0048
-Umanjenja | NN -0.3472 oštećenja
-Zaraza | N. -0,0048 zaraza, najezde, najezde, zaraza
-Bias | NN -0.0048 predrasude
-Fear | NN -0.4903 strahovi
-Ograničenje | NN -0.0048 ograničenja
-Invalidske | NN -0.3578 smetnjama u razvoju
-Load | NN -0.3711 opterećenja
-Uvrede | NN -0.3432 uvrede
-Maltretiranje | N. -0,0048 uznemiravanje
+demontaža | NN -0058 degradaciju, degradacija
+sudar | N. -0,0048 nesreće, sudara, sudari
+odricanje | NN -0.0048 odricanja
+otpad | N. -0,0048
+odbacivanje | NN -0.3367
+ambis | N. -0,3465
+zavisnost | NN -0.3653 zavisnosti
+ometanje | NN -0.0435 ometanja, ometati
+smanjenje | NN -0.0048 opada, smanjiti, opadati
+ne sviđa mi se | NN -0.0048
+rušenje | N. -0,0048 rušenja
+ukidanje | NN -0058 ukidati
+odvraćanje | N. -0.0048 odvraćati
+amortizacija | N. -0,3345
+slabljenje | N. -0,1935 slabiti
+spuštanje | N. -0.3434 smanjenje, opadanje, nagibi, silazak
+cepanja | NN -0.0048 podela
+barijera | NN -0.0048 barijere
+odvratan | N. -0,0048 odvratno
+bris | NN -0.3201 briseva, bris
+nalaz | N. -0,0048
+sudar | N. -0.4739 nesreće, nesreća
+apsurd | NN -0.0048 apsurdi
+devijacija | NN -0.3462 odstupanja
+opadanje | N. -0,1941
+rip | N. -0,0048
+nebriga | N. -0,0048
+afera | N. -0.1794
+sgresija | N. -0,4889 agresije
+agresivnost | N. -0,1958
+agresor | N. -0.3155 agresori
+agitacija | NN -0.0048 agitacije
+alarm | N. -0.0048 alarmi, alarma, uzbuna, uzbune
+noćna mora | N. -0.0048 noćne more, mora
+amater | N. -0.0048 amateri, amaterski
+ambivalentnost | NN -0.3266 dvosmislenost, dvosmislenosti
+pretnja | NN -0.0048 pretnje
+osetljivost | N. -0,0048
+napadači | N. -0,0048 napadača
+napad | N. -0212 napada, napadi
+strah | NN -0514 strahovi
+optužnica | NN -0.3468 optužnice
+otkazivanje | NN -0.0048 otkazivanja
+anomalija | NN -0.0048 anomalije
+zatezanje | NN -0.0048 zatezanja
+napor | NN -0.0048 napori
+antipatija | NN -0.0048 antipatije
+nezaposleni | N. -0,3549 nezaposlenih
+nezaposlenost | N. -0,3654
+siromaštvo | N. -0,2038
+arogancija | N. -0,3289
+seronja | N. -0.1901 seronje, seronjo
+napad | NN -0.47 napadi
+ukidanje | NN -0.0048 suspenzije, ukidanja, suspenzija
+rezolucija | NN -0.0048 rezolucije
+uzbuđenje | NN -0.0386 uzbuđenja
+pobuna | NN -0.0048 nered, neredi, pobune, nemir, nemiri
+negodovanje | N. -0,0048 negodovanja
+ustanak | N. -0,0048 nemiri, pobuna
+prinos | NN -0.1894 prinosi
+eksploatacije | NN -0.0048 eksploatacija
+izbijanje | N. -0,0048 izbijanja, erupcija, erupcije
+diskusija | NN -0.0603 diskutovanje
+gubitak | N. -0.2164 gubici
+isključenje | N. -0626
+izumiranje | NN -0.0048 izumiranja
+iskorjenjivanja | NN -0.0048 iskorjenjivanje
+suspenzija | NN -0.0048 suspenzije
+banalnost | NN -0.0048 banalnosti
+stečajni | N. -0,0048 stečaja, stečaj
+barijera | NN -0.0048 barijere
+beznačajnost | N. -0,0048
+pretnja | NN -0.0048 pretnje
+ugnjetavanje | ugnjetavanja N. -0,0435
+Umanjenja | NN -0.3472
+zaraza | N. -0,0048 zarazae, najezde, najezda
+predrasuda | NN -0.0048 predrasude
+strah | NN -0.4903 strahovi
+ograničenje | NN -0.0048 ograničenja
+invalidska | NN -0.3578 invalidske
+opterećenje | NN -0.3711 opterećenja
+uvreda | NN -0.3432 uvrede
+maltretiranje | N. -0,0048 uznemiravanje, maltretiranja
 Obrezivanja | NN -0.3313 obrezivanja
 Ograničenje | NN -0.3518 ograničenja
 Optužba | NN -0.3209 optužbe
