@@ -368,269 +368,214 @@ aljkavost | N. -0,0048
 zlo | N. -0,4646 pokvarenost
 koškanja | NN -0.0048
 bol | N. -0,0048
-Krijumčarenja | N. -0,0048 krijumčarenja, Schmuggeles
-Dirt | N. -0,0542 Schmutzs, prljavština
-Shock | N. -0,0048 Schockn, šokovi, Schocke, Schocken, Schockes
-Scratch | NN -0.0048 ogrebotine
-Šrek | N. -0194 kriket, teror, straha, Schreckes
-Scrap | N. -0,0534 otpad, otpad, otpad, otpad
-Skev | N. -0.0048 iskošenja, skev, skev, iskošenja
-Nudge | N. -0,0048 Gur, gur, Schubses
-Dug | N. -0,9686 dug
-Dužnik | NN -0.0048 dužnika, dužnik
-Dužnik | NN -0.0048 dužnici
-Rogue | NN -0.3306 zlikovci
-Teškoća | NN -0.0483 poteškoće
-Gubitak | N. -0,0048 bledi, bledi
-Slabost | NN -0.5035 slabosti
-Slabljenje | NN -0337 slabosti
-Damage | N. -0,3731
-Damage | N. -0,0048 šteta
-Spuštanje | N. -0.0545 rezove
-Besmislenost | NN -0.0048 apsurdi
-Poplava | N. -0,3313
-Scandal | NN -0,0048 skandala, afera, skandala, afera
-Rob | robovi NN -0.3281
-Robovski rad | N. -0,0048
-Koncern | NN -0.3618 brige
-Podsmeh | N. -0,3357 podsmeh, izrugivanje
-Eksploziva | NN -0.0048 eksploziv, eksplozivne, eksploziva, eksplozivnih
-Bloving | N. -0,0048 miniranja
-Stagnacija | N. -0,0048 stagnacija
-Jam | NN -0.0438 zaglavi
-Die | N. -0.0539 smrt
-Porez | N. -0,0048
-Decommissioning | N. -0.0048 zatvarači
-Zastoj | N. -0,0048 Ipak Standen, zastoj, zastoj, zastoj
-Otkazivanja | NN -0.0048 otkazivanja
-Shock | N. -0,0048 shock Stoss, rupe, potresi
-Criminal | NN -0.0048 krivični postupak
-Strain | NN -0.0048 poteškoće
-Strike | NN -0.0048 udara
-Naoružani | N. -0,6632 sporove, spor, sporovi, svađe
-Strogi | N. -0,0048
-Stres | N. -0,0048 stresss, stres, Stresse, naglašavajući
-Stres | N. -0,0048
-Tvrdoglavost | N. -0,1894
-Fall | N. -0,6316 Sturzs, gredice, pada, pada, pada, pada
-Disorder | NN -0.3569 poremećaji
-Addiction | NN -0.3505 bolesti zavisnosti, bolesti zavisnosti
-Žrtveni jarac | N. -0,3285 žrtveni jarac, žrtveni jarci, žrtveni jarac, žrtveni jarac
-Taboo | N. -0,0048
-Terror | N. -0,0048 teror
-Terorizam | N. -0,3553
-O inflaciji | NN -0,322 rasta cena
-Inflacija | N. -0,0048 inflacija
-Vicious | N. -0479 đavo Kreiss, Vicious Circles, Vicious Circles, začarani krug
-Death | N. -0,0697 smrt, smrt, smrt, smrt
-Smrt | N. -0.0048 smrti, smrti, težak gubitak, tugovanje
-Death Penalti | N. -0.0048 smrtne kazne
-Ludost | NN -0.0048 Follies
-Ubistvo | NN -0.0048 ubistva, ubistvo, ubistvo iz nehata, ubistvo
-Tragedi | NN -0.0048 tragedije
-Žalost | N. -0,0048
-Trauma | N. -0,0048 traume
-Sadness | NN -0.0457 sadnesses
-Odvajanje | N. razdvajanja -0.5071
-Tristesse | N. -0,0555 Tristessen
-Pustoš | N. -0,0048
-Trot | N. -0.0048 Trottes, kasu, Trot, trotte
-Zabluda | N. -0,0048
-Inercija | N. -0,1937 inercija
-Tear | N. -0.0562 suze
-Affliction | NN -0189 nevoljama, poteškoće
-Turbulencija | N. -0,0048
-Turbulencije | N. -0,0048
-Tiranni | NN -0.3243 tiranija
-Deception | NN -0.3445 obmane
-Ekchange | N. -0343 razmena informacija, pretvaranja, konverzije, ulaznica razmene, konverzija, Umtauschen
-Nelagodnost | N. -0,3291 nelagodnost
-Uncomfortableness | NN -0.0048 nelagodnosti
-Nepopularnost | N. -0,0048
-Neprijatnosti | NN -0.0048 neugodnosti
-Neizvesnost | N. -0,0537
-Nezahvalnost | N. -0,0048
-Nepoštenje | N. -0,0048
-Neslaganje | NN -0.3289 neslaganja
-Nepomirljivost | N. -0,0048
-Nepodnošljivo | N. -0,0048
-Accident | N. -0,0048 nesreća, nesreća, nesreća, nesreća
-Neprijateljstvo | N. -0,3085 neprijateljstvo
-Nestašluk | N. -0,3394
-Nemogućnost | N. -0,1896
-Nestrpljenje | N. -0,4655
-Neposlušnost | N. -0,0048
-Nepreciznost | NN -0.0048 netačnosti
-Nepravda | NN -0.3419 nepravde
-Nelagodnost | nespretnost N. -0,3116
-Neverovatnoće | N. -0,0048
-Nejednakost | NN -0.0048 nejednakosti
-Misfortune | N. -0,5004 nesreća, katastrofa, nesreća, katastrofa
-Neizlečiva | N. -0,0048
-Grubost | N. -0,0048 nepristojnost
-Nesigurnosti | NN -0.0048 nejasnoća
-Nehumanost | N. -0,0048 nehumanost
-Nemoral | N. -0,3172
-Nezadovoljstvo | N. -0,3394 nezadovoljstvo, ozlojeđenost
-Disorder | NN -0.3391 poremećaji
-Pogrešno | N. -0,5086 pogrešno, nepravda
-Nepravilnosti | NN -0.0048 nepravilnosti
-Neprofitabilosti | N. -0,0048
-Nemir | N. -0201
-Neizvesnost | neizvesnosti N. -0358
-Gluposti | N. -0,4969 gluposti, gluposti
-Diskontinuitet | NN -0.3075 prekidi
-Neslaganje | NN -0.0048 nedoslednosti
-Prekida | N. -0.0048 prekidi
-Ugnjetavanje | ugnjetavanja N. -0,0048
-Doom | N. -0,3498 gubitak, zakati, uništavanje, zalaske sunca
-Propust | NN -0.0048 propusti
-Submission | NN -0.3279 podnesaka
-Neverstvo | N. -0,3293
-Neodgovornost | N. -0,3068
-Nekompatibilnost | NN -0.0048 Nekompatibilnosti
-Neproporcionalnosti | N. -0,0048
-Drskost | N. -0,0048 bezobrazluk
-Nesavršenost | NN -0.0048 nesavršenosti
-Nepotpunosti | N. -0,0048
-Neistina | NN -0466 neistina
-Neefikasnost | N. -0,0048
-Neefikasnost | N. -0,0048
-Neznanje | N. -0,4935
-Nezadovoljstvo | N. -0,6324
-Neprihvatljivog | N. -0.0048 nerazumne uslove
-Nepouzdanost | N. -0,0048
-Neodređenost | N. -0,0048 neodređenost
-Prezir | N. -0,3308
-Reference | NN -0.0048 banishments
-Ban | N. -0,0048 ban, zabrana, zabrana, zabrana
-Suspect | N. -0,8074 sumnje, sumnja, sumnje, sumnja
-Korupcija | N. -0,0048
-Vodoizmesenie | NN -0.0048 represije
-Sumnjivo | N. -0,0048
-Ekpiration | N. -0,0048 propadanje, raspad
-Missing | NN -0.0048 prestupe
-Retribution | NN -0.3369 Retributions
-Osveta | N. -0,0048 odmazda
-Otpad | N. -0.0048 otpad
-Veličanje | N. -0,0048
-Katastrofalne | N. -0,0048 smrtnih slučajeva, žrtava, Verhangnise, Verhangnisen, Verhangnises, smrtno, smrtnost
-Reduction | NN -0.0048 smanjenje
-Usporavanje | NN -0.0048 usporenja
-Abuse | NN -0.5032 povrede
-Kleveta | N. -0,4792 kleveta
-Gubitnici | NN -0.3441 gubitnici, gubitnik
-Gubitak | N. -0,5204
-Prevencija | NN -0.0048 odstupanja
-Reduction | NN -0.0048 smanjenje
-Zanemarivanje | N. -0328 zanemarivanje
-Destruction | NN -0.4883 anhilacija
-Izdaja | N. -0,0048 izdaja, izdaja, izdaja, izdaja
-Traitor | N. -0,3352 izdajnik, izdajnici
-Crazi | N. -0,0447
-Ludilo | N. -0,0048 ludilo
-Neuspeh | N. -0,3517
-Pogoršanje | NN -0.4959 pogoršanja
-Zagađenje | N. -0,3392 kontaminacija
-Otpad | N. -0,0048 otpad
-Zavjere | NN -0.3355 zavera
-Tone | NN -0.0048 sinkings
-Porobljavanje | N. -0,0048 porobljavanje
-Abuse | N. -0,0048 povrede, povrede, povrede Verstoßs
-Entanglement | NN -0.0048 zapleta
-Temptation | NN -0.3463 iskušenja
-Neuspeh | N. -0,0048 Versaumniss, Versaumnise, Versaumnises, Versaumnisen
-Isključenje | NN -0.0048 proterivanja
-Kazni | NN -0.0048 presude
-Denial | demanti N. -0,3441
-Odbijanje | N. -0,3202 nemir
-Konfuzija | N. -0,3323 konfuzija
-Ranjavanje | NN -0.0048 rane
-Pustoš | N. -0,0048 razaranja
-Distortion | NN -0.0048 distorzije
-Disclaimer | N. -0,2022 odricanje, odricanje, odricanja, odricanja
-Očaj | NN -0.0048 Despairs
-Delai | NN -0.0048 kašnjenja
-Predrasude | N. -0,6261 predrasude, predrasude, predrasude
-Povod | N. -0.0048 izgovori izgovor izgovor izgovor
-Prekorno | N. -0.5095 navode, optužbe, navode, optužbe
-Ludilo | N. -0,0048 ludilo
-Dovner | N. -0,3356 vermut kap
-Bezvrednosti | N. -0,0048
-Amortizacija | NN -0.0048 gubitaka, amortizacija, amortizacija, vrednost gubici
-Busibodies | NN -0.0048 Vichtigtuers, busibodies
-Perversiti | NN -0.0048 neprirodne aspekti
-Opoziv | N. -0,0048 oduzimanje
-Opozicija | N. -0.3655 protivrečnosti, suprotnosti, protivrečnosti, protivrečnost
-Nedaće | nevolje N. -0,0048
-Depresija | NN -0.0048 ekonomske krize
-Vreck | NN -0.0048 olupina
-Rana | rane N. -0,3396
-Bes | N. -0,4726
-Desert | NN -0.0048 pustinje
-Stečajni | NN -0.0048 podrazumevano
-Gubljenje vremena | NN -0.3223 otpad vremena
-Cenzura | NN -0.3468 razredi
-Strain | NN -0.0048 sojevi
-Razbijanja | NN -0.0048 razaranja
-Uništavanje | N. -0,3578 uništavanje
-Besciljnost | N. -0,0048
-Carinske | N. -0.0048 carine, takse, inča, carine, carine
-Bes | N. -0,3537
-Drskost | NN -0.3286 nametanja
-Collapse | N. -0,0048 kolaps, kolaps, kolaps, kolaps
-Collision | N. -0,3302 sudara, sudara, Zusammenstoßs, sukobi
-Prisiljen | N. -0,0721 prinuda, ograničenja, ograničenja, prinuda
-Neprilika | NN -0.0048 Predicaments
-Mere prinude | N. -0,0048
-Sumnja | N. -0,0048
-Nesloga | N. -0,0048
-Remove | VVINF -0,0578
-Odbaciti | VVINF -0,3482
-abdicira | abdicirao VVINF -0,0048, abdicira abdicirao, abdank, odriče, abdanktet, abdankest, abdankst, abdanktest, abdicirao, abdanket
-abdampfen | VVINF -0,0048
-Pad | VVINF -0,0048
-omalovažavanjem | adjKs -0.3197 abfalligstes, abfalligster, abfalligste, uvredljive, abfalligst, abfalligstem, uvredljive, abfalligerer, uvredljive, abfalligere, uvredljive, abfalligeren, abfalligerem, uvredljive, ponižavajući, abfalligeres
-platiti | VVINF abfuhrtet -0,3358, rasipa, abfuhrst, abfuhre, odvede, vodi u, laksativ, rasipa abfuhrtest, odvede, abfuhrest
-otkazan | adjKs -0,0048
-banalno | adjKs -0,1839 abgedroschner, banalan, abgedroschenem, abgedroscheneres, abgedroschenst, abgedroschenerer, otrcan, banalan, abgedroschenerem, abgedroscheneren, abgedroschneren, banalan, abgedroschnerem, abgedroschneres, abgedroschnerer, banalan, abgedroschenere, abgedroschenstem, abgedroschenstes, abgedroschenster, abgedroschnere, otrcan
-bajate | adjKs -0,0368 abgestandnerer, abgestandneres, Stale, Stale, Stale, Stale, abgestandenstes, abgestandenere, abgestandenster, abgestandenstem, abgestandensten, abgestandenste, abgestandnere, ustajao, abgestandeneren, abgestandenerem, abgestandenst, abgestandneren, abgestandeneres, abgestandnerem, abgestandenerer, abgestandner
-abgetakelt | adjKs -0,0048 abgetakeltstem, abgetakeltere, abgetakeltste, abgetakeltsten, abgetakeltstes, abgetakeltster, unrigged, abgetakelteren, abgetakeltem, abgetakeltst, unrigged, abgetakelterem, abgetakeltes, abgetakelter, abgetakelterer, abgetakelteres
-slajd | VVINF -0,0397
-neshvatljiv | adjKs -0,1719 nedokučiva, zagonetan, abgrundigst, abgrundigste, abgrundigstem, Naglo opali, abgrundigeres, bez dna, abgrundigerer, abgrundigerem, abgrundigeren, abgrundigster, abgrundigstes, bez dna, bez dna, abgrundigere
-u zavisnosti | adjKs -0,0048 abhangigstem, najviše zavisi, zavisi, zavisi, više zavisi, zavisi, zavisi, najviše zavise, abhangigerer, abhangigeres, abhangigster, abhangigstes, abhangigerem, zavisi, više zavisi, abhangigst
-mozgova | VVINF -0,0048
-odbiti | VVINF Odbaci -0,6458, ablehntest, odbio ablehnest, ablehnet, ablehntet, odbaciti, odbacio, odbaciti, odbiti, odbaciti
-odvratiti | VVINF ablenket -0042, rastresen, rastresen, skrenuti, odvratiti, odvrati, ablenktet, odvrati, ablenkest, skretanje, ablenktest
-Remove | VVINF -0,0292
-nose | VVINF iscrpljen -0.0417, nositi, nosio, abnutze, abnutztest, nosi, amortizovanih, abnutztet, abnutzet, abnutzest
-savetuju | VVINF -0,3353
-tear | VVINF -0,3116
-naglo | adjKs -0,0048 abruptestes, abruptester, abrupteste, najviše naglo, abruptestem, nagli, nagli, abrupterem, abruptest, više nagli, više naglo, odjednom, naglo, naglo, odjednom, naglo
-slip | VVINF -0,0048
-ukinuti | VVINF -0,0048
-shoot | VVINF -0,0048
-odložiti | VVINF abschrecket -0178, kaljenje, abschreckest, obeshrabreni, odvratila, ugasiti odvraća, odvratila, abschreckst, umiri, abschrecktet
-odvraća | VVINF -0049
-otpisati | VVINF -0,1847
-oslabiti | VVINF -0,0048 slabi usporava, oslabljena, oslabljena, debuffing, abschvachst, oslabljena abschvachtest, abschvachet, abschvachest, abschvachtet
-omalovažavanjem | adjKs -0,0048 abschatzigere, abschatzigeres, abschatzigerer, abschatzigeren, abschatzigem, abschatzigerem, abschatzigstes, uvredljiv, abschatzigst, ponižavajući, uvredljiv, ponižavajući, abschatzigste, abschatzigsten, abschatzigstem, abschatzigster
-Donja | VVINF -0,0048
-Pad | VVINF -0,3269
-probiti | VVINF -0,3099
-Isključite | VVINF -0,0048
-Dismount | VVINF -0,4776
+krijumčarenje | N. -0,0048 krijumčarenja
+ogrebotine | NN -0.0048
+teror | N. -0194
+otpad | N. -0,0534
+dug | N. -0,9686 dugovati, dugovanje
+dužnik | NN -0.0048 dužnika, dužnici
+teškoća | NN -0.0483 poteškoće
+gubitak | N. -0,0048
+slabost | NN -0.5035 slabosti
+slabljenje | NN -0337
+spuštanje | N. -0.0545
+besmislenost | NN -0.0048 apsurdi
+poplava | N. -0,3313
+skandal | NN -0,0048 skandala, afera, skandali, afere
+rob | robovi, roblje NN -0.3281
+briga | NN -0.3618 brige
+podsmeh | N. -0,3357 podsmesi, izrugivanje, ruganje
+eksploziva | NN -0.0048 eksploziv, eksplozivne, eksplozivnih
+stagnacija | N. -0,0048 stagnirati
+zaglavi | NN -0.0438 zaglaviti, zaglavilo, zaglavila, zaglavio, zaglavili
+umreti | N. -0.0539 smrt
+porez | N. -0,0048 oporezovati
+zatvarači | N. -0.0048
+zastoj | N. -0,0048 zastoji
+otkazivanja | NN -0.0048 otkazivanje
+kriminal | NN -0.0048 krivični
+poteškoće | NN -0.0048
+udar | NN -0.0048 udara, udariti, udarac
+naoružani | N. -0,6632
+strogi | N. -0,0048
+stres | N. -0,0048
+tvrdoglavost | N. -0,1894
+poremećaj | NN -0.3569 poremećaji
+zavisnost | NN -0.3505 zavisnosti
+taboo | N. -0,0048
+teror | N. -0,0048 terorisati
+terorizam | N. -0,3553
+inflacija | N. -0,0048 inflacije
+zloban | N. -0479 zloba
+smrt | N. -0,0697 smrtnik
+ludost | NN -0.0048 ludosti
+ubistvo | NN -0.0048 ubistva
+tragedija | NN -0.0048 tragedije
+žalost | N. -0,0048 žalosti
+trauma | N. -0,0048 traume
+tuga | NN -0.0457 tuge
+odvajanje | N. -0.5071 razdvajanja
+pustoš | N. -0,0048
+zabluda | N. -0,0048 zablude
+inercija | N. -0,1937 inercije
+suza | N. -0.0562 suze
+nevoljama | NN -0189 poteškoće
+turbulencija | N. -0,0048 turbulencije
+tiran | NN -0.3243 tiranija
+obmana | NN -0.3445 obmane
+razmena | N. -0343
+nelagodnost | N. -0,3291 nelagodnosti
+nepopularnost | N. -0,0048 nepopularnosti
+neprijatnosti | NN -0.0048 neugodnosti, neprijatnost, neugodnost
+neizvesnost | N. -0,0537 neizvesnosti
+nezahvalnost | N. -0,0048 nezahvalan, nezahvalna, nezahvalno, nezahvalni
+nepoštenje | N. -0,0048
+neslaganje | NN -0.3289 neslaganja
+nepomirljivost | N. -0,0048
+nepodnošljivo | N. -0,0048
+nesreća | N. -0,0048 nesreće
+neprijateljstvo | N. -0,3085 neprijateljstva
+nestašluk | N. -0,3394 nestašluci
+nemogućnost | N. -0,1896 nemogućnosti
+nestrpljenje | N. -0,4655
+neposlušnost | N. -0,0048
+nepreciznost | NN -0.0048 netačnost, netačnosti
+nepravda | NN -0.3419 nepravde
+nelagodnost | N. -0,3116 nelagodnosti
+neverovatnoće | N. -0,0048
+nejednakost | NN -0.0048 nejednakosti
+nesreća | N. -0,5004 nesreće, katastrofa, katastrofe
+neizlečiva | N. -0,0048
+grubost | N. -0,0048 nepristojnost, nepristojnosti, grubosti
+nesigurnosti | NN -0.0048 nejasnoća, nejasnoće, nesigurnost
+nehumanost | N. -0,0048
+nemoral | N. -0,3172
+nezadovoljstvo | N. -0,3394 nezadovoljstva
+poremećaj | NN -0.3391 poremećaji
+pogrešno | N. -0,5086 nepravda
+nepravilnost | NN -0.0048 nepravilnosti
+neprofitabilost | N. -0,0048 neprofitabilosti
+nemir | N. -0201 nemir
+neizvesnost | N. -0358 neizvesnosti
+gluposti | N. -0,4969 glupost
+diskontinuitet | NN -0.3075 prekidi
+neslaganje | NN -0.0048 nedoslednosti, neslaganja
+prekida | N. -0.0048 prekidi, prekid
+ugnjetavanje | N. -0,0048 ugnjetavanja
+propust | NN -0.0048 propusti
+neverstvo | N. -0,3293
+neodgovornost | N. -0,3068
+nekompatibilnost | NN -0.0048 nekompatibilnosti
+neproporcionalnosti | N. -0,0048
+drskost | N. -0,0048 bezobrazluk
+nesavršenost | NN -0.0048 nesavršenosti
+nepotpunosti | N. -0,0048 nepotpunost
+neistina | NN -0466 neistine
+neefikasnost | N. -0,0048
+neznanje | N. -0,4935 neznanje
+nezadovoljstvo | N. -0,6324
+neprihvatljivog | N. -0.0048 neprihvatljivo, neprihvatljiva
+nepouzdanost | N. -0,0048
+neodređenost | N. -0,0048
+prezir | N. -0,3308
+reference | NN -0.0048 referenca
+ban | N. -0,0048 banovati, zabrana, zabraniti, zabranjeno
+sumnje | N. -0,8074 sumnje, sumnja, sumnnjati
+korupcija | N. -0,0048
+represija | NN -0.0048 represije
+sumnjivo | N. -0,0048 sumnjati
+propadanje | N. -0,0048 raspad
+osveta | N. -0,0048 odmazda, osvetnici, osvetiti
+otpad | N. -0.0048
+veličanje | N. -0,0048
+katastrofalne | N. -0,0048
+smanjenje | NN -0.0048 smanjiti
+usporavanje | NN -0.0048 usporenja, usporiti
+zloupotreba | NN -0.5032 zloupotrebljavati
+kleveta | N. -0,4792
+gubitnici | NN -0.3441 gubitnik
+gubitak | N. -0,5204 gubici
+smanjenje | NN -0.0048 smanjivati
+zanemarivanje | N. -0328 zanemarivati
+uništenje | NN -0.4883 anhilacija, razbijanje
+izdaja | N. -0,0048
+izdajnik | N. -0,3352 izdajnici
+ludilo | N. -0,0048 ludila
+neuspeh | N. -0,3517
+pogoršanje | NN -0.4959 pogoršanja
+zagađenje | N. -0,3392 kontaminacija, zagađenja
+otpad | N. -0,0048
+zavere | NN -0.3355 zavera
+porobljavanje | N. -0,0048
+povrede | N. -0,0048 povreda
+iskušenja | NN -0.3463
+neuspeh | N. -0,0048
+isključenje | NN -0.0048 proterivanja, proterivanje, isključenja
+kazna | NN -0.0048 presude, presuda, kazne
+poricanje | demanti N. -0,3441
+odbijanje | N. -0,3202 odbijanja
+konfuzija | N. -0,3323 konfuzije, konfuzno
+ranjavanje | NN -0.0048 rane, raniti, ranjavati, ranjen, ranjena, ranjeno
+pustoš | N. -0,0048 opustošiti
+distorzija | NN -0.0048 distorzije
+odricanje | N. -0,2022 odricanja, odricati
+očaj | NN -0.0048 očajavanje, očajavati
+kašnjenje | NN -0.0048 kašnjenja, kasniti
+predrasude | N. -0,6261 predrasuda
+izgovor | N. -0.0048 izgovori
+optužbe | N. -0.5095 navode
+ludilo | N. -0,0048
+bezvrednosti | N. -0,0048 bezvrednost
+amortizacija | NN -0.0048
+perverzije | NN -0.0048 perverzija
+opoziv | N. -0,0048 oduzimanje, oduzimanja
+protivrečnost | N. -0.3655 protivrečnosti
+nedaće | N. -0,0048 nevolje, nevolja
+olupina | NN -0.0048 olupine
+rana | rane N. -0,3396 rane
+bes | N. -0,4726 besovi
+pustinja | NN -0.0048 pustinje
+gubljenje | NN -0.3223
+cenzura | NN -0.3468 cenzurisanje
+razbijanje | NN -0.0048 razaranja
+uništavanje | N. -0,3578 uništavanja
+besciljnost | N. -0,0048
+carina | N. -0.0048 carine, takse, taksa
+drskost | NN -0.3286
+kolaps | N. -0,0048 kolapsi
+koliyija | N. -0,3302 sudar, sudara
+prisiljen | N. -0,0721 prinuda, ograničenja
+neprilika | NN -0.0048
+sumnja | N. -0,0048
+nesloga | N. -0,0048
+ukloniti | VVINF -0,0578
+odbaciti | VVINF -0,3482
+abdiciranje | VVINF -0,0048, abdicirati,  abdicirao, abdicirala
+omalovažavanjem | adjKs -0.3197 uvredljive, ponižavajući, omalovažavanje
+platiti | VVINF -0,3358 plaćanje
+otkazan | adjKs -0,0048 otkazati
+banalno | adjKs -0,1839 banalan, banalna, banalno
+bajate | adjKs -0,0368 ustajao, ustajala, ustajalo, bajat
+neshvatljiv | adjKs -0,1719 nedokučiva, nedokučiv, nedokučivo, zagonetan, zagonetno, zagonetna
+odbiti | VVINF -0,6458 odbio, odbila, odbilo, odbili, odbacio, ocbacila, odbaciti, odbaci
+odvratiti | VVINF -0.0042 odvrati, odvratila, odvratilo, odvratio, odvratim, odvratiš
+naglo | adjKs -0,0048 nagli, nagla, naglo, odjedanput, odjednom
+ukinuti | VVINF -0,0048 ukidati
+pucati | VVINF -0,0048 pucaš, puca, pucalo, pucao, pucali, pucadu
+odložiti | VVINF -0.0178 odvraća, odvratila, odvratati, odložila, odložio, odložilo
+otpisati | VVINF -0,1847 otpisaom otpisala, otpisani, otpisano, optisana, otpisane
+oslabiti | VVINF -0,0048 slabi, oslabljena, oslabljen, oslabljeno
+omalovažavanjem | adjKs -0,0048 uvredljiv, uvrediti, ponižavajući, ponižavajuće
+probiti | VVINF -0,3099 probijati
+isključite | VVINF -0,0048
 odbiti | VVINF -0,1796
-odbojan | adjKs -0,5859 abstoßendstem, odbojna, odbijaju one abstoßendster odbijaju posebno, odbijaju više kompletna, abstoßendst, abstoßendstes, odbija, odbojna, odbija, odbojna, odvratna, odbojna, odbijaju im odbijaju ostalog
-tupa | VVINF abstumpf -0,0048, abstumpfet, abstumpfest, abstumpften, iznuren, abstumpftet, poravnati, abstumpftest, poravnati, Blunts, abstumpfst
-Crash | VVINF absturztet -0.4697, padova, padove, srušio, Absturz, absturzet, absturzest, srušio, srušio absturztest
-Apsurdno | adjKs -0212 absurdester, absurdestes, absurderer, apsurdno, besmisleno, apsurdno, apsurdan, absurderem, absurdestem, apsurdno, besmisleno, apsurdno, apsurdan, absurdest, apsurdno, više apsurdno
-nose | VVINF -0,0048
-razlikuju | VVINF -0,3422
-Odbaci | VVINF -0,0048
-devalvira | VVINF -0,4521 abvertest devalvirala, abverttest, abvertten, popunite vrednost, obezvređena, amortizuje abverte, abvertetet, abvertte, abverttet, abvertetest, devalvira
-neoprezno | adjKs -0,0048 neoprezan, osam gubitnik, achtlosestes, achtlosester, neoprezan, achtlosest, osam gubitnik, achtloseste, osam gubitnik, gubitnik osam, achtlosestem, achtlosesten, neoprezan, nemaran, nemaran, achtloserem
-agresivno | adjKs -0,4484 aggressivst, agresivniji, agresivniji, aggressivster, agresivan, agresivni, agresivan, agresivni, agresivan, agresivni, agresivan, najagresivniji, agresivan, najagresivniji, agresivan, agresivni
-Upozorenje | VVINF alarmiertest -0,0048, alarmieret, uznemireni, će upozoriti, alarmiertet, alarmier, alarmierest, alarmi, uznemirilo, uznemirilo
-opijen | adjKs -0,0048 pijanom stanju, u alkoholisanom stanju, alkoholisierteste, pod dejstvom alkohola, alkoholisiertester, alkoholisiertestes, alkohol sluha, alkoholisiertest, alkoholisiertesten, pijani, alkoholisiertestem, alkoholisierterer, alkoholisiertere, alkoholisierteres, alkoholisierteren, alkoholisierterem
-stari | adjKs -0,0048 stara, stara, stari, najstariji, stari, stari, stariji, najstariji, stariji, stariji, stariji, stariji, najstariji, najstariji, stariji, najstariji, najstariji
+odbojan | adjKs -0,5859 odbojna, odbojno
+apsurdno | adjKs -0.0212
+razlikuju | VVINF -0,3422 razlikovati
+odbaci | VVINF -0,0048 odbaciti, odbacila, odbacilo, odbacio, odbacim, odbaciš
+devalvirati | VVINF -0,4521 devalvirala
+neopreznost | adjKs -0,0048 neoprezna, neoprezan, neoprezno, neoprezni
+agresivno | adjKs -0,4484 agresivniji, agresivan, agresivni, agresivna, agresivno, najagresivniji
+upozorenje | VVINF -0,0048 upozoriti, upozorio, upozorila, upozorilo, upozorili, upozorim, upozoriš
+opijati | adjKs -0,0048 opijen, opijena, opijeno, opijeni, opijene, alkoholisati
+stari | adjKs -0,0048 stara, staro, najstariji, stariji
