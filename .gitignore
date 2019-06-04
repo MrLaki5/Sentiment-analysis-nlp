@@ -8,3 +8,11 @@
 .idea/
 
 venv/
+
+src/stemmer/temp_in\.txt
+
+src/stemmer/temp_out\.txt
+
+src/__pycache__/
+
+src/stemmer/__pycache__/
