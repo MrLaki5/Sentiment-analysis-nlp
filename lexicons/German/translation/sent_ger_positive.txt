@@ -1,616 +1,779 @@
-Sporazum | NN 0.0040 sporazuma
-Završetak | NN 0.0040 stepeni, Abschlußs, kraj zatvaranje, finansijski izveštaji
-Vote | NN 0.0040 ankete
-Agilnost | N. 0.0040
-Aktivnost | NN 0.0040 Aktivnosti
-Update | NN 0.0040 ispravke
-Aktuelnost | N. 0.0040 novosti
-Prihvatanje | N. 0.0040
-Rush | NN 0,0040 zauzet periode, lete
-Priznavanje | NN 0.0855 priznanja
-Ponuda | N. 0.0711 ponude, bavi, ponuda, ponuda
-Adekvatnost | N. 0.0040
-Podizanje | N. 0.0040 šetnje
-Anheiterung | N. 0.0040
-Boost | N. 0.0040
-Convenience | NN 0.0040 pogodnosti
-Pristup | NN 0.0040 pristupi
-Podešavanje | NN 0.0040 prilagođavanja
-Prilagodljivost | N. 0.0040
-Obogaćivanje | NN 0.0040 obogaćenje
-Tvrdnja | N. 0,0040 zahtev, zahtev ili potraživanja, potraživanja
-Pristojnost | N. 0,0040 pristojnost, Anstanden, pristojnosti, pristojnost
-Rise | NN 0.0040 povećava, povećanje, povećanje, povećanje
-Pristojnost | N. 0.0040
-Podeli | NN 0,0040 akcija, akcija, akcija, akcija
-Attraction | N. 0.0040 atrakcije
-Applause | N. 0.0871 Applausen, Applauss, aplauz, aplauz
-Atraktivnost | N. 0.0040
-Tretman | NN 0.0040 preparati
-ENHANCE | N. 0.0040 Aufbesserungen
-Vaskrsenje | vaskrsenja N. 0.0040
-Pažnja | NN 0.0040 nasrtanje
-Podsticanje | N. 0.0040 ohrabrenje
-Iskrenost | N. 0.0040
-Recoveri | NN 0.0040 upsvings, boom, uspon, upsvings
-Rise | N. 0,0040 penje, penje, uspon, uspon
-Povećanje | N. 0.0040 povećanje
-Order | N. 0,0040, više radnih mesta, posao, posao
-Lift | N. 0.0040 Auftrieben, plovnost, plovnost, jača
-Nadogradnja | N. 0.0040 nadogradnje
-Tendencija rasta | N. 0.0040
-Eie candi | N. 0.0844 Eie Candi
-Završni radovi | NN 0,0040 Ausbaues, ekspanzija
-Obrazovanje | N. 0.0040 Obuka
-Izdržljivost | N. 0.0886
-Kompenzacija | N. 0.0040 balansiranje, naknada, naknada, naknada
-Naknada | N. 0.0040 kompenzacija
-Nagrada | NN 0.0040 nagrade
-Autentičnost | N. 0.0040
-Autonomija | NN 0.0040 autonomije
-Značenje | NN 0.0040 značenja
-Liberation | NN 0.0040 izuzeci
-Satisfaction | NN 0.0040 satisfakcija
-Garderoba | NN 0.0040 Promocije
-Entuzijazam | NN 12:32 entuzijazam
-Pardon | NN 0.0040 pomilovanja
-Favorizuje | N. 0.0040 usluge
-Cheers | N. 0.3265 aplauz, aplauz
-Obradujte | NN 0,0040 živeli, aplauz stoji, navija, navijanje
-Settlement | NN 0.0040 naselja
-Beisteuerung | N. 0.0040
-Pristupanje | NN 0,0040 pristupanja, pridruživanje, pridruživanje, pristupanje
-Potvrđujući | N. 0.0040 afirmacije
-Endurance | NN 0.0040 nosivosti
-Animaci | N. 0.0040
-Popularnosti | N. 0.0040
-Revard | NN 0.0813 nagrade
-Dobrotvorni | NN 0,0040 Benefizes, Benefizen, Benefize
-Obogaćivanje | NN 0.0040 obogaćenje
-Spremnost | N. 0.0040 spremnost
-Odredba | NN 0.0040 razmeštanja
-Reassurance | NN 0.0040 ponovno obećanje
-Skromnost | N. 0.0852
-Ubrzanja | NN 0.0040 ubrzanja
-Umirenje | N. 0.0040 umirenje
-U vlasništvu | N. 0.0040 posedovanje, Besitzs
-Poboljšanje | NN 0.0040 poboljšanja, Besserungnen
-Potvrda | NN 0.0040 potvrde
-Učešće | NN 0.0040 investicije
-Poštovalac | N. 0.0040 admirer, obozavaoci
-Divljenje | admirations N. 0.0040
-Obrazovanje | NN 0.0040 formacije
-Bloom | NN 0.0040 cveće
-Credit | NN 0.0040 kreditni rejting
-Bonus | N. 0,0040 bonusi, bonusi, bonusi, Bonuss, bonusi, bonusi, Bonus
-Boom | N. 0.0040 bum
-Sjaj | N. 0.0040
-Bratstvo | N. 0.0040
-Bund | N. 0,0040 kragne, ogrlice, ogrlica, federalni, Bunde, pragovi
-Alliance | N. 0,0040 Bundnise, Bundnises, Bundnisen, savezi, savez, savezi, savez
-Champion | NN 0.0040 šampiona
-Karizma | N. 0.0040
-Doručak | N. 0.0040 Charmes
-Cleverness | N. 0.0040
-Comeback | NN 0.0712 Comebacks
-Zahvalnost | N. 0.0040
-Diskrecija | N. 0.0040
-Disciplina | NN 0.0611 discipline
-Fragrance | NN 0.2149 miris, mirisi, miris, mirisi
-Dinamički | N. 0.0040
-Autentičnost | N. 0.0040
-Efikasnost | NN 0.0040 efikasnost
-Čast | N. 0.0732 čast
-Ave | N. 0.0040
-Iskrenost | N. 0.0040
-Venerableness | N. 0.0040 Ehrvurdigkeiten
-Težnja | NN 0,0040 Eiferes, revnost
-Kapital | N. 0.0040
-Fitness | N. 0.0040
-Jedinstvenost | NN 0.0040 unambiguities
-Snalažljivost | N. 0.0040 genijalnost
-Usklađenost | N. 0.0040
-Unit | NN 0.0040 jedinica
-Jedinstvo | N. 0.0040
-Shopping | N. 0,0040 kupovine, kupovine, Einkaufes, za kupovinu
-Prihod | NN 0.0040 prihodi
-Čuvanje | NN 0.0040 uštede
-Inauguration | NN 0.0040 inicijacije
-Jedinstvenost | N. 0.0040
-Elegance | N. 0.0040
-Empatija | N. 0.0040
-Preporuka | NN 0.0040 Preporuke
-Predanost | N. 0.2157 obaveza
-Reljef | N. 0.0040 olakšanje
-Naknada | NN 0.0040 nagrade
-Odluka | N. 0.0804 Entschlußs, odluka
-Dešifrovanje | N. 0.0040 dešifrovanje
-Naknada | N. 0.0040 kompenzacija
-Relaksacija | NN 0.0875 olakšice
-Unraveling | N. 0.0040 Entvirrungen
-Nasleđe | NN 0,0040 naslednici, nasleđe
-Iskustvo | NN 0.0040 iskustva
-Uspeh | N. 0.3446 uspeh, uspeh, uspeh, uspeh
-Dostignuće | N. 0.0884 iskustvo uspeh, uzbuđenje, osećaj postignuća
-Ispunjenje | NN 0.0040 ispunjenja
-Pokrivenost | N. 0.0040
-Supplement | NN 0.0040 suplementi
-Grade | N. 0.0040
-Rekreacija | N. 0.0865
-Povećanje | N. 0.0040 povećanje
-Permission | NN 0.0040 licence, dozvole
-Relief | NN 0.0040 pauze
-Enlightenment | NN 0.0040 iluminacije
-Redemption | NN 0.0040 deliverances
-Podsticanje | N. 0.0040 ohrabrenje
-Reneval | NN 0.0040 obnavljanje
-Ozbiljnost | N. 0.0040
-Štednja | N. 0.0040 Ersparnise, Ersparnisen štednje
-Zarada | N. 0,0040 prihod, prihod, dohodak, prihod
-Enhancements | NN 0.0040 ekstenzije
-Proizvod | N. 0,0040 Erzeugnisen, proizvod, proizvod je stupio na snagu, Erzeugnise, proizvodi od, proizvoda, proizvoda
-Stručni | NN 0.0040 stručnjaci
-Stručnost | N. 0.0040 ekspertiza
-Ekcellence | NN 0.0040 ekselencije
-Pravednost | N. 0.0040
-Fascinacija | N. 0.0040
-Omiljeni | NN 0.0040 favoriti
-Proslava | NN 0.0829 proslave
-Skill | NN 0.0040 veštine
-Čvrsti | NN 0.2346 praznik, praznik, proslave, festivali
-Ceremoni | N. 0.0040 ceremoni, ceremonija, svečanosti, obredi
-Snaga | N. 0.0040
-Festiviti | NN 0.0040 svečanosti
-Finansiranje | N. 0.0040 Finansiranje
-Fitness | N. 0.0851
-Flair | N. 0,2216 njuh
-Radišnost | N. 0.3113 marljivost, Fleißs
-Fleksibilnost | N. 0.0040
-Napredak | N. 0.0040
-Freedom | NN 0.0040 slobode
-Oslobađajuća | N. 0,0040 oslobađajuće oslobađajuće, oslobađajuća presuda, oslobađajuća presuda
-Joi | NN 0.6502 zadovoljstva
-Prijatelj | N. 0.0116 prijatelji, prijatelj, prijatelji, prijatelj
-Ease | N. 0.0913 ljubaznosti
-Prijateljstvo | NN 0.2059 prijateljstva
-Mir | N. 0.0040 mir
-Plodnost | N. 0.0040
-Funkcionisanje | N. 0.0040
-Neustrašivost | N. 0.0040
-Abiliti | NN 0.0892 veštine
-Promocija | NN 0.0829 promocije
-Leadership | NN 0.0040 vodiči
-Punoća | N. 0.0040 punjenje
-Transfer | NN 0.0747 akcija
-Garancija | NN 0.0040 garancije
-Gostoprimstvo | N. 0.0040 gostoprimstvo će
-Komemoracija | N. 0.0040 komemoracija
-Patience | N. 0.0789
-Voleo | N. 0.3349 zadovoljstvo
-Plata bonus | NN 0.0040 plata bonusi
-Sereniti | N. 0.0721
-Donatori | N. 0.0040 finansijer, finansijeri
-Communiti | NN 0.0040 zajednice
-Preciznost | N. 0.0040
-Odobrenje | NN 0.0040 odobrenja
-Recoveri | NN 0.0040 oporavak
-Genius | N. 0.0040
-Genie | N. 0.0697 genije
-Zadovoljstvo | N. 0.0701 zadovoljstva Genusss, uživanje, zadovoljstvo
-Uživanje | N. 0073 uživanje, zadovoljstva, oduševljava, Genußs
-Pravda | N. 0.0040
-Prostranost | N. 0.0040
-Gift | NN 0.4792 pokloni, poklon, poklon, pokloni
-Skill | N. 0.0040 sudbina, sudbina, sudbina, sreća
-Spretnost | N. 0.0040
-Zdravlje | N. 0.0040
-Recoveri | N. 0.0040
-Dobit | N. 0,0040 profit, profit, profit, profit
-Pobednici | N. 0.0040 pobednici pobednik
-Garancija | NN 0.0040 garancije
-Glamour | N. 0.0040 glamour
-Gloss | N. 0,0040 Glanzs, sjaj
-Faith | NN 0.0040 Glaubes
-Kredibilitet | NN 0,0040 nivo pouzdanosti
-Jednakost | N. 0.0040
-Luck | NN 0.2452 bogatstvo, sreća, sreća, sreća
-Bliss | NN 0.0040 felicities
-Čestitam | N. 0.2193 čestitke, čestitke, sretno želi, čestitka
-Grace | N. 0.0040 milost
-Čestitam NN 0428 čestitke
-Bezgraničnost | N. 0.0040
-Großzugigigkeit | N. 0.0040
-Veličina | NN 0.0040 veličine
-Temeljitost | N. 0.0040
-Favor | N. 0.0040
-Pokrovitelji | NN 0,0040 pokrovitelji, pokrovitelj
-Pokroviteljstvo | N. 0.0040
-Validnost | N. 0.0040
-Dobrota | N. 0.0040
-Čekić | NN 0,0040 čekići, čekić
-Harmoni | NN 0.0795 harmonija
-Usklađivanje | N. 0.0040 usklađivanje
-Upornost | N. 0.0040
-Sanctuari | N. 0,0040 svetilište, svetilišta, svetilišta, svetilište
-Healing | NN 0.0040 lekovi
-Brak | NN 0.0040 brakovi
-Sereniti | N. 0.0040
-Brightness | NN 0.0040 sjaja
-Glori | NN 0.0040 slave
-Highlight | NN 0.0040 momenti
-Help | N. 0.0040 podršku
-Bespomoćnost | N. 0.0040
-Posveta | N. 0.0040
-Anticiklon | N. 0,0040 anticiklon, anticiklon, visoki sistemi pritiska, visokog pritiska oblast
-Cheer | N. 0.0040 visok ugled, zapali, Hochrufs, živeli
-Visok kvalitet | N. 0.0040
-Nadam se | NN 0.2038 nade
-Čovečanstvo | N. 0.0040
-Humor | N. 0.3296 Humors, Humors, humora
-Ura | NN 0.0040 živeli
-Navijanje | NN 0.0040 ura zapomaganje
-Courtesi | NN 0.0040 ljubaznosti
-Highlight | NN 0.0040 highlights, klimaks, klimaks, momenti
-Individualnost | NN 0.0040 individualnosti
-Inovacije | NN 0.0040 inovacije
-Inspiracija | NN 0.0040 inspiracije
-Integritet | N. 0.0040
-Intelekt | N. 0,0040 intelekt intelekt, um, razum
-Intelligence | NN 0.0040 inteligencije
-Interes | N. 0.0040
-Zastupanje | N. 0.0040 zastupanje
-Investicioni | NN 0.0040 investicije
-Cheers | N. 0.0652 slavlje
-Anniversari | N. 0.0040
-Kupiti | N. 0.0040 kupovine, kupovine, kupovine kupovinu
-Clariti | NN 0.0040 clariti
-Udobnost | N. 0.1808 udobnost
-Communication | NN 0.0040 komunikacije
-Kompatibilnost | NN 0.0040 Compatibilities
-Kompenzacija | NN 0,0040 naknade
-Nadležnost | NN 0.0040 veštine
-Kompliment NN 0.3323 POHVALE, kompliment, kompliment, komplimenti
-Kompromis | N. 0,0040 kompromis Kompromisss, kompromis, kompromis
-Ekonomski oporavak | N. 0,0040 Konjunkturaufschvunge, ekonomski oporavak, ekonomskih kretanja, ciklična uspon
-Konsenzus | N. 0,0040 konsenzus, postignu konsenzus, konsenzus
-Doslednost | N. 0.0040
-Konsolidacija | NN 0.0040 konsolidacije
-N. 0,0040 | Konstanc
-Konsultacije | NN 0.0040 konsultacije
-Kontinuitet | N. 0.0040
-Saradnja | N. 0.0040 saradnja
-Koordinacija | NN 0.0040 koordinacija
-Ispravnost | N. 0.0040
-Correction | NN 0.0040 korekcije
-Dragocenost | NN 0.0040 blago
-Pover | NN 0.0040 snage, snage
-Kreativnost | N. 0.0768
-Goodvill | N. 0.0040
-Kur | NN 0.0859 lekovi
-Dugovečnost | N. 0.0040
-Raspoloženja | NN 0.1085 hirovi
-Održivost | NN 0.0040 životne veštine
-Zakonitost | N. 0.0040
-Legitimitet | N. 0.0040
-Ease | N. 0.1725
-Passion | NN 0.0040 strasti
-Performance | NN 0.0040 usluge
-Performance | NN 0.0040 mogućnosti
-Liberalizam | N. 0.0040
-Love | N. 0.0985 voljene
-Omiljeni | NN 0.0873 omiljeni, favorites, favoriti
-Relief | NN 0.0040 ublatavanje, Linderungnen
-Praise | N. 0.7246 pohvala, pohvala, pohvala, pohvala
-Plata | N. 0,0040 plate, dnevnice, plate, plata
-Loialti | NN 0.0040 lojalnost
-Luksuzni | N. 0.0040
-Rešenje | NN 0.0040 rešenja
-Pover | N. 0.0040 sile, sile
-Magic | NN 0.0040 Magics
-Majesti | NN 0.0040 Veličanstva
-Maksimalni | N. 0.0040
-Championship | NN 0.0040 prvenstvo
-Masterpiece | NN 0.0040 remek remek, remek-delo, remek
-Ljudsko dostojanstvo | N. 0.0040
-Čovečanstvo | N. 0.0040 humanost
-Blaga | N. 0.0040
-Saosećanje | N. 0,0040 saosećanje, samilost
-Mobilnost | N. 0.0040
-Modernizacija | N. 0.0040 modernizacija
-Modernost | modernosti N. 0.0040
-Moralni | NN 0.0040 moralnosti
-Motivacioni | NN 0.0040 motivacija
-Hrabrost | N. 0,6093 hrabrost, hrabrost
-Opcija | NN 0.0040 opcije
-Održivost | N. 0.0040
-Prednosti | N. 0.0040 korist
-Zatvori | N. 0.0911
-Oaza | N. 0.0040
-Optimalnost | N. 0.0040
-Optimizam | N. 0.0882
-Optimist | N. 0.0836 optimisti
-Redovnost | N. 0.0040
-Originalnost | NN 0.0040 originalities
-Pomoć | NN 0.0040 Popravke
-Paradise | N. 0,0040 raj, raj, Paradiess, raj
-Partneri | NN 0.0040 partneri, partneri
-Partnerski | NN 0.0779 partnerstva
-Perfection | NN 0.0040 savršenstava
-Perfekcionizam | N. 0.0040
-Perfekcionista | NN 0.0040 perfekcionisti
-Care | N. 0.0040
-Fantasi | NN 0075 fantazije
-Verodostojnost | N. 0.0040
-Pozitivnost | N. 0.0040
-Potencija | NN 0.0040 sile
-Splendor | NN 0.0040 Prachtnen, sjaj
-Praktičnost | N. 0.0040
-Premium | NN 0.0040 Premien, premije
-Prestiž | prestiž N. 0.0040
-Privilegija | N. 0.0040
-N. 0,0040 | Produktivnost
-Profit | N. 0.0040
-Napredovanje | N. 0.0040
-Splendour | N. 0.0040
-Preference | NN 0.0040 preferencije
-Precizni | N. 0.0040
-Tačnost | N. 0.0040
-Kvalifikacioni | NN 0.0040 kvalifikacije
-Kualiti | NN 0.0040 kvaliteti
-poboljšanje kvaliteta | N. 0.0040 poboljšanja kvaliteta
-Saveti | N. 0.0040
-Pravni | N. 0.0040 privilegije, prava, pravo, pravo
-Zakonitost | N. 0.0040
-Validnost | N. 0.0040
-Rehabilitacija | N. 0.0040 rehabilitacija
-Bogatstvo | NN 0.0040 bogatstvo, bogatstvo, bogatstvo, bogatstvo
-Čistoća | N. 0.0040
-Čišćenje | NN 0.0040 čišćenja
-Relevantnosti | N. 0.0040 relevantnost
-Renoviranje | NN 0.0040 renoviranje
-Profitabilnost | N. 0.0040
-Popravke | NN 0.0040 popravke
-Respect | N. 0,0040 Respekte, poštovanje, poštovanje, Respekten
-Rescue | NN 0.0707 spasava
-Robusnost | N. 0.0040
-Romance | N. 0.0688
-Ostatak | N. 0.5017
-Fame | N. 0,0040 slava, slava
-Bek | N. 0.0040
-Okosnice | NN 0.0040 kičma, okosnice, kičma, kičma
-Razmatranje | N. 0.0040
-Reosiguranje | N. 0.0040
-Čistoća | N. 0.0755
-Treasure | NN 0.1096 blaga, blaga, blaga, Schatzs
-Donacija | NN 0.0040 donacije
-Patron | NN 0.0040 Pokrovitelji
-Pokroviteljstvo | N. 0,0040 Schirmherrschaftnen, pokroviteljstvo
-Lukav | N. 0.0040
-Nakit | N. 0,0040 nakit, Nakit, nakit, ukras
-Speed | N. 0.0040 Schnelligkeiten
-Bargain | NN 0.0040 Schnappchens
-Nevinost | N. 0.0040
-Protection | N. 0.0040 bezbednosti alat, zaštita, zaštita, zaštita, zaštita, kontaktori
-Mere opreza | N. 0.0040
-Sving | N. 0238 Sving, Sving, ljuljaške, ljuljaške
-Beauti | NN 0.3286 lepote
-Self | N. 0.0040
-Sensation | NN 0.0040 senzacije
-Ozbiljnost | N. 0.0040
-Sigurnost | N. 0.0040 kolateralna
-Victori | N. 0.0040 pobjedonosno trijumfa, trijumfalni marš, pobeda vozovi
-Značenje | N. 0.0040 čula, čula, um, čula
-Solidarnost | N. 0.0040
-Carefulness | N. 0.0040
-Nebriga | N. 0.0040
-Thrift | NN 0.0040 frugalities
-Fun | NN 0.2429 zabava, vicevi, traže zabavu, vicevi
-Zabava | N. 0.2823
-Donacija | NN 0.0040 donacije
-Specialti | NN 0.0040 specijaliteti
-Skoči | NN 0,0040 skokova, skok, skok, skok
-Stabilnost | N. 0.0040
-Postojanost | N. 0.0040
-Divota | N. 0.0040
-Povećanje | N. 0.0040 povećanje
-Climb | N. 0.0040
-Donatori | N. 0.0040
-Foundation | NN 0.0040 fondacije
-Stile | N. 0.3398 stilovi, stilovi, stil, stil
-Stimulacije | NN 0.0040 stimulacije
-Štolc | N. 0.0797 ponos, peder ponos
-Jačina | NN 0.0040 prednosti
-Podrška | N. 0.0040
-Subvencija | NN 0.0040 subvencije
-Zavisnost | N. 0,0040 zavisnost faktor, ispitati faktore
-Superlative | NN 0,0040 superlativa superlativu, superlativu
-Simbiosis | NN 0.0040 simbioses
-Simpathi | N. 0.0040
-Talent | N. 0.3352 talenat, talenat, talenat, talenat
-Tolerancija | NN 0.0040 tolerancije
-Tradicija | NN 0.0040 tradicije
-Odanost | N. 0.2019
-Trijumf | N. 0,0040 trijumfuje, trijumf, trijumf, trijumf
-Trophi | NN 0.0040 trofeji
-Uteha | N. 0.0706 uteha, uteha
-Vrap | N. 0.0040 prevrata, Breaks, Break, pauze
-Nezavisnost | NN 0.0040 independences
-Nedodirljivost | N. 0.0040
-Neustrašivost | N. 0.0040
-Nepogrešivost | N. 0.0040
-Nepristrasnost | N. 0.0040
-Nevinost | N. 0.0040
-Besmrtnost | N. 0.0040
-Podrška | N. 0.0040 podrška
-Invulnerabiliti | N. 0.0040
-Neophodnost | N. 0.0040
-Neodoljivost | N. 0.0040
-Upgrade | N. 0.0040
-Odgovornost | NN 0.0040 odgovornosti
-Association | N. 0.0040 organizacije, udruženja, asocijacija, Udruženje
-Poboljšanje | NN 0.0040 poboljšanja
-Kompozitni | N. 0.0040
-Veze | N. 0.0040
-Allied | N. 0.0040
-Zarade | N. 0.0040 zarade, zarade, zarade, zarade
-Završni | N. 0.0040
-Obožavanje | N. 0.0040
-Sporazum | NN 0.0040 sporazuma
-Pojednostavljenje | NN 0.0040 pojednostavljenja
-Association | NN 0.0040 udruženja
-Nasleđe | N. 0.0040 nasleđe
-Refinement | NN 0.0040 preciziranja
-Forgiveness | NN 0.0040 pomilovanja
-Enlargement | NN 0.0040 uvećanja
-Idolatri | N. 0.0040 obožavanje
-Po dogovoru | N. 0.0040
-Angažman | NN 0.0040 angažovanja
-Veridba | NN 0,0040 Verlobnissen, Verlobnisen, Verlobnise, Verlobniss, veridbe, betrothals, Verlobnises
-Regrutovanje | N. 0.0040
-Razlog | N. 0.0040
-Uređenje | NN 0.0040 Embellishments
-Osiguranje | N. 0.0040 osiguranje
-Promise | N. 0.0040 obećanje
-Mind | N. 0,0040 um, intelekt
-Razumevanje | N. 0,0040 shvatanja, razumevanja, razumevanje, razumevanje
-Ojačanja | NN 0.0040 pojačanja
-Pomirenja | NN 0.0040 poravnanje
-Defender | NN 0,0040 branitelji, odbrana
-Odbrane | NN 0.0040 odbrane
-Ugovor | N. 0,0040 ugovori, sporazumi, ugovori, ugovor
-Poverenje | N. 0.3512 poverenje
-Pouzdanost | N. 0.0040
-Povjerenik | N. 0.0040
-UPOZNAVANjE | NN 0.0040 familiarities
-Upotrebljivost | N. 0.0040
-Realizacija | NN 0.0040 realizacije
-Raznovrsnost | N. 0.0040
-Varijanta | N. 0.0040
-Vizionar | N. 0,0040 vizionar, vizionari, vizionar, vizionar
-Vitalnost | N. 0.0040
-Potpunost | N. 0.0040
-Priprema | NN 0.0040 preparati
-Oprez | N. 0.0040
-Preventivne | NN 0.0040 odredbe
-Benefit | NN 0.0040 prednosti, prednost, Vantage, prednosti
-Budnost | N. 0.0040
-Rast | N. 0.0040 rast
-Truth | NN 0.0040 istine
-Mekoću | NN 0.0040 soft karakteristike
-Mudrost | N. 0.0040 mudrost
-Dalekovidost | N. 0.0040
-Vrednost | N. 0.0040
-Zahvalnost | N. 0.0040
-Povećanje vrednosti | N. 0.0040 zahvalnost
-Otpor | N. 0.0040
-Revival | N. 0.0040
-Reparacije | NN 0.0040 reparacije
-Recoveri | N. 0.0040
-Ponavlja | N. 0.0040
-Spajanje | NN 0.0040 okupljanja
-Ville | N. 0.0040
-Efikasnost | N. 0.0040
-Znanje | N. 0.0040
-Vitz | N. 0.0040 vicevi, vicevi, vicevi
-Blagostanje | N. 0.0040 blagostanje
-Zadovoljstvo | N. 0.0040 samozadovoljstvo
-Prosperitet | N. 0,0040 prosperitet, blagostanje
-Benefit | NN 0.0040 prednosti
-Dobrotvor | NN 0.0040 dobrotvor dobrotvori
-Dobrotvorne | N. 0.0040
-Goodvill | N. 0.0040 dobročinstvo
-Vonder | N. 0.0741 čuda, čuda
-Heat | N. 0.0040
-Zenit | N. 0,0040 zenit, zeniths, zenit, Zenite
-Ciljna | N. 0.0040 objektivni, goals, goal, goals
-Refuge | NN 0.0040 izbeglice
-N. 0.2207 | Zadovoljstvo
-Addition | NN 0.0882 dodaci
-Pristupačnost | N. 0.0040
-Dodatak | NN 0.0040 dodaci
-Prihvatljivost | N. 0.0040
-Ljubav | osećanja N. 0.0040
-Saradnja | NN 0.0893 saradnja
-Zajedništva | N. 0.0040
-Kohezija | N. 0,1947 kohezija, kohezivni, kohezija, drži zajedno
-Subvencija | NN 0.0040 grantovi, grant, grantovi, Zuschußs
-Odobrenje | NN 0.0040 saglasnosti
-Pouzdanost | N. 0.0040
-Poverenje | N. 0.0727
-backed | adjKs 0.0040
-organizovati | VVINF 0,0040 naselili, abmachst, abmach, abmachet, abmachten, unajmljuje, abmache, abmachtest, abmachte, abmachest, abmachtet
-Kompletna | VVINF 0.0040
-apsolutno | adjKs 0.2418 absoluterem, apsolutno, absolutestem, absolutesten, apsolutni, više apsolutni, absolutestes, absolutester, više apsolutna, apsolutno, absolutest, absoluteres, absoluterer, apsolutno, apsolutna većina apsolutna
-Glasaj | VVINF abstimmtest 0,0040 abstimmtet, melodija, abstimmest, abstimmet, glasali, glasali, glasali, abstimmst, abstimme, glasanje
-raznovrsni | adjKs 0,5797 raznolika najbogatiji, raznovrsniji, raznovrsniji, abvechslungsreicherem, raznovrsni, abvechslungsreichstem, abvechslungsreichst, raznovrsna najbogatiji, najviše varirao, različiti i raznovrsni, raznovrsniji, raznovrsniji, raznovrsniji, raznovrsniji, raznovrsni
-dodaj | VVINF se dodaje 0,0040, dodao, addierest, dodati, addiertet, dodao, dodajući addiertest, addieret, dodaje
-uredno | adjKs 0.1987 adrettestes, adrettere, adretteren, adrettester, adrettestem, adrettesten, adretterem, Preppi, Preppi, adretteste, Preppi, Preppi, adrettest, Preppi, adretteres, adretterer
-okretan | adjKs 0.1959 agilstes, agilster, agilniji, agilniji, većina agilan, agilstem, agilniji, agilniji, okretan, agilan, agilst, okretan, agilan, agilniji, najviše odgovara, okretan
-precizno | adjKs 0,0040 akkuratester, izuzetno precizno, akkuratest, akkuratem, tačan, precizan, tačan, preciznije, tačnije, tačan, akkuraterer, akkuratesten, akkuraterem, akkuratestem, preciznije, najtačniji
-aktivan | adjKs 0.0911 aktivniji, aktivniji, više aktivni, najaktivnije, najaktivniji, aktivan, aktivan, aktivan, aktivan, aktivster, aktivniji, najaktivniji, aktivniji, aktivni, najaktivnije, najaktivniji
-Update | VVINF aktualisiertest 0,0040, aktualisieret, ažurira, ažuriranje, ažuriranje, aktualisierest, aktualisiertet, se ažuriraju, update, updated
-novosti | adjKs 0,0040 nedavno, struja, struja, struja, struja, aktuellerem, struja, nedavno, najnovije, najaktuelnije, novije, struje, više struje, više struje, najnoviju, aktuellster
-prihvatljivi | adjKs 0,0040 akzeptabelster, akzeptabelst, prihvatljivo, akzeptabelstem, najprihvatljivija, prihvatljivo, više prihvatljivo, prihvatljivo, najprihvatljivija, prihvatljivo, akzeptablerem, više prihvatljivi, više prihvatljivi, prihvatljivih, akzeptabelstes, prihvatljivije
-prihvatiti | VVINF akzeptiertet 0,0040, akzeptiertest, akzeptierest, prihvatio akzeptieret, prihvatili i saglasni, prihvati, prihvatio, Accept
-najbolje | adjKs 0,0040 allerbesteem, allerbesteerer, allerbestee, allerbesteeres, allerbesteeren, allerbesteerem, allerbestest, allerbesteen, allerbesteer, allerbestees, allerbesteste, allerbestestem, allerbestester, allerbestesten, allerbesteere, allerbestestes
-Prvi | adjKs 0,0040 allerersteere, allererstestem, allererstesten, allererstest, allerersteeres, allerersteerer, allererstester, allererstestes, allerersteen, allerersteem, allerersteer, allererstee, allererstees, allerersteerem allerersteeren, allerersteste
-univerzalni | adjKs 0,0040 uopšte, allgemeingultigerer, više univerzalan, generalno važi, Universal, Universal, allgemeingultigst, generalno primenljiv, allgemeingultigster, allgemeingultigere, allgemeingultigstes, allgemeingultigsten, allgemeingultigstem, generalno važi, allgemeingultigerem, većina uopšte
-obuhvatajući | adjKs allumfassendsten 0,0040 allumfassendstem, allumfassendster, allumfassenderer, sveobuhvatna, allumfassendstes, allumfassenderes, potpuna, sveobuhvatna, sveobuhvatna, allumfassendst, allumfassendere, potpuna, sveobuhvatna, allumfassenderem, allumfassenderen
-Ponuda | VVINF 0.0040
-prepoznao | adjKs anerkanntest 0.0785, više priznata, anerkannterem, anerkannteres, anerkannterer, anerkanntester, priznat, prihvaćen, anerkanntestem, anerkanntesten, prepoznat, priznat, priznat, više priznata, najpoznatiji, najcenjeniji
-prepoznati | VVINF 0.0040
-pohvalni | adjKs 0.0040 anerkennensvertest, anerkennensvertesten, anerkennensverterem, anerkennensvertestem, zaslužan, anerkennensvertester, pohvalni, anerkennensvertestes, anerkennensvertere, anerkennensverteren, anerkennensvertem, anerkennensverterer, anerkennensverteste, za svaku pohvalu, anerkennensverteres, zaslužan
-prikladno | adjKs 0.0040 je messnerer, više potrebno, da se messneres, je messneren, fer, angemessnerem, razuman, fer, razumno, adekvatna, pravedniji, razumnije, više razumno, više razumno, angemessenstem, najlepša, je MESSNER, angemessenster, angemessenst, Sajam lica čuvaju, najlepša je messnere
-prijatno | adjKs 0,4887 prijatno, prijatno, prijatno, prijatno, najprijatnije, prijatno, najprijatnije, prijatno, prijatno, najprijatnije, prijatno, angenehmster, prijatno, prijatno, prijatniji, ugodnije
-vieved | adjKs 0,0040 angesehnerem, poštovana, angesehneren, poštovana, više prestižna, angesehenerem, 'a najprestižnijih, angeseheneres, angesehnerer, više prestižna, angesehneres, poštovana, prestižna Londonu, angesehnere, više prestižna, ugledni, poštuju, je Sehner, poštovan, angesehenst, najcenjeniji, angesehenster
-Raise | VVINF 0.0040
-anheitern | VVINF 0.0040
-podsticaj | VVINF povećala 0,0040 ankurbelen, ankurbelst, povećala, ankurbele, ankurbl, okretanja, ankurbeltet, ankurbeltest, jača, boosted, ankurble
-privući | VVINF 0.0040
-prihvatljivo | adjKs 0,0040 više prihvatljiv, prihvatljiviji, prihvatljiviji, annehmbarst, prihvatljivo, prihvatljivo, annehmbarstem, više prihvatljivi, prihvatljivih, poželjni, annehmbarstes, prihvatljivo, annehmbarster, prihvatljivo, prihvatljivo, annehmbarerem
-pristup | VVINF oko 0,0040, annahertet, prišao, pristupi, annahere, annahertest, annaherten, na imitacije, annaheren, annaherst
-Prilagodite | 0,0040 VVINF
-prilagodljive | adjKs 0.0799 anpassungsfahigstes, prilagodljiv, anpassungsfahigster, prilagodljiv, prilagodljiv, prilagodljiviji, prilagodljiviji, prilagodljiviji, anpassungsfahigerem, prilagodljiv, prilagodljiv, prilagodljiv, anpassungsfahigstem, najfleksibilniji, prilagodljiv, anpassungsfahigst
-akumuliraju | VVINF anreichertet 0,0040, anreicheren, ne akumuliraju, anreicherst, anreichere, obogaćen, obogatio, anreicher, anreichertest, obogaćen
-reprezentativno | adjKs 0.0931 više respektabilna, ansehnlicherer, ansehnlichem, ansehnlichstes, ansehnlichster, ansehnlichst, najzgodniji ansehnlichstem, najzgodniji, zgodan, zgodniji, ansehnlicherem, zgodan, lep, zgodan, više značajan
-apelujući | adjKs 0.3382 privlačna, atraktivna, ansprechendst, dopadljiv, atraktivan, dopadljiv, žalba ostalog, atraktivna, ansprechendstem, privlačno, apelujemo na one koji najprivlačniji, atraktivnije, ansprechendster, više izazovne ansprechendstes
-sofisticiran | adjKs 0,2216 veći izazov, zahtevajući, zahtevajući, zahtevajući, zahtevajući, zahtevajući, zahtevajući, anspruchsvollst, najambiciozniji, anspruchsvollster, zahtevajući, zahtevajući, zahtevajući, zahtevajući, najzahtevnije, najzahtevniji
-Porast | VVINF 0.0040
-pristojno | adjKs 0.0977 više ugledan, pristojan, više pristojan, poštovan, više pristojan, poštovan, pristojan, poštovan, većina pristojan, poštovan, anstandigerem, pristojan, anstandigstem, anstandigster, anstandigst, anstandigstes
-rata | adjKs 0,0040 anteiligeres, anteiligerer, anteiligerem, anteiligeren, srazmerno, anteiligere, srazmerno učešće, anteiligst, srazmerno, anteiligster, anteiligste, anteiligstes, proporcionalno, anteiligsten, anteiligstem
-poveriti | VVINF anvertrautet 0,0040, poveravaju, poverena, anvertrau, poverio se poverim, poverio, anvertrauest, anvertrautest, poverena
-Zategnite | VVINF 0.0040
-Pozdravljam | VVINF applaudieret 0,0040, aplaudirali, navijali, applaudier, applaudierest, applaudiertest, applaudiertet, applaudierst, aplaudira, aplaudiraju
-kao | adjKs 0225 artigst, artigstem, većina uljudan, artigster, artigere, artigerem, kao što su, artigeren, ARTIGEM, artigerer, artigstes, kao što su, artigste, artigeres, kao, kao
-više zapanjujući adjKs 0.3261, zastaje dah ostalog, atemberaubendster, zastaje dah one zapanjujuće, atemberaubendstem, oduzima dah, obogatite svoj, više od kojih zastaje dah, atemberaubendstes, zapanjujući, zapanjujući, oduzima dah, zapanjujući, atemberaubendst, dah | Zapanjujuće
-atraktivan | adjKs 0.2162 atraktivan, dopadljiv, najatraktivniji, atraktivnije, attraktivster, atraktivnije, privlačan, privlačan, attraktivst, atraktivan, najatraktivniji, atraktivnije, privlačan, privlačan, privlačan, privlačan
-Reciklaža | VVINF aufbereitetest 0,0040, aufbereitte, obrađuju, aufbereitten, aufbereite, obrađuju, aufbereittest, aufbereitetet, prečistač, aufbereitest, aufbereittet, reciklirani
-poboljšati | VVINF aufbessertest 0,0040 aufbesserten, aufbesseren, aufbessertet, podrsku, aufbesserst, aufbesserte, jačanje, aufbessere, aufbesser
-cvetaju | VVINF 0.0845
-Porast | VVINF 0.0040
-Pažnja | adjKs 0,0040 aufmerksamst, većina pažljivi, većina pažljivi, više upozorenja, pažljiv, aufmerksamster, aufmerksamstes, pažljivi, ljubazni, pažljiviji, pažljiviji, pažljivi, pažljivi, ljubazni, aufmerksamerem, pažljiv
-navijanje | VVINF bodrili 0,0040, aufmuntertet, aufmunterst, ohrabrujući, podsticanje niže, podsticanje niži aufmunterten, podsticanje test, navija, navijali
-ohrabrujući | adjKs 0.0040
-uspravno | adjKs 0,0040 aufrechtester, aufrechterem, aufrechtest, aufrechtestes, uspravno, aufrechtestem, aufrechtesten, više uspravno, uspravno, uspravno, uspravno, uspravno, uspravno, više uspravno, aufrechterer, najviše uspravno
-Iskreno | adjKs 0,0040 aufrichtigerem, iskreno, više pošten, iskren, više iskreno iskreno, iskrenije, aufrichtigster, iskreno, najiskrenije, pravi, iskreni, iskreno, iskreno, aufrichtigstem, iskren
-grlo | VVINF 0.0040
-Porast | VVINF 0.0040
-Povećanje | VVINF povećana 0,0040 aufstocket, aufstockest, top-up, aufstockten, aufstocktet, aufstockst, doliti, kada se sve više na bodovi, top-up test
-muster | VVINF 0.0040
-konzumiranje | adjKs 0.0040, skupo je, složen, skup, aufvendigstem, složene, razrađuje, složenije, složenije, razrađuje, složenije, luksuzno, složenije, razrađuje, aufvendigster, aufvendigstes
-upgrade | VVINF 0,0040 na vrednosti, revalorizacija, aufvertte, aufvertest, upgraded aufvertten, Aufvert, aufverttet, revalorizovano, aufverttest, poboljšava, aufvertetet, aufvertetest
-do | NAR 0.0040
-Remove | VVINF 0,0040 ausbaue, širi, test za proširenje, proširenja, ausbauet, gol za, proširenu ausbaust, ausbauest, sa mogućnošću proširenja, ausbautet
-train | VVINF 0.0040 obučeni, obučenih, formirane, ausbildte, ausbildten, obučeni, ausbildtet, su obuke, test obuka, ausbildetet, ausbildtest, obuka, trening sr
-izdržati | VVINF ausdauere 0,0040, izdržali, izdržljivost, ausdauerten, traje, ausdauerst, ausdauerte, ausdauertet, izdržljivost test, ausdaueren
-detalj | adjKs 0,0040 detaljan, detaljnija, detaljno, detaljno, detaljno, detaljno, detaljno, detaljno, ausfuhrlichster, ausfuhrlicherem, ausfuhrlichstem, najdetaljniji, detaljan, najdetaljniji, puna detalja, najdetaljniji
-Freaki | adjKs 0.0756
-ofset | adjKs 0.0987 uravnotežen, ausgeglichner, ausgeglichenst, uravnotežen, ravnomerno izbalansirane Kept, uravnotežen, ausgeglichnere, uravnotežen, uravnotežen, ausgeglichenster, ausgeglichneres, ausgeglichnerer, najviše uravnotežen, uravnotežen, uravnotežen, ausgeglichenstem, najviše uravnotežen, ausgeglichneren, ausgeglichnerem, više izbalansiran, pravednija, više izbalansiran
-ektended | adjKs 0.0040
-Balanced | adjKs 0206 ausgevogenstes, uravnotežen, ausgevogner, ausgevogenster, ausgevognere, ausgevognerem, ausgevogneren, ausgevogenst, ausgevognerer, ausgevogenstem, ausgevogneres, najviše uravnotežen, uravnotežen, pravičan, uravnotežen, uravnotežen, uravnotežen, više izbalansiran, više izbalansiran, više izbalansiran, više izbalansiran, pravični
-izabran | adjKs 0,0040 više selektivan, ausgevahltste, ausgevahltstem, ausgevahlteren, ausgevahlterem, izabrani, odabrani, izabrani, odabrani, ausgevahltster, ausgevahltstes, izabrana, ausgevahltsten, ausgevahlterer, ausgevahltst, izabran klijent
-nagrađena | adjKs 0.3146 više odličan, više odlično, najistaknutiji, više odličan, ausgezeichnetster, odlično, ausgezeichnetstes, odličan, ausgezeichnetst, istaknuti, odlično, odlično, ausgezeichnetstem, odlična, više istaknuti, više odličan
-nadoknaditi | VVINF 0.0040
-commented | VVINF 0.0040
-auskurieren | VVINF auskurierte 0,0040 auskurierst, auskurier, oporavlja od, auskuriere, auskurieret, auskurierest, oporavio od, auskuriertet, auskuriertest
-dovoljno | VVINF 0.0040
+adekvatnost,0.004
+afirmacije,0.004
+agilan,0.1959
+agilniji,0.1959
+agilnost,0.09995
+akcija,0.004
+akcije,0.004
+aktivan,0.0911
+aktivnije,0.0911
+aktivniji,0.0911
+aktivnost,0.004
+aktivnosti,0.004
+aktuelan,0.004
+aktuelnost,0.004
+akumulirati,0.004
+angažman,0.004
+angažovanja,0.004
+ankete,0.004
+anticiklon,0.004
+apelujući,0.3382
+aplauz,0.0871
+aplauzi,0.0871
+apsolutno,0.2418
+atrakcija,0.004
+atrakcije,0.004
+atraktivno,0.2162
+atraktivnost,0.004
+atraktivnosti,0.004
+autentično,0.1885
+autentičnost,0.004
+autonomija,0.004
+autonomije,0.004
+autonomno,0.004
+azuriranje,0.004
+balansiranje,0.004
+beneficija,0.004
+beneficije,0.004
+benefit,0.004
+besmrtnost,0.004
+besplatno,0.004
+bezbednost,0.004
+bezgraničnost,0.004
+blago,0.004
+blagostanje,0.004
+blaženstvo,0.004
+bodrenje,0.004
+bogatstvo,0.1246
+bolje,0.004
+bonus,0.004
+bonusi,0.004
+brak,0.004
+brakovi,0.004
+branilac,0.004
+bratstvo,0.004
+briga,0.004
+brzina,0.004
+budjenje,0.004
+budnost,0.004
+cenjeno,0.004
+ceremonija,0.004
+cilj,0.004
+culo,0.004
+cvetati,0.004
+cveće,0.004
+dalekovidost,0.004
+darovit,0.004
+delo,0.004
+detalj,0.004
+dešifrovanje,0.004
+dinamički,0.004
+disciplina,0.0611
+discipline,0.0611
+diskrecija,0.004
+divota,0.004
+dobit,0.004
+dobro,0.004
+dobrota,0.004
+dobrotvor,0.004
+dobrotvorno,0.004
+dobročinstvo,0.004
+dodaj,0.004
+dodatak,0.0882
+dohodak,0.004
+dominirati,0.4635
+donacija,0.004
+donacije,0.004
+donator,0.004
+donatori,0.004
+doprineti,0.004
+doslednost,0.004
+dostignuće,0.0884
+dostojanstvo,0.004
+dovoljno,0.004
+dozvola,0.004
+dozvole,0.004
+dragocenost,0.004
+dugovečnost,0.004
+efikasnost,0.004
+ekselencija,0.004
+ekselencije,0.004
+ekspertiza,0.004
+ekstenzija,0.004
+elegancija,0.004
+empatija,0.004
+entuzijazam,0.2182
+fantazija,0.075
+fascinacija,0.004
+favorites,0.0873
+favoriti,0.04565
+favorizovanje,0.004
+favorizovati,0.004
+favorizuje,0.004
+festivali,0.2346
+finansijer,0.004
+finansijeri,0.004
+finansijski,0.004
+finansiranje,0.004
+fitnes,0.004
+fleksibilnost,0.004
+fondacija,0.004
+funkcionisanje,0.004
+garancija,0.004
+garancije,0.004
+garderoba,0.004
+genijalnost,0.004
+genije,0.0697
+glamur,0.004
+glas,0.004
+glasanje,0.004
+glasati,0.004
+godisnjica,0.004
+gore,0.004
+gostoprimstvo,0.004
+gozba,0.2346
+graditi,0.004
+grejanje,0.004
+grlo,0.004
+harizma,0.004
+harmonija,0.0795
+hrabrost,0.6093
+humanost,0.004
+humor,0.3296
+impresioniran,0.2126
+impresivna,0.3408
+inauguracija,0.004
+individualnost,0.004
+individualnosti,0.004
+inovacije,0.004
+inspiracija,0.004
+inspiracije,0.004
+integritet,0.004
+intelekt,0.004
+inteligencija,0.004
+inteligencije,0.004
+interes,0.004
+investicije,0.004
+investicioni,0.004
+iskreno,0.004
+iskrenost,0.004
+iskustva,0.004
+iskustvo,0.046200000000000005
+ispravka,0.004
+ispravke,0.004
+ispravnost,0.004
+ispunjenja,0.004
+ispunjenje,0.004
+istaknuti,0.004
+istaknutiji,0.3146
+istina,0.004
+istrajnost,0.004
+izabrano,0.004
+izbalansiran,0.0987
+izbeglica,0.004
+izdržati,0.004
+izdržljivost,0.0886
+izuzetan,0.4515
+izuzetno,0.3395
+izvanredno,0.3395
+izveštaji,0.004
+jasnoca,0.004
+jača,0.004
+jačina,0.004
+jedinstvenost,0.004
+jedinstvo,0.004
+jednakost,0.004
+kapacitet,0.004
+kapital,0.004
+klicanje,0.004
+kohezija,0.1947
+komemoracija,0.004
+kompatibilnost,0.004
+kompenzacija,0.004
+kompletna,0.004
+kompliment,0.3323
+kompromis,0.004
+komunikacija,0.004
+komunikacije,0.004
+konsenzus,0.004
+konsolidacija,0.004
+konsolidacije,0.004
+konsultacija,0.004
+konsultacije,0.004
+kontinuitet,0.004
+koordinacija,0.004
+korekcija,0.004
+korekcije,0.004
+korist,0.004
+kraj,0.004
+kreativnost,0.0768
+kredibilitet,0.004
+kredit,0.004
+kreditni,0.004
+kupovina,0.004
+kupovine,0.004
+kupovinu,0.004
+kvalifikacije,0.004
+kvalifikacioni,0.004
+kvalitet,0.004
+kvaliteti,0.004
+lecenje,0.004
+legitimitet,0.004
+lek,0.044950000000000004
+lekovi,0.044950000000000004
+lepota,0.3286
+liberalizam,0.004
+licence,0.004
+lift,0.004
+ljubav,0.051250000000000004
+ljubaznost,0.004
+ljubaznosti,0.0913
+ljuljaška,0.0238
+lojalnost,0.004
+lukav,0.004
+luksuzni,0.004
+magija,0.004
+maksimalni,0.004
+marljivost,0.3113
+mekoća,0.004
+melodija,0.004
+mera,0.004
+milosrdne,0.0744
+milost,0.004
+milostiv,0.0744
+mir,0.25285
+miran,0.004
+miris,0.2149
+mirisi,0.2149
+mobilnost,0.004
+modernizacija,0.004
+modernost,0.004
+moral,0.004
+motivacija,0.004
+motivacioni,0.004
+mudrost,0.004
+nada,0.2038
+nadaren,0.004
+nade,0.2038
+nadležnost,0.004
+nadogradnja,0.004
+nadogradnje,0.004
+nadoknaditi,0.004
+nagrada,0.065975
+nagrade,0.04265
+nagrađena,0.3146
+najbolje,0.004
+najneobičniji,0.3395
+najviše,0.2344
+nakit,0.004
+naknada,0.004
+napredak,0.004
+napredovanje,0.004
+napretku,0.004
+narocito,0.5391
+naselja,0.004
+naselje,0.004
+naslednici,0.004
+nasleđe,0.004
+nasrtanje,0.004
+navala,0.004
+navija,0.004
+navijanje,0.004
+nazdravlja,0.3265
+nazdravljaju,0.3265
+nedodirljivost,0.004
+neobično,0.3395
+neodoljivost,0.004
+neophodnost,0.004
+nepogrešivost,0.004
+nepristrasnost,0.004
+neranjivost,0.004
+neustrašivost,0.004
+nevinost,0.004
+nezavisna,0.004
+nezavisnost,0.004
+nežno,0.004
+nivo,0.004
+njuh,0.2216
+nositi,0.004
+nosivost,0.004
+nosivosti,0.004
+novosti,0.004
+oaza,0.004
+obaveza,0.2157
+obezbedi,0.004
+obećanje,0.004
+obećavajući,0.004
+obnavljanje,0.004
+obnovljanje,0.004
+obogati,0.0718
+obogaćenje,0.004
+obogaćivanje,0.004
+obogaćuje,0.0718
+obozavaoci,0.004
+obožavanje,0.004
+obrazovanje,0.004
+obuciti,0.004
+obuhvatajući,0.004
+obuka,0.004
+odanost,0.2019
+odbrana,0.004
+odgovara,0.2344
+odgovornost,0.004
+odgovornosti,0.004
+odluka,0.0804
+odobrenja,0.004
+odobrenje,0.004
+održivost,0.004
+ohrabrenje,0.004
+ohrabrujući,0.004
+ojačanje,0.004
+okosnica,0.004
+okretan,0.1959
+okupljanje,0.004
+olakšanje,0.004
+olakšice,0.0875
+omiljeni,0.066475
+opcija,0.004
+opcije,0.004
+opojeno,0.0809
+oporavak,0.004
+oporaviti,0.004
+oprez,0.004
+opreza,0.004
+optimalnost,0.004
+optimist,0.0836
+optimisti,0.0836
+optimizam,0.0882
+organizacije,0.004
+originalni,0.1885
+originalnost,0.004
+osecanje,0.004
+osećaj,0.0884
+osiguranje,0.004
+oslobadjanje,0.004
+oslobađajuća,0.004
+oslobađajuće,0.004
+oslobodjenje,0.004
+oslobođen,0.004
+otkup,0.004
+otpor,0.004
+ozbiljnost,0.004
+oživi,0.004
+pamet,0.004
+partneri,0.004
+partnerski,0.0779
+partnerstva,0.0779
+pažnja,0.004
+pažnje,0.004
+penjanje,0.004
+penje,0.004
+perfekcionista,0.004
+perfekcionisti,0.004
+perfekcionizam,0.004
+pionirski,0.004
+plata,0.004
+plodnost,0.004
+plovnost,0.004
+pobeda,0.004
+pobednici,0.004
+pobednik,0.004
+poboljsati,0.004
+poboljšan,0.004
+poboljšanja,0.004
+poboljšanje,0.004
+poboljšati,0.004
+podešavanje,0.004
+podici,0.004
+podizanje,0.004
+podrska,0.004
+podrška,0.004
+podršku,0.004
+podsticaj,0.004
+podsticanje,0.004
+podsticati,0.004
+pogodba,0.004
+pogodnosti,0.004
+pohvala,0.52845
+pohvalno,0.004
+pojačanje,0.004
+pojednostavljenje,0.004
+poklon,0.27695000000000003
+pokloni,0.4792
+pokrivenost,0.004
+pokrovitelj,0.004
+pokrovitelji,0.004
+pokroviteljstvo,0.004
+pomilovanja,0.004
+pomilovanje,0.004
+pomirenje,0.004
+pomoc,0.004
+ponizan,0.0956
+ponos,0.0797
+ponuda,0.03755
+ponude,0.0711
+popravke,0.004
+popularan,0.2172
+popularniji,0.2172
+popularnost,0.004
+popustljivost,0.004
+porast,0.004
+poseban,0.004
+posedovanje,0.004
+postignuća,0.0884
+postojanost,0.004
+posveta,0.004
+potencija,0.004
+potpunost,0.004
+potraživanja,0.004
+potražnja,0.004
+potvrda,0.004
+potvrde,0.004
+potvrđuju,0.004
+potvrđujući,0.004
+pouzdan,0.004
+pouzdanost,0.004
+pouzdanosti,0.004
+poverenik,0.004
+poverenje,0.21195
+poveriti,0.004
+povećanje,0.004
+povećava,0.004
+povratak,0.0376
+povratkom,0.0712
+povratku,0.0712
+pozdraviti,0.004
+pozdravljati,0.004
+pozitivnost,0.004
+poznato,0.004
+poštovalac,0.004
+poštovanje,0.004
+poželjno,0.004
+praktičnost,0.004
+pravda,0.004
+pravednost,0.004
+pravo,0.004
+praznik,0.2346
+preciscavanje,0.004
+precizno,0.004
+preciznost,0.004
+predanost,0.2157
+prednosti,0.004
+predusetljivost,0.004
+preferencija,0.004
+preferencije,0.004
+premija,0.004
+preporuka,0.004
+preporuke,0.004
+prepoznati,0.004
+prestiž,0.004
+preventiva,0.004
+pridruživanje,0.004
+prihod,0.004
+prihodi,0.004
+prihvatanje,0.004
+prihvatiti,0.004
+prihvatljiv,0.004
+prihvatljivo,0.004
+prihvatljivost,0.004
+prijatelj,0.0116
+prijatelji,0.0116
+prijateljstva,0.2059
+prijateljstvo,0.2059
+prijatelju,0.0116
+prijatno,0.3447
+prijatnost,0.004
+prikladno,0.004
+prilagoditi,0.004
+prilagodljivo,0.0799
+prilagodljivost,0.004
+prilagođavanja,0.004
+priložiti,0.004
+primer,0.004
+priprema,0.004
+pristojno,0.0977
+pristojnost,0.004
+pristojnosti,0.004
+pristup,0.004
+pristupanja,0.004
+pristupanje,0.004
+pristupačnost,0.004
+pristupi,0.004
+pristupiti,0.004
+privilegija,0.004
+privlacno,0.2162
+privući,0.004
+priznanja,0.0855
+priznat,0.0785
+priznato,0.004
+priznavanje,0.0855
+procesuirati,0.004
+produktivnost,0.004
+produziti,0.004
+produžetak,0.004
+profit,0.004
+profitabilnost,0.004
+proizvod,0.004
+proizvoda,0.004
+proizvodi,0.004
+promišljeno,0.004
+promocija,0.0829
+promocije,0.0829
+proporcionalno,0.004
+prosireno,0.004
+proslava,0.0829
+proslave,0.0829
+prosperitet,0.004
+prostranost,0.004
+prosvećenje,0.004
+proširiti,0.004
+pružajući,0.004
+prvenstvo,0.004
+prvi,0.004
+punjenje,0.004
+punoća,0.004
+radišnost,0.3113
+raj,0.004
+rasplesti,0.004
+raspoloženja,0.1085
+rast,0.004
+razlikovati,0.004
+razlog,0.004
+razmatranje,0.004
+raznovrsni,0.5797
+raznovrsnost,0.004
+razum,0.004
+razumevanje,0.004
+razvedriti,0.004
+realizacija,0.004
+realizacije,0.004
+red,0.004
+redovnost,0.004
+regrutovanje,0.004
+rehabilitacija,0.004
+rekreacija,0.0865
+rekreaciju,0.0865
+relaksacija,0.0875
+relevantnost,0.004
+relevantnosti,0.004
+remek,0.004
+renoviranje,0.004
+reosiguranje,0.004
+reparacija,0.004
+reprezentativno,0.0931
+restauracija,0.004
+revolucionarno,0.004
+rešenje,0.004
+robusnost,0.004
+romantika,0.0688
+saglasnost,0.004
+sala,0.004
+samilostan,0.0744
+samostalna,0.004
+saosećajan,0.0744
+saosećanje,0.004
+saradnja,0.046650000000000004
+satisfakcija,0.004
+saveti,0.004
+savez,0.004
+savezi,0.004
+savezni,0.004
+saveznik,0.004
+savršenstvo,0.004
+senzacija,0.004
+shvatanje,0.004
+sigurnost,0.004
+sila,0.004
+simbioza,0.004
+simpatija,0.004
+sjaj,0.004
+sjaja,0.004
+skociti,0.004
+skok,0.004
+skroman,0.0956
+skromnost,0.0852
+skupo,0.004
+slava,0.004
+slave,0.004
+slavlje,0.004
+sloboda,0.004
+slobode,0.004
+sloziti,0.004
+sminka,0.004
+smiren,0.004
+smiruju,0.004
+snabdevanje,0.004
+snaga,0.004
+snalažljivost,0.004
+sofisticiran,0.2216
+solidarnost,0.004
+spas,0.0707
+specijalitet,0.004
+sporazum,0.004
+sporazuma,0.004
+spreman,0.004
+spremniji,0.004
+spremnost,0.004
+spretnost,0.004
+sreća,0.2452
+stabilnost,0.004
+stedljivost,0.004
+stil,0.3398
+stimulacija,0.004
+strahopoštovanje,0.004
+strast,0.004
+strasti,0.004
+strpljenje,0.0789
+stručan,0.004
+stručnjaci,0.004
+stručnost,0.004
+subvencija,0.004
+subvencije,0.004
+sudbina,0.004
+superlativ,0.004
+suplement,0.004
+suplementi,0.004
+susedstvo,0.0911
+svetilište,40.0
+svečanost,0.004
+svidjanje,0.3349
+talenat,0.3352
+tačnost,0.004
+temeljitost,0.004
+tendencija,0.004
+težnja,0.004
+tolerancija,0.004
+tolerancije,0.004
+toplota,0.004
+tradicija,0.004
+tradicije,0.004
+traženo,0.004
+treasure,0.1096
+tretman,0.004
+tretmani,0.004
+tretmanu,0.004
+trijumf,0.004
+trofej,0.004
+tvrdnja,0.004
+ublaziti,0.1725
+ublažiti,0.004
+ubrzanja,0.004
+ubrzanje,0.004
+ubrzano,0.004
+ubrzati,0.004
+udobno,0.21755
+udobnost,0.1808
+udruženja,0.004
+ugled,0.004
+ugovor,0.004
+um,0.004
+umirenje,0.004
+umirujuće,0.2133
+univerzalan,0.004
+upornost,0.004
+upotrebljivost,0.004
+upoznavanje,0.004
+ura,0.004
+uravnotežen,0.0987
+uredno,0.1987
+uređenje,0.004
+usklađenost,0.004
+usklađivanje,0.004
+usluge,0.004
+uspeh,0.28055
+uspon,0.004
+uspravno,0.004
+uteha,0.0706
+uvećanje,0.004
+uzbuditi,0.4324
+uzbuđenje,0.0884
+uzbuđeno,0.4324
+učešće,0.004
+uštede,0.004
+uživanje,0.073
+užurbanost,0.004
+validnost,0.004
+varijanta,0.004
+vaskrsenja,0.004
+vaskrsenje,0.004
+važnije,0.004
+važno,0.004
+vedrina,0.0721
+velelepnost,0.004
+velicanstveno,0.004
+veličina,0.004
+veličine,0.004
+vera,0.004
+veridba,0.004
+verodostojnost,0.004
+veru,0.004
+veselje,0.004
+veselost,0.004
+veština,0.0466
+veštine,0.0466
+visok,0.004
+vitalnost,0.004
+vizionar,0.004
+vlasništvu,0.004
+vlastiti,0.004
+vodič,0.004
+vodiči,0.004
+volja,0.004
+vrednih,0.004
+vrednost,0.004
+vrhunac,0.004
+zabava,0.2429
+zadovoljavajuće,0.2152
+zadovoljiti,0.0809
+zadovoljno,0.4324
+zadovoljstva,0.36014999999999997
+zadovoljstvo,0.39366875
+zagrevati,0.004
+zahtev,0.004
+zahtevanje,0.004
+zahvalnost,0.004
+zajednica,0.004
+zajednice,0.004
+zajedništvo,0.004
+zakonitost,0.004
+zapamtiti,0.004
+zapanjujući,0.3261
+zarada,0.004
+zastita,0.004
+zastupanje,0.004
+zategnuti,0.004
+zatvaranje,0.004
+zauzet,0.004
+zavidan,0.004
+zavidno,0.004
+zavisnost,0.004
+završetak,0.004
+završni,0.004
+zdravica,0.3265
+zdravlje,0.004
+zenit,0.004
+zgodan,0.2344
+znaciti,0.004
+znanje,0.004
+značajan,0.4515
+značajnije,0.004
+značajnijih,0.004
+značajno,0.004
+značenja,0.004
+značenje,0.004
+čast,0.0732
+čekić,0.004
+čestitka,0.2193
+čistoća,0.03975
+čišćenje,0.004
+član,0.004
+čovečanstvo,0.004
+čudo,0.0741
+čula,0.004
+čuvani,0.004
+čuvanje,0.004
+šampion,0.004
+šampiona,0.004
+šarm,0.004
+štednja,0.004
+štednje,0.004

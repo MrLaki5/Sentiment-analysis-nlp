@@ -1,0 +1,18 @@
+# OSX file system stuff
+.DS_Store
+
+#Visual studio code stuff
+.vs
+
+#pyCharm stuff
+.idea/
+
+venv/
+
+src/stemmer/temp_in\.txt
+
+src/stemmer/temp_out\.txt
+
+src/__pycache__/
+
+src/stemmer/__pycache__/
