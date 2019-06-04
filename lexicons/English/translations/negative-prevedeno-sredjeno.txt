@@ -3352,7 +3352,8 @@ zvečke
 živce
 žlebove
 žrtva
-žrtvenižrtvovali
+žrtveni
+žrtvovali
 žuljevit
 žurba
 žuri
