@@ -22,7 +22,7 @@ def call_stemmer(stemm_text):
     with open("./stemmer/temp_in.txt", "w", encoding="utf8") as f:
         f.write(stemm_text)
 
-    stemmer.stemm(stemmer.STEM_OPTION_KESELJ_SIPKA_GREEDY, "./stemmer/temp_in.txt", "./stemmer/temp_in.txt")
+    stemmer.stemm(stemmer.STEM_OPTION_KESELJ_SIPKA_GREEDY, "./stemmer/temp_in.txt", "./stemmer/temp_out.txt")
 
     # Load stemmed data set
     with open("./stemmer/temp_out.txt", encoding="utf8") as f:
@@ -65,15 +65,8 @@ def stem_dictionary(st_dict):
 
 
 # START MAIN
-# Load data set
-data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
-text = data_set['Text'][0]
-text = prepare_for_stemming(text)
-text = call_stemmer(text)
-# Tokenize data set
-tokens = tokenizer.text_to_tokens(text)
-print(tokens)
-
+# Load dictionaries
+# English
 engDict = buildEnglish()
 engDictStemmed = stem_dictionary(engDict)
 cnt = 0
@@ -81,7 +74,7 @@ for item in engDictStemmed:
     if len(engDictStemmed[item]) > 1:
         print(cnt, item, engDictStemmed[item])
         cnt += 1
-
+# German
 gerDict = build_german()
 gerDictStemmed = stem_dictionary(gerDict)
 cnt = 0
@@ -89,3 +82,16 @@ for item in gerDictStemmed:
     if len(gerDictStemmed[item]) > 1:
         print(cnt, item, gerDictStemmed[item])
         cnt += 1
+
+# Load data set
+data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
+# Iterate through data set
+for index, row in data_set.iterrows():
+    print(row[0])
+    text = row[0]
+    text = prepare_for_stemming(text)
+    text = call_stemmer(text)
+    # Tokenize data set
+    tokens = tokenizer.text_to_tokens(text)
+    print(tokens)
+    print("Value: " + row[1])
