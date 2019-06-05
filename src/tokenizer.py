@@ -14,5 +14,6 @@ def text_to_tokens(text):
     punkt = string.punctuation
     punkt += '”'
     punkt += '“'
+    punkt += "’"
     tokens = [x.lower() for x in tokens if not re.fullmatch('[' + punkt + ']+', x)]
     return tokens

@@ -91,7 +91,20 @@ for index, row in data_set.iterrows():
     text = row[0]
     text = prepare_for_stemming(text)
     text = call_stemmer(text)
-    # Tokenize data set
-    tokens = tokenizer.text_to_tokens(text)
-    print(tokens)
+    # Generate tokens for data set
+    tokens_original = tokenizer.text_to_tokens(row[0])
+    token_text = ""
+    for i in tokens_original:
+        token_text = token_text + i + "\n"
+    token_text = call_stemmer(token_text)
+    tokens_stemmed = token_text.split("\n")
+    cnt = 0
+    while cnt < len(tokens_original):
+        if tokens_stemmed[cnt] == "":
+            del tokens_stemmed[cnt]
+            del tokens_original[cnt]
+        else:
+            cnt += 1
+    for i, j in zip(tokens_stemmed, tokens_original):
+        print(i + " " + j)
     print("Value: " + row[1])
