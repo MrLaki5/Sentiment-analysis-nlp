@@ -1,42 +1,46 @@
 import pandas as pd
 from stemmer import stemmer
 import tokenizer
+from eng_dict import buildEnglish
+from ger_dict import build_german
 
-from lexicons.English.translations.tools.eng_dict import buildEnglish
+
+def prepare_for_stemming(prep_text):
+    prep_text = prep_text.replace("č", "cx")
+    prep_text = prep_text.replace("ć", "cy")
+    prep_text = prep_text.replace("dž", "dx")
+    prep_text = prep_text.replace("đ", "dy")
+    prep_text = prep_text.replace("ž", "zx")
+    prep_text = prep_text.replace("š", "sx")
+    prep_text = prep_text.replace("nj", "ny")
+    prep_text = prep_text.replace("lj", "ly")
+    return prep_text
 
 
-def prepareForStemming(text):
-    text = text.replace("č", "cx")
-    text = text.replace("ć", "cy")
-    text = text.replace("dž", "dx")
-    text = text.replace("đ", "dy")
-    text = text.replace("ž", "zx")
-    text = text.replace("š", "sx")
-    text = text.replace("nj", "ny")
-    text = text.replace("lj", "ly")
-    return text
-
-def callStemmer(text, output_path):
+def call_stemmer(stemm_text):
     # Stemm data set
     with open("./stemmer/temp_in.txt", "w", encoding="utf8") as f:
-        f.write(text)
+        f.write(stemm_text)
 
-    stemmer.stemm(stemmer.STEM_OPTION_KESELJ_SIPKA_GREEDY, "./stemmer/temp_in.txt", output_path)
+    stemmer.stemm(stemmer.STEM_OPTION_KESELJ_SIPKA_GREEDY, "./stemmer/temp_in.txt", "./stemmer/temp_in.txt")
 
     # Load stemmed data set
     with open("./stemmer/temp_out.txt", encoding="utf8") as f:
-        text = f.read()
+        stemm_text = f.read()
 
     # Return the result of stemming
-    return text
+    return stemm_text
 
-def stemDictionary(dict):
+
+def stem_dictionary(st_dict):
     temp = []
     originals = []
-    stemmedDictionary = {}
-    for word in dict:
+    stemmed_dictionary = {}
+
+    for word in st_dict:
         originals.append(word)
-        temp.append(prepareForStemming(word)+","+str(dict[word]))
+        temp.append(prepare_for_stemming(word)+","+str(st_dict[word]))
+
     with open("./stemmer/temp_in.txt", "w", encoding="utf8") as f:
         for item in temp:
             f.write(item)
@@ -51,44 +55,37 @@ def stemDictionary(dict):
             stem = items[0]
             sentiment = items[1]
             sentiment = sentiment[:sentiment.find("\n")]
-            sentiment = int(sentiment)
-            if stem not in stemmedDictionary:
-                stemmedDictionary[stem] = {}
-            stemmedDictionary[stem][originals[line_counter]] = sentiment
+            sentiment = float(sentiment)
+            if stem not in stemmed_dictionary:
+                stemmed_dictionary[stem] = {}
+            stemmed_dictionary[stem][originals[line_counter]] = sentiment
+            line_counter += 1
 
-            line_counter+=1
+    return stemmed_dictionary
 
-    return stemmedDictionary
 
 # START MAIN
-
 # Load data set
 data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 text = data_set['Text'][0]
-text = prepareForStemming(text)
-
-callStemmer(text, "./stemmer/temp_out.txt")
-
-# Stemm data set
-#with open("./stemmer/temp_in.txt", "w", encoding="utf8") as f:
-#    f.write(text)
-#
-#stemmer.stemm(stemmer.STEM_OPTION_KESELJ_SIPKA_GREEDY, "./stemmer/temp_in.txt", "./stemmer/temp_out.txt")
-#
-## Load stemmed data set
-#with open("./stemmer/temp_out.txt", encoding="utf8") as f:
-#    text = f.read()
-
+text = prepare_for_stemming(text)
+text = call_stemmer(text)
 # Tokenize data set
 tokens = tokenizer.text_to_tokens(text)
 print(tokens)
 
 engDict = buildEnglish()
-engDictStemmed = stemDictionary(engDict)
-
-print(engDictStemmed)
+engDictStemmed = stem_dictionary(engDict)
 cnt = 0
 for item in engDictStemmed:
     if len(engDictStemmed[item]) > 1:
         print(cnt, item, engDictStemmed[item])
+        cnt += 1
+
+gerDict = build_german()
+gerDictStemmed = stem_dictionary(gerDict)
+cnt = 0
+for item in gerDictStemmed:
+    if len(gerDictStemmed[item]) > 1:
+        print(cnt, item, gerDictStemmed[item])
         cnt += 1

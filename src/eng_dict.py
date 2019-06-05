@@ -1,8 +1,6 @@
 pathPositive = "../lexicons/English/translations/positive-prevedeno-sredjeno.txt"
 pathNegative = "../lexicons/English/translations/negative-prevedeno-sredjeno.txt"
 
-#pathPositive = "../positive-prevedeno-sredjeno.txt"
-#pathNegative = "../negative-prevedeno-sredjeno.txt"
 
 def constructEngLexicon(positives, negatives):
     engDict = {}
