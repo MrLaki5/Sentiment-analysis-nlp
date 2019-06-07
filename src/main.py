@@ -8,26 +8,39 @@ from src.naive_bayes import naive_bayes
 import os.path
 import comment_process_pool
 import plotting
+import logging
+from sklearn.metrics import accuracy_score
+
+logging.basicConfig(level=logging.DEBUG)
 
 
 # Function for calculating sum of weights of comment from specific dictionary
-def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter):
+def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter, is_ger):
     summ = 0
     for token, stemm_token in zip(t_original, t_stemmed):
+        # TODO do something with this kind of words
+        if token == "ne":
+            continue
         if stemm_token in dict_curr:
             min_distance = -1
             temp_weight = 0
-
+            temp_word = ""
+            temp_stem = ""
+            temp_key = ""
             for key in dict_curr[stemm_token].keys():
                 curr_distance = levenshtein.iterative_levenshtein(key, token)
                 if curr_distance < min_distance or min_distance < 0:
                     min_distance = curr_distance
                     temp_weight = dict_curr[stemm_token][key]
-            if temp_weight <= distance_filter:
-                # TODO remove if needed :)
-                #if temp_weight < 0:
+                    temp_word = token
+                    temp_stem = stemm_token
+                    temp_key = key
+            if min_distance <= distance_filter:
+                # if temp_weight < 0:
                 #    temp_weight *= 0.44
                 summ += temp_weight
+                if is_ger:
+                    logging.debug("Comment word: " + temp_word + ", stem: " + temp_stem + ", paired word: " + temp_key + ", Weight: " + str(temp_weight) + ", distance: " + str(min_distance))
     return summ
 
 
@@ -89,8 +102,8 @@ while work_flag == 1:
                 sentiment_class = data['class_att']
                 tokens_stemmed = data['tokens_original']
                 tokens_original = data['tokens_stemmed']
-                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 5)
-                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 5)
+                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 1, False)
+                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 1, True)
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
@@ -120,8 +133,10 @@ while work_flag == 1:
                     y_true.append(-1)
             cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, plotting.LABELS_TWO_CLASS, title="Eng leksikon")
             plotting.show_confusion_matrix()
+            print(accuracy_score(y_true, y_eng))
             cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, plotting.LABELS_TWO_CLASS, title="Ger leksikon")
             plotting.show_confusion_matrix()
+            print(accuracy_score(y_true, y_ger))
 
 
             print("Finished")
