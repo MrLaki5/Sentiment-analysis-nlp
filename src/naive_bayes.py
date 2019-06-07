@@ -5,6 +5,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score
 import tokenizer
+import plotting
 
 def naive_bayes():
     train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')
@@ -22,4 +23,10 @@ def naive_bayes():
     naive_bayes.fit(train_X_tfidf, train_y)
 
     y_pred = naive_bayes.predict(val_X_tfidf)
+
+    plotting.calculate_confusion_matrix(val_y, y_pred, plotting.LABELS_TWO_CLASS)
+    plotting.show_confusion_matrix()
+
     return accuracy_score(val_y, y_pred)
+
+print(naive_bayes())
