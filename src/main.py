@@ -5,6 +5,8 @@ from eng_dict import buildEnglish
 from ger_dict import build_german
 import levenshtein
 
+from src.naive_bayes import naive_bayes
+
 
 def prepare_for_stemming(prep_text):
     prep_text = prep_text.replace("č", "cx")
@@ -150,5 +152,8 @@ for index, row in data_set.iterrows():
     list_summ_eng.append(summ_eng)
     list_summ_ger.append(summ_ger)
     list_out.append(sentiment_class)
+
+# Naive Bayes
+print(naive_bayes())
 
 print("Finished")
