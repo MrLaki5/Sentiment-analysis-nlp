@@ -8,10 +8,11 @@ def constructEngLexicon(positives, negatives):
         for line in f1:
             word = line[:line.find("\n")]
             engDict[word] = 1
+
     with open(negatives, encoding='utf-8') as f2:
         for line in f2:
             word = line[:line.find("\n")]
-            if word in engDict:    
+            if word in engDict:
                 engDict[word] = 0
             else:
                 engDict[word] = -1

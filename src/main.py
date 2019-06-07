@@ -7,6 +7,7 @@ import json
 from src.naive_bayes import naive_bayes
 import os.path
 import comment_process_pool
+import plotting
 
 
 # Function for calculating sum of weights of comment from specific dictionary
@@ -24,8 +25,8 @@ def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter
                     temp_weight = dict_curr[stemm_token][key]
             if temp_weight <= distance_filter:
                 # TODO remove if needed :)
-                if temp_weight < 0:
-                    temp_weight *= 0.44
+                #if temp_weight < 0:
+                #    temp_weight *= 0.44
                 summ += temp_weight
     return summ
 
@@ -88,8 +89,8 @@ while work_flag == 1:
                 sentiment_class = data['class_att']
                 tokens_stemmed = data['tokens_original']
                 tokens_original = data['tokens_stemmed']
-                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 80)
-                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 80)
+                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 5)
+                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 5)
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
@@ -97,6 +98,32 @@ while work_flag == 1:
             print("List of sum eng dic:" + str(list_summ_eng))
             print("List of sum ger dic:" + str(list_summ_ger))
             print("List of should outcome:" + str(list_out))
+
+            # Calculate accuracy and confusion matrix
+            y_ger = []
+            y_eng = []
+            y_true = []
+            for y in list_summ_ger:
+                if y>0:
+                    y_ger.append(1)
+                else:
+                    y_ger.append(-1)
+            for y in list_summ_eng:
+                if y>0:
+                    y_eng.append(1)
+                else:
+                    y_eng.append(-1)
+            for y in list_out:
+                if y=='POSITIVE':
+                    y_true.append(1)
+                else:
+                    y_true.append(-1)
+            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, plotting.LABELS_TWO_CLASS, title="Eng leksikon")
+            plotting.show_confusion_matrix()
+            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, plotting.LABELS_TWO_CLASS, title="Ger leksikon")
+            plotting.show_confusion_matrix()
+
+
             print("Finished")
         else:
             print("Tokenization of comment has not been done.")

@@ -18,7 +18,8 @@ def calculate_confusion_matrix(y_true, y_pred, class_labels):
     ax.yaxis.set_ticklabels(class_labels)
     return cm
 
-def calculate_normalized_confusion_matrix(y_true, y_pred, class_labels, title = "Normalized confusion matrix"):
+
+def calculate_normalized_confusion_matrix(y_true, y_pred, class_labels, title="Normalized confusion matrix"):
     cm = confusion_matrix(y_true, y_pred)
     cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
     ax = plt.subplot()
