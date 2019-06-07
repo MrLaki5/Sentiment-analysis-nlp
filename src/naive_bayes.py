@@ -29,4 +29,4 @@ def naive_bayes():
 
     return accuracy_score(val_y, y_pred)
 
-print(naive_bayes())
+# print(naive_bayes())
