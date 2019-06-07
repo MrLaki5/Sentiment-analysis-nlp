@@ -3,6 +3,7 @@ from stemmer import stemmer
 import tokenizer
 from eng_dict import buildEnglish
 from ger_dict import build_german
+import levenshtein
 
 
 def prepare_for_stemming(prep_text):
@@ -84,6 +85,26 @@ def zip_comment(raw_text):
     return zipped
 
 
+def comment_weight_calculation(dict_curr, tokens, distance_filter):
+    summ = 0
+    for token, stemm_token in tokens:
+        if stemm_token in dict_curr:
+            min_distance = -1
+            temp_weight = 0
+
+            for key in dict_curr[stemm_token].keys():
+                curr_distance = levenshtein.iterative_levenshtein(key, token)
+                if curr_distance < min_distance or min_distance < 0:
+                    min_distance = curr_distance
+                    temp_weight = dict_curr[stemm_token][key]
+            if temp_weight <= distance_filter:
+                # TODO remove if needed :)
+                if temp_weight < 0:
+                    temp_weight *= 0.44
+                summ += temp_weight
+    return summ
+
+
 # START MAIN
 # Load dictionaries
 # English
@@ -113,13 +134,21 @@ with open("./stemmer/logs/log_nonlinear_ger.txt", "w", encoding="utf8") as f:
                 f.write("\n\t" + key + " -> " + str(gerDictStemmed[item][key]))
             cnt += 1
 
+list_summ_ger = []
+list_summ_eng = []
+list_out = []
+
 # Load data set
 data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 # Iterate through data set
 for index, row in data_set.iterrows():
     raw_text = row['Text']
-    zipped = zip(raw_text)
     sentiment_class = row['class-att']
-    #TODO call comment_wait_calculation for engDict and gerDict
+    zipped_tokens = zip_comment(raw_text)
+    summ_eng = comment_weight_calculation(engDictStemmed, zipped_tokens, 80)
+    summ_ger = comment_weight_calculation(gerDictStemmed,  zipped_tokens, 80)
+    list_summ_eng.append(summ_eng)
+    list_summ_ger.append(summ_ger)
+    list_out.append(sentiment_class)
 
 print("Finished")
