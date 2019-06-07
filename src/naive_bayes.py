@@ -24,7 +24,7 @@ def naive_bayes():
 
     y_pred = naive_bayes.predict(val_X_tfidf)
 
-    plotting.calculate_confusion_matrix(val_y, y_pred, plotting.LABELS_TWO_CLASS)
+    plotting.calculate_normalized_confusion_matrix(val_y, y_pred, plotting.LABELS_TWO_CLASS)
     plotting.show_confusion_matrix()
 
     return accuracy_score(val_y, y_pred)

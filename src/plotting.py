@@ -18,14 +18,14 @@ def calculate_confusion_matrix(y_true, y_pred, class_labels):
     ax.yaxis.set_ticklabels(class_labels)
     return cm
 
-def calculate_normalized_confusion_matrix(y_true, y_pred, class_labels):
+def calculate_normalized_confusion_matrix(y_true, y_pred, class_labels, title = "Normalized confusion matrix"):
     cm = confusion_matrix(y_true, y_pred)
     cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
     ax = plt.subplot()
     sns.heatmap(cm, annot=True, ax=ax, cmap='Greens')
     ax.set_xlabel('Predicted labels')
     ax.set_ylabel('True labels')
-    ax.set_title('Confusion Matrix')
+    ax.set_title(title)
     ax.xaxis.set_ticklabels(class_labels)
     ax.yaxis.set_ticklabels(class_labels)
     return cm
