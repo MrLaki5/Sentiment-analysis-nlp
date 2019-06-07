@@ -1,0 +1,3167 @@
+
+
+0: bla
+Items(3): 
+	blag -> 1.0
+	blago -> 1.0
+	bla -> -1.0
+
+1: blaž
+Items(2): 
+	blažen -> 1.0
+	blaženo -> 1.0
+
+2: bonus
+Items(2): 
+	bonus -> 1.0
+	bonuse -> 1.0
+
+3: božanstv
+Items(2): 
+	božanstven -> 1.0
+	božanstveno -> 1.0
+
+4: bri
+Items(3): 
+	britak -> 1.0
+	brige -> -1.0
+	brine -> -1.0
+
+5: br
+Items(3): 
+	briše -> 1.0
+	brže -> 1.0
+	bruto -> -1.0
+
+6: buda
+Items(2): 
+	budan -> 1.0
+	budala -> -1.0
+
+7: buja
+Items(2): 
+	bujan -> 1.0
+	bujati -> 1.0
+
+8: c
+Items(2): 
+	ceni -> 1.0
+	cene -> -1.0
+
+9: cen
+Items(3): 
+	cenim -> 1.0
+	ceniti -> 1.0
+	cenjen -> 1.0
+
+10: d
+Items(2): 
+	divan -> 1.0
+	delo -> -1.0
+
+11: div
+Items(2): 
+	divili -> 1.0
+	divno -> 1.0
+
+12: dob
+Items(2): 
+	dobit -> 1.0
+	dobiti -> 1.0
+
+13: dobrob
+Items(2): 
+	dobrobit -> 1.0
+	dobrobiti -> 1.0
+
+14: dobrotvor
+Items(2): 
+	dobrotvor -> 1.0
+	dobrotvorne -> 1.0
+
+15: doli
+Items(2): 
+	dolikuje -> 1.0
+	dolikovati -> -1.0
+
+16: dominira
+Items(2): 
+	dominirala -> 1.0
+	dominirati -> 1.0
+
+17: dostojanstv
+Items(3): 
+	dostojanstven -> 1.0
+	dostojanstveno -> 1.0
+	dostojanstvo -> 1.0
+
+18: dragoc
+Items(2): 
+	dragocen -> 1.0
+	dragoceno -> 1.0
+
+19: društv
+Items(2): 
+	društven -> 1.0
+	društveno -> 1.0
+
+20: dušev
+Items(2): 
+	duševni -> 1.0
+	duševna -> -1.0
+
+21: garancij
+Items(2): 
+	garancija -> 1.0
+	garancije -> 1.0
+
+22: glas
+Items(3): 
+	glasno -> 0.0
+	glas -> -1.0
+	glasu -> -1.0
+
+23: gla
+Items(2): 
+	glatka -> 1.0
+	glatko -> 0.0
+
+24: glav
+Items(2): 
+	glavni -> 1.0
+	glave -> -1.0
+
+25: hipnot
+Items(2): 
+	hipnotisan -> 1.0
+	hipnotisati -> 1.0
+
+26: hit
+Items(3): 
+	hit -> 1.0
+	hitne -> -1.0
+	hitno -> -1.0
+
+27: hva
+Items(2): 
+	hvala -> 1.0
+	hvaljena -> 1.0
+
+28: hval
+Items(2): 
+	hvaliti -> 1.0
+	hvalim -> -1.0
+
+29: ideal
+Items(2): 
+	ideal -> 1.0
+	idealno -> 1.0
+
+30: impresionira
+Items(2): 
+	impresioniran -> 1.0
+	impresionirati -> 1.0
+
+31: inspir
+Items(2): 
+	inspiriše -> 1.0
+	inspirišući -> 1.0
+
+32: instrumental
+Items(2): 
+	instrumental -> 1.0
+	instrumentalno -> 1.0
+
+33: interes
+Items(2): 
+	interesima -> 1.0
+	interes -> -1.0
+
+34: iskr
+Items(3): 
+	iskra -> 1.0
+	iskren -> 1.0
+	iskreno -> 1.0
+
+35: iskušenj
+Items(2): 
+	iskušenje -> 0.0
+	iskušenja -> -1.0
+
+36: isprav
+Items(2): 
+	ispraviti -> 1.0
+	ispravno -> 1.0
+
+37: jač
+Items(2): 
+	jača -> 1.0
+	jači -> 1.0
+
+38: jefti
+Items(2): 
+	jeftino -> 0.0
+	jeftini -> -1.0
+
+39: koris
+Items(3): 
+	korisno -> 1.0
+	korist -> 1.0
+	koristi -> -1.0
+
+40: kvalifi
+Items(2): 
+	kvalifikovan -> 1.0
+	kvalifikovati -> 1.0
+
+41: laga
+Items(2): 
+	lagano -> 1.0
+	lagali -> -1.0
+
+42: laskav
+Items(2): 
+	laskav -> 1.0
+	laskavo -> 1.0
+
+43: lep
+Items(4): 
+	lep -> 1.0
+	lepa -> 1.0
+	lepo -> 1.0
+	lepše -> 1.0
+
+44: li
+Items(2): 
+	like -> 1.0
+	likovati -> 1.0
+
+45: ljubav
+Items(2): 
+	ljubav -> 1.0
+	ljubavi -> -1.0
+
+46: luksuz
+Items(2): 
+	luksuz -> 1.0
+	luksuzno -> 1.0
+
+47: mam
+Items(2): 
+	mami -> 1.0
+	mamac -> -1.0
+
+48: marljiv
+Items(2): 
+	marljiv -> 1.0
+	marljivo -> 1.0
+
+49: mek
+Items(2): 
+	mek -> 1.0
+	mekše -> 1.0
+
+50: milostiv
+Items(2): 
+	milostiv -> 1.0
+	milostivo -> 1.0
+
+51: mir
+Items(3): 
+	mir -> 1.0
+	mirno -> 1.0
+	mirisao -> -1.0
+
+52: miris
+Items(4): 
+	mirisna -> 1.0
+	miris -> -1.0
+	mirisa -> -1.0
+	mirisi -> -1.0
+
+53: moć
+Items(2): 
+	moćna -> 1.0
+	moćno -> 1.0
+
+54: muč
+Items(3): 
+	muči -> 0.0
+	mučeni -> -1.0
+	mučiti -> -1.0
+
+55: nadmaš
+Items(3): 
+	nadmašio -> 1.0
+	nadmašiti -> 1.0
+	nadmašuje -> 1.0
+
+56: nagrad
+Items(4): 
+	nagrada -> 1.0
+	nagrade -> 1.0
+	nagradu -> 1.0
+	nagrađeni -> 1.0
+
+57: napreda
+Items(2): 
+	napredak -> 1.0
+	napredan -> 1.0
+
+58: napred
+Items(2): 
+	napredovanje -> 1.0
+	napredovati -> 1.0
+
+59: nasmeja
+Items(2): 
+	nasmejana -> 1.0
+	nasmejali -> -1.0
+
+60: nedvosmisl
+Items(2): 
+	nedvosmislen -> 1.0
+	nedvosmisleno -> 0.0
+
+61: ne
+Items(2): 
+	negovati -> 1.0
+	nema -> -1.0
+
+62: neodoljiv
+Items(2): 
+	neodoljiv -> 1.0
+	neodoljivo -> 1.0
+
+63: neogranič
+Items(2): 
+	neograničen -> 1.0
+	neograničeno -> 1.0
+
+64: nepogrešiv
+Items(2): 
+	nepogrešiv -> 1.0
+	nepogrešivo -> 1.0
+
+65: neprocenjiv
+Items(2): 
+	neprocenjiv -> 1.0
+	neprocenjivo -> 1.0
+
+66: neupit
+Items(2): 
+	neupitna -> 1.0
+	neupitno -> 1.0
+
+67: neustrašiv
+Items(2): 
+	neustrašiv -> 1.0
+	neustrašivo -> 1.0
+
+68: nežnos
+Items(2): 
+	nežnost -> 1.0
+	nežnosti -> -1.0
+
+69: obil
+Items(2): 
+	obilovati -> 1.0
+	obiluje -> 1.0
+
+70: obožava
+Items(3): 
+	obožavalac -> 1.0
+	obožavan -> 1.0
+	obožavati -> 1.0
+
+71: odobr
+Items(2): 
+	odobri -> 1.0
+	odobrio -> 1.0
+
+72: ogrom
+Items(2): 
+	ogromno -> 1.0
+	ogromna -> -1.0
+
+73: ohrabr
+Items(4): 
+	ohrabri -> 1.0
+	ohrabriti -> 1.0
+	ohrabruje -> 1.0
+	ohrabrujući -> 1.0
+
+74: olakša
+Items(2): 
+	olakšano -> 1.0
+	olakšati -> 1.0
+
+75: oprez
+Items(3): 
+	oprezno -> 0.0
+	oprez -> -1.0
+	oprezni -> -1.0
+
+76: opsesij
+Items(2): 
+	opsesija -> 1.0
+	opsesije -> 1.0
+
+77: opuš
+Items(3): 
+	opušten -> 1.0
+	opušteno -> 1.0
+	opuštene -> -1.0
+
+78: opčin
+Items(2): 
+	opčiniti -> 1.0
+	opčinjen -> 1.0
+
+79: oslobod
+Items(3): 
+	oslobodio -> 1.0
+	osloboditi -> 0.0
+	oslobođen -> 1.0
+
+80: osnaž
+Items(2): 
+	osnažiti -> 1.0
+	osnažujući -> 1.0
+
+81: ostvar
+Items(2): 
+	ostvaren -> 1.0
+	ostvariti -> 1.0
+
+82: osvet
+Items(2): 
+	osvetli -> 1.0
+	osvetu -> -1.0
+
+83: osvež
+Items(2): 
+	osvežen -> 1.0
+	osveži -> 1.0
+
+84: očara
+Items(2): 
+	očaran -> 1.0
+	očarati -> 1.0
+
+85: očis
+Items(2): 
+	očišćen -> 1.0
+	očistiti -> -1.0
+
+86: oštr
+Items(4): 
+	oštro -> 0.0
+	oštre -> -1.0
+	oštri -> -1.0
+	oštrom -> -1.0
+
+87: plemenit
+Items(2): 
+	plemenita -> 1.0
+	plemenito -> 1.0
+
+88: pobed
+Items(3): 
+	pobeda -> 1.0
+	pobedio -> 1.0
+	pobediti -> 1.0
+
+89: poboljšanj
+Items(2): 
+	poboljšanja -> 1.0
+	poboljšanje -> 1.0
+
+90: poboljša
+Items(3): 
+	poboljšano -> 1.0
+	poboljšati -> 1.0
+	poboljšan -> -1.0
+
+91: podrš
+Items(2): 
+	podrška -> 1.0
+	podršku -> -1.0
+
+92: podrža
+Items(2): 
+	podržao -> 1.0
+	podržan -> -1.0
+
+93: pogoda
+Items(2): 
+	pogodak -> 1.0
+	pogodan -> 1.0
+
+94: pohva
+Items(2): 
+	pohvala -> 1.0
+	pohvale -> 1.0
+
+95: pohval
+Items(2): 
+	pohvalim -> 1.0
+	pohvalno -> 1.0
+
+96: pojednostav
+Items(3): 
+	pojednostaviti -> 1.0
+	pojednostavljeno -> 0.0
+	pojednostavljene -> -1.0
+
+97: pom
+Items(2): 
+	pomogao -> 1.0
+	pomama -> -1.0
+
+98: poraz
+Items(2): 
+	poraz -> 1.0
+	porazi -> 1.0
+
+99: po
+Items(3): 
+	poteći -> 1.0
+	posao -> -1.0
+	posla -> -1.0
+
+100: potvrd
+Items(2): 
+	potvrdi -> 1.0
+	potvrditi -> 1.0
+
+101: pouzda
+Items(2): 
+	pouzdan -> 1.0
+	pouzdano -> 1.0
+
+102: pozitiv
+Items(2): 
+	pozitivi -> 1.0
+	pozitivno -> 0.0
+
+103: pozna
+Items(2): 
+	poznat -> 1.0
+	poznati -> -1.0
+
+104: poš
+Items(2): 
+	pošteno -> 1.0
+	pošast -> -1.0
+
+105: pošt
+Items(3): 
+	poštovan -> 1.0
+	poštovanje -> 1.0
+	poštovati -> 1.0
+
+106: prav
+Items(2): 
+	pravi -> 1.0
+	pravo -> 1.0
+
+107: prednos
+Items(2): 
+	prednost -> 1.0
+	prednosti -> 1.0
+
+108: preporu
+Items(2): 
+	preporuka -> 1.0
+	preporuke -> 1.0
+
+109: preporuč
+Items(2): 
+	preporučeno -> 1.0
+	preporučiti -> 1.0
+
+110: prestiž
+Items(2): 
+	prestiž -> 1.0
+	prestižno -> 1.0
+
+111: primamljiv
+Items(2): 
+	primamljiv -> 1.0
+	primamljivo -> 1.0
+
+112: prob
+Items(2): 
+	proboj -> 1.0
+	probili -> -1.0
+
+113: prostra
+Items(2): 
+	prostran -> 1.0
+	prostrana -> 1.0
+
+114: rad
+Items(3): 
+	rad -> 1.0
+	radio -> 1.0
+	rado -> 1.0
+
+115: rados
+Items(2): 
+	radosno -> 1.0
+	radost -> 1.0
+
+116: razum
+Items(2): 
+	razumno -> 1.0
+	razumeti -> -1.0
+
+117: reform
+Items(2): 
+	reforme -> 1.0
+	reformisan -> 1.0
+
+118: restrukturira
+Items(2): 
+	restrukturiran -> 1.0
+	restrukturirati -> 1.0
+
+119: rok zvezd
+Items(2): 
+	rok zvezda -> 1.0
+	rok zvezde -> 1.0
+
+120: ruž
+Items(2): 
+	ruža -> 1.0
+	ružne -> -1.0
+
+121: savlada
+Items(2): 
+	savladan -> 1.0
+	savladati -> 1.0
+
+122: savrš
+Items(2): 
+	savršen -> 1.0
+	savršeno -> 1.0
+
+123: senzacij
+Items(2): 
+	senzacija -> 1.0
+	senzacije -> 1.0
+
+124: sjaj
+Items(2): 
+	sjajna -> 1.0
+	sjajno -> 1.0
+
+125: sl
+Items(4): 
+	slast -> 1.0
+	slava -> 1.0
+	slaba -> -1.0
+	slom -> -1.0
+
+126: slav
+Items(5): 
+	slavi -> 1.0
+	slavni -> 1.0
+	slavno -> 1.0
+	slavu -> 1.0
+	slave -> -1.0
+
+127: slobod
+Items(2): 
+	sloboda -> 1.0
+	slobode -> 1.0
+
+128: slučaj
+Items(2): 
+	slučajno -> 1.0
+	slučajna -> -1.0
+
+129: smir
+Items(2): 
+	smiren -> 1.0
+	smirujući -> 1.0
+
+130: src
+Items(2): 
+	srce -> 1.0
+	srca -> -1.0
+
+131: sr
+Items(2): 
+	sreće -> 1.0
+	srama -> -1.0
+
+132: srećnij
+Items(2): 
+	srećnije -> 1.0
+	srećniji -> 1.0
+
+133: str
+Items(5): 
+	strast -> 1.0
+	strava -> -1.0
+	strm -> -1.0
+	strmo -> -1.0
+	stroga -> -1.0
+
+134: strastv
+Items(2): 
+	strastven -> 1.0
+	strastveno -> 1.0
+
+135: straš
+Items(3): 
+	strašno -> 0.0
+	strašne -> -1.0
+	strašni -> -1.0
+
+136: subvencionira
+Items(2): 
+	subvencionirano -> 1.0
+	subvencionirati -> 1.0
+
+137: sve
+Items(2): 
+	svetac -> 1.0
+	sveže -> 1.0
+
+138: top
+Items(2): 
+	top -> 1.0
+	toplo -> 1.0
+
+139: udostoj
+Items(3): 
+	udostojava -> 1.0
+	udostoji -> -1.0
+	udostojio -> -1.0
+
+140: ugled
+Items(2): 
+	ugled -> 1.0
+	ugledno -> 1.0
+
+141: ulagivanj
+Items(2): 
+	ulagivanje -> 1.0
+	ulagivanjem -> 1.0
+
+142: ulepša
+Items(3): 
+	ulepšao -> 1.0
+	ulepšati -> 1.0
+	ulepšan -> -1.0
+
+143: umir
+Items(3): 
+	umiriti -> 1.0
+	umirujući -> 1.0
+	umire -> -1.0
+
+144: upadljiv
+Items(2): 
+	upadljivo -> 0.0
+	upadljiv -> -1.0
+
+145: usp
+Items(4): 
+	uspeh -> 1.0
+	uspeo -> 1.0
+	uspeti -> 1.0
+	uspeva -> 1.0
+
+146: uverljiv
+Items(2): 
+	uverljiv -> 1.0
+	uverljivo -> 1.0
+
+147: uzbudljiv
+Items(2): 
+	uzbudljivo -> 1.0
+	uzbudljivih -> -1.0
+
+148: uzbud
+Items(2): 
+	uzbuđen -> 1.0
+	uzbuđeno -> 1.0
+
+149: už
+Items(3): 
+	uživali -> 1.0
+	uživati -> 1.0
+	uži -> -1.0
+
+150: veličanstv
+Items(3): 
+	veličanstven -> 1.0
+	veličanstveno -> 1.0
+	veličanstvo -> 1.0
+
+151: ver
+Items(5): 
+	vera -> 1.0
+	verni -> 1.0
+	verno -> 1.0
+	verujem -> 1.0
+	verujući -> 1.0
+
+152: ves
+Items(2): 
+	veselo -> 1.0
+	veseo -> 1.0
+
+153: vod
+Items(2): 
+	vodeći -> 1.0
+	vodi -> 1.0
+
+154: vol
+Items(2): 
+	voleći -> 1.0
+	volim -> 1.0
+
+155: vo
+Items(2): 
+	voli -> 1.0
+	voljen -> 1.0
+
+156: volj
+Items(2): 
+	voljni -> 1.0
+	voljno -> 1.0
+
+157: vra
+Items(2): 
+	vraćeno -> 1.0
+	vrati -> -1.0
+
+158: vr
+Items(2): 
+	vrhovi -> 1.0
+	vruće -> 1.0
+
+159: zabav
+Items(2): 
+	zabaviti -> 1.0
+	zabavno -> 1.0
+
+160: zadiv
+Items(2): 
+	zadiviti -> 1.0
+	zadivljen -> 1.0
+
+161: zadovolj
+Items(3): 
+	zadovoljava -> 0.0
+	zadovoljiti -> 1.0
+	zadovoljni -> 0.0
+
+162: zahval
+Items(2): 
+	zahvaliti -> 1.0
+	zahvalno -> 1.0
+
+163: zapan
+Items(2): 
+	zapanjen -> 0.0
+	zapanjeni -> -1.0
+
+164: zarob
+Items(2): 
+	zarobiti -> 1.0
+	zarobljen -> -1.0
+
+165: zasleplj
+Items(2): 
+	zaslepljujte -> 1.0
+	zaslepljujući -> -1.0
+
+166: zasluž
+Items(2): 
+	zasluženo -> 1.0
+	zaslužuje -> 1.0
+
+167: začara
+Items(2): 
+	začaran -> 1.0
+	začarani -> -1.0
+
+168: zdrav
+Items(2): 
+	zdrav -> 1.0
+	zdravo -> 1.0
+
+169: č
+Items(2): 
+	čast -> 1.0
+	čio -> 1.0
+
+170: česti
+Items(2): 
+	čestitka -> 1.0
+	čestitke -> 1.0
+
+171: čud
+Items(3): 
+	čuda -> 1.0
+	čudo -> 1.0
+	čudno -> -1.0
+
+172: šaljiv
+Items(2): 
+	šaljiv -> 0.0
+	šaljivo -> -1.0
+
+173: žalb
+Items(3): 
+	žalba -> 1.0
+	žalbe -> -1.0
+	žalbi -> -1.0
+
+174: žark
+Items(2): 
+	žarki -> 1.0
+	žarko -> 1.0
+
+175: agonij
+Items(2): 
+	agonija -> -1.0
+	agoniji -> -1.0
+
+176: alarmant
+Items(2): 
+	alarmantna -> -1.0
+	alarmantno -> -1.0
+
+177: apsurdnos
+Items(2): 
+	apsurdnost -> -1.0
+	apsurdnosti -> -1.0
+
+178: bed
+Items(2): 
+	beda -> -1.0
+	bedno -> -1.0
+
+179: bes
+Items(4): 
+	bes -> -1.0
+	besa -> -1.0
+	besni -> -1.0
+	besno -> -1.0
+
+180: beskompromis
+Items(2): 
+	beskompromisni -> -1.0
+	beskompromisno -> -1.0
+
+181: beskrupuloz
+Items(2): 
+	beskrupulozni -> -1.0
+	beskrupulozno -> -1.0
+
+182: besmisl
+Items(3): 
+	besmislena -> -1.0
+	besmislene -> -1.0
+	besmisleno -> -1.0
+
+183: bezvre
+Items(2): 
+	bezvredne -> -1.0
+	bezvredni -> -1.0
+
+184: bogalj
+Items(2): 
+	bogalj -> -1.0
+	bogalji -> -1.0
+
+185: bol
+Items(4): 
+	bol -> -1.0
+	bolela -> -1.0
+	bolno -> -1.0
+	bolovi -> -1.0
+
+186: boles
+Items(4): 
+	bolesna -> -1.0
+	bolesne -> -1.0
+	bolesno -> -1.0
+	bolest -> -1.0
+
+187: bor
+Items(4): 
+	bora -> -1.0
+	borben -> -1.0
+	borbena -> -1.0
+	bore -> -1.0
+
+188: brutal
+Items(3): 
+	brutalna -> -1.0
+	brutalne -> -1.0
+	brutalno -> -1.0
+
+189: bu
+Items(2): 
+	buka -> -1.0
+	buku -> -1.0
+
+190: bur
+Items(3): 
+	bura -> -1.0
+	burna -> -1.0
+	burno -> -1.0
+
+191: curenj
+Items(2): 
+	curenja -> -1.0
+	curenje -> -1.0
+
+192: deform
+Items(2): 
+	deformisan -> -1.0
+	deformisati -> -1.0
+
+193: demoral
+Items(2): 
+	demoralisati -> -1.0
+	demorališući -> -1.0
+
+194: deponij
+Items(2): 
+	deponija -> -1.0
+	deponije -> -1.0
+
+195: depresij
+Items(2): 
+	depresija -> -1.0
+	depresije -> -1.0
+
+196: depresiv
+Items(2): 
+	depresivne -> -1.0
+	depresivno -> -1.0
+
+197: disiden
+Items(2): 
+	disident -> -1.0
+	disidente -> -1.0
+
+198: dislaj
+Items(2): 
+	dislajk -> -1.0
+	dislajkovano -> -1.0
+
+199: divlj
+Items(2): 
+	divlja -> -1.0
+	divlje -> -1.0
+
+200: divlja
+Items(2): 
+	divljaci -> -1.0
+	divljak -> -1.0
+
+201: đavolsk
+Items(2): 
+	djavolski -> -1.0
+	đavolski -> -1.0
+
+202: dosad
+Items(3): 
+	dosaditi -> -1.0
+	dosadno -> -1.0
+	dosadu -> -1.0
+
+203: drastič
+Items(2): 
+	drastična -> -1.0
+	drastično -> -1.0
+
+204: du
+Items(2): 
+	duga -> -1.0
+	duha -> -1.0
+
+205: dvolič
+Items(2): 
+	dvolična -> -1.0
+	dvolično -> -1.0
+
+206: ekstravagant
+Items(2): 
+	ekstravagantni -> -1.0
+	ekstravagantno -> -1.0
+
+207: fanati
+Items(2): 
+	fanatici -> -1.0
+	fanatik -> -1.0
+
+208: fatal
+Items(2): 
+	fatalne -> -1.0
+	fatalno -> -1.0
+
+209: g
+Items(2): 
+	gadi -> -1.0
+	guše -> -1.0
+
+210: gađenj
+Items(2): 
+	gađenje -> -1.0
+	gađenjem -> -1.0
+
+211: gl
+Items(2): 
+	gladi -> -1.0
+	glava -> -1.0
+
+212: glad
+Items(2): 
+	gladovanje -> -1.0
+	gladovati -> -1.0
+
+213: glavobolj
+Items(2): 
+	glavobolja -> -1.0
+	glavobolje -> -1.0
+
+214: glup
+Items(2): 
+	glup -> -1.0
+	glupo -> -1.0
+
+215: glupos
+Items(2): 
+	glupost -> -1.0
+	gluposti -> -1.0
+
+216: gor
+Items(2): 
+	gore -> -1.0
+	gori -> -1.0
+
+217: grd
+Items(2): 
+	grdi -> -1.0
+	grditi -> -1.0
+
+218: greš
+Items(6): 
+	grešeći -> -1.0
+	grešiti -> -1.0
+	greška -> -1.0
+	greške -> -1.0
+	grešni -> -1.0
+	grešno -> -1.0
+
+219: groznic
+Items(2): 
+	groznica -> -1.0
+	groznicu -> -1.0
+
+220: grub
+Items(3): 
+	grub -> -1.0
+	gruba -> -1.0
+	grubi -> -1.0
+
+221: gub
+Items(2): 
+	gube -> -1.0
+	gubi -> -1.0
+
+222: gubi
+Items(2): 
+	gubici -> -1.0
+	gubitak -> -1.0
+
+223: histerij
+Items(2): 
+	histerija -> -1.0
+	histeriji -> -1.0
+
+224: iluzij
+Items(2): 
+	iluzija -> -1.0
+	iluzije -> -1.0
+
+225: imbecil
+Items(2): 
+	imbecil -> -1.0
+	imbecilno -> -1.0
+
+226: infiltrator
+Items(2): 
+	infiltrator -> -1.0
+	infiltratore -> -1.0
+
+227: iritacij
+Items(2): 
+	iritacija -> -1.0
+	iritacije -> -1.0
+
+228: iritant
+Items(2): 
+	iritantni -> -1.0
+	iritantno -> -1.0
+
+229: iscrp
+Items(3): 
+	iscrpi -> -1.0
+	iscrpljen -> -1.0
+	iscrpljena -> -1.0
+
+230: ismejavanj
+Items(2): 
+	ismejavanje -> -1.0
+	ismejavanju -> -1.0
+
+231: izazov
+Items(2): 
+	izazov -> -1.0
+	izazovno -> -1.0
+
+232: izbegava
+Items(3): 
+	izbegavaju -> -1.0
+	izbegavali -> -1.0
+	izbegavati -> -1.0
+
+233: izbirljiv
+Items(2): 
+	izbirljiv -> -1.0
+	izbirljivi -> -1.0
+
+234: izdaj
+Items(2): 
+	izdaje -> -1.0
+	izdajom -> -1.0
+
+235: izdajic
+Items(2): 
+	izdajica -> -1.0
+	izdajice -> -1.0
+
+236: izda
+Items(2): 
+	izdaju -> -1.0
+	izdati -> -1.0
+
+237: izgovor
+Items(3): 
+	izgovora -> -1.0
+	izgovorio -> -1.0
+	izgovoriti -> -1.0
+
+238: izgub
+Items(3): 
+	izgubile -> -1.0
+	izgubio -> -1.0
+	izgubljeno -> -1.0
+
+239: iznud
+Items(2): 
+	iznude -> -1.0
+	iznudi -> -1.0
+
+240: izol
+Items(2): 
+	izolovani -> -1.0
+	izolovati -> -1.0
+
+241: jad
+Items(2): 
+	jad -> -1.0
+	jadno -> -1.0
+
+242: jeziv
+Items(4): 
+	jeziv -> -1.0
+	jezive -> -1.0
+	jezivi -> -1.0
+	jezivo -> -1.0
+
+243: katastrof
+Items(2): 
+	katastrofa -> -1.0
+	katastrofe -> -1.0
+
+244: kaz
+Items(2): 
+	kazna -> -1.0
+	kazni -> -1.0
+
+245: kazn
+Items(2): 
+	kaznena -> -1.0
+	kazniti -> -1.0
+
+246: kašnjenj
+Items(2): 
+	kašnjenja -> -1.0
+	kašnjenje -> -1.0
+
+247: k
+Items(2): 
+	kivan -> -1.0
+	kliše -> -1.0
+
+248: klevet
+Items(2): 
+	kleveta -> -1.0
+	klevetama -> -1.0
+
+249: klon
+Items(2): 
+	klonu -> -1.0
+	klonuti -> -1.0
+
+250: konfrontacij
+Items(2): 
+	konfrontacija -> -1.0
+	konfrontacije -> -1.0
+
+251: kontaminira
+Items(2): 
+	kontaminiraju -> -1.0
+	kontaminirana -> -1.0
+
+252: kontradiktor
+Items(2): 
+	kontradiktorne -> -1.0
+	kontradiktorno -> -1.0
+
+253: korozij
+Items(2): 
+	korozija -> -1.0
+	korozije -> -1.0
+
+254: kr
+Items(6): 
+	krele -> -1.0
+	krene -> -1.0
+	kreće -> -1.0
+	kruta -> -1.0
+	kruto -> -1.0
+	krše -> -1.0
+
+255: kriti
+Items(4): 
+	kritika -> -1.0
+	kritike -> -1.0
+	kritikovao -> -1.0
+	kritikuje -> -1.0
+
+256: kritičar
+Items(2): 
+	kritičar -> -1.0
+	kritičari -> -1.0
+
+257: kriv
+Items(5): 
+	kriv -> -1.0
+	krivac -> -1.0
+	krive -> -1.0
+	krivi -> -1.0
+	krivo -> -1.0
+
+258: krivic
+Items(2): 
+	krivica -> -1.0
+	krivice -> -1.0
+
+259: kriz
+Items(2): 
+	kriza -> -1.0
+	krize -> -1.0
+
+260: kvar
+Items(4): 
+	kvar -> -1.0
+	kvare -> -1.0
+	kvari -> -1.0
+	kvaru -> -1.0
+
+261: labav
+Items(2): 
+	labav -> -1.0
+	labavo -> -1.0
+
+262: laž
+Items(5): 
+	laž -> -1.0
+	lažna -> -1.0
+	lažne -> -1.0
+	lažni -> -1.0
+	lažno -> -1.0
+
+263: l
+Items(2): 
+	leglo -> -1.0
+	lišeni -> -1.0
+
+264: lenj
+Items(2): 
+	lenj -> -1.0
+	lenje -> -1.0
+
+265: lepljiv
+Items(2): 
+	lepljiv -> -1.0
+	lepljiva -> -1.0
+
+266: licemer
+Items(3): 
+	licemera -> -1.0
+	licemeri -> -1.0
+	licemerno -> -1.0
+
+267: ljubomor
+Items(2): 
+	ljubomora -> -1.0
+	ljubomorno -> -1.0
+
+268: lop
+Items(3): 
+	lopata -> -1.0
+	lopove -> -1.0
+	lopte -> -1.0
+
+269: lud
+Items(4): 
+	lud -> -1.0
+	ludi -> -1.0
+	ludilo -> -1.0
+	ludo -> -1.0
+
+270: luđ
+Items(2): 
+	ludja -> -1.0
+	luđa -> -1.0
+
+271: lukav
+Items(2): 
+	lukav -> -1.0
+	lukavi -> -1.0
+
+272: mag
+Items(2): 
+	magla -> -1.0
+	magle -> -1.0
+
+273: ma
+Items(2): 
+	mana -> -1.0
+	mane -> -1.0
+
+274: marginaliz
+Items(2): 
+	marginalizovan -> -1.0
+	marginalizovani -> -1.0
+
+275: marginal
+Items(2): 
+	marginalne -> -1.0
+	marginalno -> -1.0
+
+276: mazn
+Items(2): 
+	maznuo -> -1.0
+	maznuti -> -1.0
+
+277: misterioz
+Items(2): 
+	misteriozni -> -1.0
+	misteriozno -> -1.0
+
+278: mit
+Items(2): 
+	mit -> -1.0
+	mito -> -1.0
+
+279: modric
+Items(2): 
+	modrica -> -1.0
+	modrice -> -1.0
+
+280: mo
+Items(2): 
+	moli -> -1.0
+	mozak -> -1.0
+
+281: moro
+Items(2): 
+	moron -> -1.0
+	moroni -> -1.0
+
+282: mrlj
+Items(2): 
+	mrlja -> -1.0
+	mrlje -> -1.0
+
+283: mrtv
+Items(2): 
+	mrtvilo -> -1.0
+	mrtvo -> -1.0
+
+284: mrz
+Items(2): 
+	mrzeo -> -1.0
+	mrzi -> -1.0
+
+285: mrzitelj
+Items(2): 
+	mrzitelj -> -1.0
+	mrzitelji -> -1.0
+
+286: mršav
+Items(2): 
+	mršav -> -1.0
+	mršavi -> -1.0
+
+287: mržnj
+Items(4): 
+	mržnja -> -1.0
+	mržnje -> -1.0
+	mržnjom -> -1.0
+	mržnju -> -1.0
+
+288: mučenj
+Items(2): 
+	mučenja -> -1.0
+	mučenje -> -1.0
+
+289: nadm
+Items(2): 
+	nadmen -> -1.0
+	nadmeno -> -1.0
+
+290: naiv
+Items(2): 
+	naivna -> -1.0
+	naivno -> -1.0
+
+291: najgor
+Items(2): 
+	najgora -> -1.0
+	najgore -> -1.0
+
+292: nakaz
+Items(3): 
+	nakaza -> -1.0
+	nakaze -> -1.0
+	nakazno -> -1.0
+
+293: nale
+Items(2): 
+	naleteo -> -1.0
+	naletio -> -1.0
+
+294: nametljiv
+Items(4): 
+	nametljiv -> -1.0
+	nametljivac -> -1.0
+	nametljivci -> -1.0
+	nametljivo -> -1.0
+
+295: namrgođenij
+Items(2): 
+	namrgodjenije -> -1.0
+	namrgođenije -> -1.0
+
+296: nap
+Items(3): 
+	napad -> -1.0
+	napadi -> -1.0
+	napukao -> -1.0
+
+297: napor
+Items(3): 
+	napor -> -1.0
+	naporne -> -1.0
+	naporno -> -1.0
+
+298: narav
+Items(2): 
+	narav -> -1.0
+	naravi -> -1.0
+
+299: naruš
+Items(4): 
+	narušava -> -1.0
+	narušena -> -1.0
+	naruši -> -1.0
+	narušiti -> -1.0
+
+300: navod
+Items(2): 
+	navode -> -1.0
+	navodi -> -1.0
+
+301: nedokaza
+Items(2): 
+	nedokazan -> -1.0
+	nedokazane -> -1.0
+
+302: nedosled
+Items(2): 
+	nedosledna -> -1.0
+	nedosledno -> -1.0
+
+303: nedoslednos
+Items(2): 
+	nedoslednost -> -1.0
+	nedoslednosti -> -1.0
+
+304: nedosta
+Items(3): 
+	nedostaci -> -1.0
+	nedostaju -> -1.0
+	nedostatak -> -1.0
+
+305: nedostaja
+Items(2): 
+	nedostajalo -> -1.0
+	nedostajati -> -1.0
+
+306: neefikas
+Items(2): 
+	neefikasna -> -1.0
+	neefikasno -> -1.0
+
+307: negativ
+Items(2): 
+	negativa -> -1.0
+	negativna -> -1.0
+
+308: negira
+Items(2): 
+	negiraju -> -1.0
+	negirao -> -1.0
+
+309: neiskr
+Items(2): 
+	neiskren -> -1.0
+	neiskreno -> -1.0
+
+310: neizbež
+Items(2): 
+	neizbežni -> -1.0
+	neizbežno -> -1.0
+
+311: nemir
+Items(2): 
+	nemir -> -1.0
+	nemiri -> -1.0
+
+312: nemoral
+Items(2): 
+	nemoral -> -1.0
+	nemoralno -> -1.0
+
+313: neobičnos
+Items(2): 
+	neobičnost -> -1.0
+	neobičnosti -> -1.0
+
+314: neodluč
+Items(2): 
+	neodlučna -> -1.0
+	neodlučno -> -1.0
+
+315: neodred
+Items(2): 
+	neodređen -> -1.0
+	neodređeno -> -1.0
+
+316: neodrživ
+Items(2): 
+	neodrživ -> -1.0
+	neodrživa -> -1.0
+
+317: neopravda
+Items(3): 
+	neopravdan -> -1.0
+	neopravdane -> -1.0
+	neopravdano -> -1.0
+
+318: neosn
+Items(2): 
+	neosnovana -> -1.0
+	neosnovane -> -1.0
+
+319: nepodnošljiv
+Items(2): 
+	nepodnošljiv -> -1.0
+	nepodnošljivo -> -1.0
+
+320: nepokaja
+Items(2): 
+	nepokajan -> -1.0
+	nepokajani -> -1.0
+
+321: nepomirljiv
+Items(2): 
+	nepomirljive -> -1.0
+	nepomirljivijeg -> -1.0
+
+322: nepopravljiv
+Items(3): 
+	nepopravljiv -> -1.0
+	nepopravljivi -> -1.0
+	nepopravljivo -> -1.0
+
+323: neposluš
+Items(2): 
+	neposlušna -> -1.0
+	neposlušni -> -1.0
+
+324: nepotpu
+Items(2): 
+	nepotpuna -> -1.0
+	nepotpuno -> -1.0
+
+325: nepoverenj
+Items(2): 
+	nepoverenje -> -1.0
+	nepoverenjem -> -1.0
+
+326: nepoveza
+Items(2): 
+	nepovezane -> -1.0
+	nepovezano -> -1.0
+
+327: nepozna
+Items(3): 
+	nepoznat -> -1.0
+	nepoznate -> -1.0
+	nepoznati -> -1.0
+
+328: nepoš
+Items(2): 
+	nepošten -> -1.0
+	nepošteno -> -1.0
+
+329: nepravd
+Items(2): 
+	nepravda -> -1.0
+	nepravde -> -1.0
+
+330: neprihvatljiv
+Items(3): 
+	neprihvatljiv -> -1.0
+	neprihvatljivi -> -1.0
+	neprihvatljivo -> -1.0
+
+331: neprijatelj
+Items(3): 
+	neprijatelj -> -1.0
+	neprijatelja -> -1.0
+	neprijateljima -> -1.0
+
+332: neprijat
+Items(3): 
+	neprijatne -> -1.0
+	neprijatni -> -1.0
+	neprijatno -> -1.0
+
+333: neprijatnos
+Items(2): 
+	neprijatnost -> -1.0
+	neprijatnosti -> -1.0
+
+334: nepristoj
+Items(2): 
+	nepristojne -> -1.0
+	nepristojno -> -1.0
+
+335: nepromis
+Items(2): 
+	nepromišljen -> -1.0
+	nepromišljeno -> -1.0
+
+336: neracional
+Items(2): 
+	neracionalna -> -1.0
+	neracionalno -> -1.0
+
+337: nerazumljiv
+Items(2): 
+	nerazumljiv -> -1.0
+	nerazumljivo -> -1.0
+
+338: nered
+Items(2): 
+	nered -> -1.0
+	neredu -> -1.0
+
+339: nervoz
+Items(2): 
+	nervoza -> -1.0
+	nervozno -> -1.0
+
+340: nesigur
+Items(2): 
+	nesigurna -> -1.0
+	nesigurno -> -1.0
+
+341: neslaganj
+Items(2): 
+	neslaganja -> -1.0
+	neslaganje -> -1.0
+
+342: nesposobnos
+Items(2): 
+	nesposobnost -> -1.0
+	nesposobnosti -> -1.0
+
+343: nesreć
+Items(4): 
+	nesreća -> -1.0
+	nesrećna -> -1.0
+	nesrećni -> -1.0
+	nesrećno -> -1.0
+
+344: nestrpljiv
+Items(2): 
+	nestrpljiva -> -1.0
+	nestrpljivo -> -1.0
+
+345: netačnos
+Items(2): 
+	netačnost -> -1.0
+	netačnosti -> -1.0
+
+346: neubedljiv
+Items(2): 
+	neubedljive -> -1.0
+	neubedljivo -> -1.0
+
+347: neumer
+Items(2): 
+	neumeren -> -1.0
+	neumereno -> -1.0
+
+348: neumoljiv
+Items(3): 
+	neumoljiv -> -1.0
+	neumoljiva -> -1.0
+	neumoljivi -> -1.0
+
+349: neuobičaj
+Items(2): 
+	neuobičajen -> -1.0
+	neuobičajeno -> -1.0
+
+350: neusp
+Items(2): 
+	neuspeh -> -1.0
+	neuspela -> -1.0
+
+351: nevalja
+Items(2): 
+	nevaljalac -> -1.0
+	nevaljao -> -1.0
+
+352: nevaž
+Items(2): 
+	nevažna -> -1.0
+	nevažno -> -1.0
+
+353: neveric
+Items(2): 
+	neverica -> -1.0
+	nevericom -> -1.0
+
+354: neverni
+Items(2): 
+	nevernici -> -1.0
+	nevernik -> -1.0
+
+355: nevidljiv
+Items(2): 
+	nevidljiv -> -1.0
+	nevidljivi -> -1.0
+
+356: nevolj
+Items(3): 
+	nevolja -> -1.0
+	nevolji -> -1.0
+	nevoljno -> -1.0
+
+357: nezadovolj
+Items(4): 
+	nezadovoljiti -> -1.0
+	nezadovoljna -> -1.0
+	nezadovoljni -> -1.0
+	nezadovoljno -> -1.0
+
+358: nezainteres
+Items(2): 
+	nezainteresovan -> -1.0
+	nezainteresovani -> -1.0
+
+359: nečuv
+Items(2): 
+	nečuven -> -1.0
+	nečuveno -> -1.0
+
+360: obeshrabr
+Items(2): 
+	obeshrabriti -> -1.0
+	obeshrabruje -> -1.0
+
+361: obma
+Items(2): 
+	obmana -> -1.0
+	obmane -> -1.0
+
+362: obmanj
+Items(3): 
+	obmanjivati -> -1.0
+	obmanjuje -> -1.0
+	obmanjuju -> -1.0
+
+363: odbac
+Items(3): 
+	odbacio -> -1.0
+	odbaciti -> -1.0
+	odbacuje -> -1.0
+
+364: odb
+Items(3): 
+	odbegli -> -1.0
+	odbijen -> -1.0
+	odbili -> -1.0
+
+365: odbij
+Items(2): 
+	odbija -> -1.0
+	odbije -> -1.0
+
+366: oduzm
+Items(2): 
+	oduzme -> -1.0
+	oduzmite -> -1.0
+
+367: odvrat
+Items(3): 
+	odvratna -> -1.0
+	odvratne -> -1.0
+	odvratno -> -1.0
+
+368: odvratnos
+Items(2): 
+	odvratnost -> -1.0
+	odvratnosti -> -1.0
+
+369: odvraćanj
+Items(2): 
+	odvraćanja -> -1.0
+	odvraćanje -> -1.0
+
+370: ogorč
+Items(4): 
+	ogorčen -> -1.0
+	ogorčena -> -1.0
+	ogorčeno -> -1.0
+	ogorčiti -> -1.0
+
+371: ogranič
+Items(4): 
+	ograničene -> -1.0
+	ograničeni -> -1.0
+	ograničeno -> -1.0
+	ograničiti -> -1.0
+
+372: ograničenj
+Items(2): 
+	ograničenja -> -1.0
+	ograničenje -> -1.0
+
+373: ogreboti
+Items(2): 
+	ogrebotina -> -1.0
+	ogrebotine -> -1.0
+
+374: okrutnos
+Items(2): 
+	okrutnost -> -1.0
+	okrutnosti -> -1.0
+
+375: omalovažava
+Items(3): 
+	omalovažavaj -> -1.0
+	omalovažavaju -> -1.0
+	omalovažavati -> -1.0
+
+376: omalovažavanj
+Items(2): 
+	omalovažavanje -> -1.0
+	omalovažavanjem -> -1.0
+
+377: ometa
+Items(3): 
+	ometaju -> -1.0
+	ometali -> -1.0
+	ometati -> -1.0
+
+378: ometanj
+Items(2): 
+	ometanja -> -1.0
+	ometanje -> -1.0
+
+379: opas
+Items(3): 
+	opaska -> -1.0
+	opasno -> -1.0
+	opasti -> -1.0
+
+380: opasnos
+Items(2): 
+	opasnost -> -1.0
+	opasnosti -> -1.0
+
+381: optužb
+Items(2): 
+	optužba -> -1.0
+	optužbe -> -1.0
+
+382: optuž
+Items(2): 
+	optužuje -> -1.0
+	optužuju -> -1.0
+
+383: opustoš
+Items(2): 
+	opustošen -> -1.0
+	opustošiti -> -1.0
+
+384: oron
+Items(2): 
+	oronule -> -1.0
+	oronuo -> -1.0
+
+385: osiromaš
+Items(2): 
+	osiromašili -> -1.0
+	osiromašiti -> -1.0
+
+386: oskud
+Items(2): 
+	oskudna -> -1.0
+	oskudno -> -1.0
+
+387: oslab
+Items(3): 
+	oslabi -> -1.0
+	oslabiti -> -1.0
+	oslabljen -> -1.0
+
+388: osramo
+Items(2): 
+	osramotio -> -1.0
+	osramotiti -> -1.0
+
+389: ostav
+Items(3): 
+	ostavio -> -1.0
+	ostavka -> -1.0
+	ostavku -> -1.0
+
+390: osud
+Items(6): 
+	osuda -> -1.0
+	osudi -> -1.0
+	osudila -> -1.0
+	osudio -> -1.0
+	osuditi -> -1.0
+	osudu -> -1.0
+
+391: osuđ
+Items(2): 
+	osudjujući -> -1.0
+	osuđuju -> -1.0
+
+392: osuš
+Items(2): 
+	osušeni -> -1.0
+	osušiti -> -1.0
+
+393: osv
+Items(2): 
+	osvete -> -1.0
+	osveti -> -1.0
+
+394: otrov
+Items(4): 
+	otrov -> -1.0
+	otrovna -> -1.0
+	otrovne -> -1.0
+	otrovno -> -1.0
+
+395: otud
+Items(3): 
+	otudjeni -> -1.0
+	otuđen -> -1.0
+	otuđene -> -1.0
+
+396: otuđ
+Items(2): 
+	otudjiti -> -1.0
+	otuđiti -> -1.0
+
+397: očajničk
+Items(2): 
+	očajnički -> -1.0
+	očajničko -> -1.0
+
+398: ošte
+Items(4): 
+	oštećen -> -1.0
+	oštećena -> -1.0
+	oštećene -> -1.0
+	oštećeni -> -1.0
+
+399: ožilj
+Items(2): 
+	ožiljcima -> -1.0
+	ožiljke -> -1.0
+
+400: pad
+Items(4): 
+	pad -> -1.0
+	pada -> -1.0
+	padove -> -1.0
+	padovi -> -1.0
+
+401: pa
+Items(4): 
+	pakla -> -1.0
+	pali -> -1.0
+	pate -> -1.0
+	pati -> -1.0
+
+402: pani
+Items(2): 
+	panika -> -1.0
+	panike -> -1.0
+
+403: paradoksal
+Items(2): 
+	paradoksalni -> -1.0
+	paradoksalno -> -1.0
+
+404: paraliz
+Items(2): 
+	paralize -> -1.0
+	paralizovan -> -1.0
+
+405: perverz
+Items(3): 
+	perverziju -> -1.0
+	perverzne -> -1.0
+	perverzno -> -1.0
+
+406: pija
+Items(2): 
+	pijan -> -1.0
+	pijani -> -1.0
+
+407: pičkic
+Items(2): 
+	pičkica -> -1.0
+	pičkice -> -1.0
+
+408: pl
+Items(2): 
+	plen -> -1.0
+	pleva -> -1.0
+
+409: pli
+Items(2): 
+	plik -> -1.0
+	plitke -> -1.0
+
+410: pljačka
+Items(3): 
+	pljačkaju -> -1.0
+	pljačkati -> -1.0
+	pljačkaš -> -1.0
+
+411: pob
+Items(2): 
+	pobegne -> -1.0
+	pobeći -> -1.0
+
+412: pod
+Items(4): 
+	podela -> -1.0
+	podele -> -1.0
+	podli -> -1.0
+	podlo -> -1.0
+
+413: podred
+Items(2): 
+	podređena -> -1.0
+	podređeni -> -1.0
+
+414: pogoršanj
+Items(2): 
+	pogoršanja -> -1.0
+	pogoršanje -> -1.0
+
+415: pogod
+Items(2): 
+	pogođena -> -1.0
+	pogođeni -> -1.0
+
+416: pogub
+Items(2): 
+	pogubne -> -1.0
+	pogubno -> -1.0
+
+417: pohlep
+Items(2): 
+	pohlepa -> -1.0
+	pohlepni -> -1.0
+
+418: pokor
+Items(3): 
+	pokore -> -1.0
+	pokorili -> -1.0
+	pokorni -> -1.0
+
+419: pokvar
+Items(5): 
+	pokvaren -> -1.0
+	pokvarene -> -1.0
+	pokvari -> -1.0
+	pokvarilo -> -1.0
+	pokvariti -> -1.0
+
+420: polarizacij
+Items(2): 
+	polarizacija -> -1.0
+	polarizacije -> -1.0
+
+421: polom
+Items(2): 
+	polomiti -> -1.0
+	polomljen -> -1.0
+
+422: pometnj
+Items(2): 
+	pometnja -> -1.0
+	pometnju -> -1.0
+
+423: poreme
+Items(2): 
+	poremetiti -> -1.0
+	poremećen -> -1.0
+
+424: potiskivanj
+Items(2): 
+	potiskivanja -> -1.0
+	potiskivanje -> -1.0
+
+425: potop
+Items(3): 
+	potop -> -1.0
+	potopljen -> -1.0
+	potopljeno -> -1.0
+
+426: potpu
+Items(2): 
+	potpuna -> -1.0
+	potpuno -> -1.0
+
+427: povred
+Items(6): 
+	povreda -> -1.0
+	povrede -> -1.0
+	povredi -> -1.0
+	povrediti -> -1.0
+	povredu -> -1.0
+	povređen -> -1.0
+
+428: površ
+Items(2): 
+	površna -> -1.0
+	površno -> -1.0
+
+429: prekid
+Items(4): 
+	prekida -> -1.0
+	prekide -> -1.0
+	prekidi -> -1.0
+	prekidima -> -1.0
+
+430: prekin
+Items(2): 
+	prekinuo -> -1.0
+	prekinuta -> -1.0
+
+431: prekomer
+Items(2): 
+	prekomerna -> -1.0
+	prekomerni -> -1.0
+
+432: prekor
+Items(2): 
+	prekor -> -1.0
+	prekoriti -> -1.0
+
+433: prekršaj
+Items(2): 
+	prekršaje -> -1.0
+	prekršajne -> -1.0
+
+434: prekrš
+Items(2): 
+	prekrši -> -1.0
+	prekršiti -> -1.0
+
+435: prepir
+Items(2): 
+	prepirka -> -1.0
+	prepirke -> -1.0
+
+436: preplav
+Items(3): 
+	preplaviti -> -1.0
+	preplavljen -> -1.0
+	preplavljeni -> -1.0
+
+437: prepre
+Items(2): 
+	prepreka -> -1.0
+	prepreku -> -1.0
+
+438: prestupni
+Items(2): 
+	prestupnik -> -1.0
+	prestupnika -> -1.0
+
+439: pretera
+Items(2): 
+	preterali -> -1.0
+	preterana -> -1.0
+
+440: preter
+Items(2): 
+	preteruje -> -1.0
+	preteruju -> -1.0
+
+441: prevar
+Items(5): 
+	prevara -> -1.0
+	prevare -> -1.0
+	prevari -> -1.0
+	prevario -> -1.0
+	prevariti -> -1.0
+
+442: prevrn
+Items(2): 
+	prevrnemo -> -1.0
+	prevrnuti -> -1.0
+
+443: prezir
+Items(6): 
+	prezir -> -1.0
+	prezira -> -1.0
+	prezire -> -1.0
+	prezirem -> -1.0
+	prezirom -> -1.0
+	preziru -> -1.0
+
+444: prezr
+Items(2): 
+	prezreli -> -1.0
+	prezreni -> -1.0
+
+445: prezriv
+Items(2): 
+	prezriv -> -1.0
+	prezrivo -> -1.0
+
+446: primedb
+Items(2): 
+	primedbe -> -1.0
+	primedbi -> -1.0
+
+447: prinud
+Items(3): 
+	prinuda -> -1.0
+	prinudna -> -1.0
+	prinudno -> -1.0
+
+448: pristrasnos
+Items(2): 
+	pristrasnost -> -1.0
+	pristrasnosti -> -1.0
+
+449: pritužb
+Items(2): 
+	pritužba -> -1.0
+	pritužbi -> -1.0
+
+450: prizna
+Items(2): 
+	priznaju -> -1.0
+	priznao -> -1.0
+
+451: priznanj
+Items(2): 
+	priznanja -> -1.0
+	priznanje -> -1.0
+
+452: prkos
+Items(3): 
+	prkos -> -1.0
+	prkose -> -1.0
+	prkosno -> -1.0
+
+453: prljav
+Items(3): 
+	prljav -> -1.0
+	prljave -> -1.0
+	prljavu -> -1.0
+
+454: problematič
+Items(2): 
+	problematične -> -1.0
+	problematično -> -1.0
+
+455: progo
+Items(2): 
+	progon -> -1.0
+	progone -> -1.0
+
+456: prokl
+Items(2): 
+	proklet -> -1.0
+	prokleti -> -1.0
+
+457: proklet
+Items(2): 
+	prokleto -> -1.0
+	prokletu -> -1.0
+
+458: prop
+Items(2): 
+	propast -> -1.0
+	propuste -> -1.0
+
+459: propus
+Items(3): 
+	propust -> -1.0
+	propusti -> -1.0
+	propustio -> -1.0
+
+460: protes
+Items(2): 
+	protest -> -1.0
+	protesti -> -1.0
+
+461: protest
+Items(2): 
+	protestovali -> -1.0
+	protestuju -> -1.0
+
+462: ps
+Items(3): 
+	psovanje -> -1.0
+	psovao -> -1.0
+	psuj -> -1.0
+
+463: radikal
+Items(2): 
+	radikal -> -1.0
+	radikalno -> -1.0
+
+464: raskid
+Items(2): 
+	raskid -> -1.0
+	raskidi -> -1.0
+
+465: raspa
+Items(2): 
+	raspadne -> -1.0
+	raspala -> -1.0
+
+466: ras
+Items(2): 
+	rasti -> -1.0
+	rasuti -> -1.0
+
+467: ratobor
+Items(3): 
+	ratoborna -> -1.0
+	ratoborni -> -1.0
+	ratoborno -> -1.0
+
+468: razb
+Items(3): 
+	razbijen -> -1.0
+	razbili -> -1.0
+	razbio -> -1.0
+
+469: razdraž
+Items(3): 
+	razdražen -> -1.0
+	razdražiti -> -1.0
+	razdražujući -> -1.0
+
+470: razdražljiv
+Items(2): 
+	razdražljiv -> -1.0
+	razdražljivi -> -1.0
+
+471: razjar
+Items(3): 
+	razjaren -> -1.0
+	razjariti -> -1.0
+	razjarujući -> -1.0
+
+472: razočara
+Items(3): 
+	razočaran -> -1.0
+	razočarani -> -1.0
+	razočarati -> -1.0
+
+473: razočarenj
+Items(2): 
+	razočarenja -> -1.0
+	razočarenje -> -1.0
+
+474: razvra
+Items(2): 
+	razvrat -> -1.0
+	razvrati -> -1.0
+
+475: rea
+Items(2): 
+	reagovati -> -1.0
+	reaguje -> -1.0
+
+476: rezervoar
+Items(2): 
+	rezervoar -> -1.0
+	rezervoari -> -1.0
+
+477: reše
+Items(2): 
+	rešetka -> -1.0
+	rešetku -> -1.0
+
+478: rizi
+Items(2): 
+	rizik -> -1.0
+	rizikuje -> -1.0
+
+479: rug
+Items(2): 
+	rugajući -> -1.0
+	ruglo -> -1.0
+
+480: rup
+Items(2): 
+	rupa -> -1.0
+	rupe -> -1.0
+
+481: ruševi
+Items(2): 
+	ruševina -> -1.0
+	ruševine -> -1.0
+
+482: ruš
+Items(2): 
+	ruši -> -1.0
+	rušiti -> -1.0
+
+483: rđ
+Items(2): 
+	rđa -> -1.0
+	rđe -> -1.0
+
+484: samoubistv
+Items(2): 
+	samoubistva -> -1.0
+	samoubistvo -> -1.0
+
+485: sir
+Items(3): 
+	sirene -> -1.0
+	sirove -> -1.0
+	siroče -> -1.0
+
+486: siromaš
+Items(2): 
+	siromašna -> -1.0
+	siromašne -> -1.0
+
+487: s
+Items(2): 
+	sisao -> -1.0
+	steti -> -1.0
+
+488: skup
+Items(2): 
+	skupe -> -1.0
+	skupo -> -1.0
+
+489: skuplj
+Items(2): 
+	skuplje -> -1.0
+	skuplji -> -1.0
+
+490: slab
+Items(4): 
+	slab -> -1.0
+	slabe -> -1.0
+	slabi -> -1.0
+	slabijih -> -1.0
+
+491: slabos
+Items(2): 
+	slabost -> -1.0
+	slabosti -> -1.0
+
+492: slom
+Items(3): 
+	slomiti -> -1.0
+	slomljen -> -1.0
+	slomljena -> -1.0
+
+493: smeta
+Items(2): 
+	smetaju -> -1.0
+	smetati -> -1.0
+
+494: smetnj
+Items(2): 
+	smetnja -> -1.0
+	smetnje -> -1.0
+
+495: smicalic
+Items(2): 
+	smicalica -> -1.0
+	smicalicama -> -1.0
+
+496: smr
+Items(2): 
+	smrad -> -1.0
+	smrt -> -1.0
+
+497: smrdljiv
+Items(2): 
+	smrdljiv -> -1.0
+	smrdljiva -> -1.0
+
+498: snishodljiv
+Items(2): 
+	snishodljiv -> -1.0
+	snishodljivo -> -1.0
+
+499: snob
+Items(2): 
+	snob -> -1.0
+	snobovi -> -1.0
+
+500: spor
+Items(5): 
+	spor -> -1.0
+	sporna -> -1.0
+	sporno -> -1.0
+	sporo -> -1.0
+	sporovi -> -1.0
+
+501: sramot
+Items(4): 
+	sramota -> -1.0
+	sramotne -> -1.0
+	sramotno -> -1.0
+	sramotom -> -1.0
+
+502: stereotip
+Items(3): 
+	stereotip -> -1.0
+	stereotipni -> -1.0
+	stereotipno -> -1.0
+
+503: stidljiv
+Items(3): 
+	stidljiv -> -1.0
+	stidljive -> -1.0
+	stidljivo -> -1.0
+
+504: stra
+Items(5): 
+	strah -> -1.0
+	strahom -> -1.0
+	strahovi -> -1.0
+	strahu -> -1.0
+	strane -> -1.0
+
+505: stres
+Items(2): 
+	stres -> -1.0
+	stresno -> -1.0
+
+506: subverziv
+Items(2): 
+	subverzivna -> -1.0
+	subverzivno -> -1.0
+
+507: sudbonos
+Items(2): 
+	sudbonosni -> -1.0
+	sudbonosno -> -1.0
+
+508: sukob
+Items(3): 
+	sukob -> -1.0
+	sukoba -> -1.0
+	sukobu -> -1.0
+
+509: sumnj
+Items(3): 
+	sumnja -> -1.0
+	sumnje -> -1.0
+	sumnjom -> -1.0
+
+510: sumnjiv
+Items(4): 
+	sumnjiv -> -1.0
+	sumnjive -> -1.0
+	sumnjivih -> -1.0
+	sumnjivo -> -1.0
+
+511: sumnjičav
+Items(2): 
+	sumnjičav -> -1.0
+	sumnjičavo -> -1.0
+
+512: sumor
+Items(3): 
+	sumorna -> -1.0
+	sumorne -> -1.0
+	sumorno -> -1.0
+
+513: surov
+Items(2): 
+	surov -> -1.0
+	surovo -> -1.0
+
+514: suviš
+Items(2): 
+	suvišna -> -1.0
+	suvišno -> -1.0
+
+515: svađ
+Items(2): 
+	svađa -> -1.0
+	svađe -> -1.0
+
+516: svinj
+Items(3): 
+	svinja -> -1.0
+	svinjac -> -1.0
+	svinje -> -1.0
+
+517: tra
+Items(2): 
+	tragova -> -1.0
+	tragovi -> -1.0
+
+518: tr
+Items(4): 
+	tremu -> -1.0
+	trom -> -1.0
+	truje -> -1.0
+	truo -> -1.0
+
+519: tri
+Items(2): 
+	trikova -> -1.0
+	trikove -> -1.0
+
+520: tu
+Items(3): 
+	tuga -> -1.0
+	tugovati -> -1.0
+	tuguje -> -1.0
+
+521: tup
+Items(2): 
+	tup -> -1.0
+	tupi -> -1.0
+
+522: tuž
+Items(3): 
+	tužio -> -1.0
+	tužiti -> -1.0
+	tužno -> -1.0
+
+523: tvrdnj
+Items(2): 
+	tvrdnj -> -1.0
+	tvrdnju -> -1.0
+
+524: tvrdoglav
+Items(2): 
+	tvrdoglav -> -1.0
+	tvrdoglavo -> -1.0
+
+525: ubij
+Items(2): 
+	ubija -> -1.0
+	ubije -> -1.0
+
+526: ub
+Items(2): 
+	ubio -> -1.0
+	ubiti -> -1.0
+
+527: ubistv
+Items(2): 
+	ubistva -> -1.0
+	ubistveno -> -1.0
+
+528: udar
+Items(5): 
+	udarac -> -1.0
+	udaren -> -1.0
+	udari -> -1.0
+	udario -> -1.0
+	udariti -> -1.0
+
+529: ugroz
+Items(2): 
+	ugrozi -> -1.0
+	ugroziti -> -1.0
+
+530: ukor
+Items(2): 
+	ukor -> -1.0
+	ukori -> -1.0
+
+531: ukra
+Items(2): 
+	ukradene -> -1.0
+	ukrao -> -1.0
+
+532: umanjivanj
+Items(2): 
+	umanjivanja -> -1.0
+	umanjivanje -> -1.0
+
+533: uniš
+Items(4): 
+	uništi -> -1.0
+	uništila -> -1.0
+	uništio -> -1.0
+	uništit -> -1.0
+
+534: uobraž
+Items(2): 
+	uobražen -> -1.0
+	uobraženi -> -1.0
+
+535: upetlja
+Items(2): 
+	upetljano -> -1.0
+	upetljati -> -1.0
+
+536: uplaš
+Items(3): 
+	uplašim -> -1.0
+	uplašio -> -1.0
+	uplašiti -> -1.0
+
+537: upozor
+Items(2): 
+	upozorio -> -1.0
+	upozoriti -> -1.0
+
+538: uprlja
+Items(2): 
+	uprljan -> -1.0
+	uprljati -> -1.0
+
+539: usam
+Items(3): 
+	usamljen -> -1.0
+	usamljena -> -1.0
+	usamljeni -> -1.0
+
+540: usija
+Items(2): 
+	usijana -> -1.0
+	usijane -> -1.0
+
+541: uspor
+Items(2): 
+	usporava -> -1.0
+	usporen -> -1.0
+
+542: utuč
+Items(2): 
+	utučen -> -1.0
+	utučeni -> -1.0
+
+543: uvred
+Items(4): 
+	uvreda -> -1.0
+	uvrediti -> -1.0
+	uvredu -> -1.0
+	uvređen -> -1.0
+
+544: uvredljiv
+Items(2): 
+	uvredljiv -> -1.0
+	uvredljivo -> -1.0
+
+545: uzalud
+Items(2): 
+	uzalud -> -1.0
+	uzaludna -> -1.0
+
+546: uznemir
+Items(6): 
+	uznemirava -> -1.0
+	uznemiren -> -1.0
+	uznemireni -> -1.0
+	uznemiri -> -1.0
+	uznemiriti -> -1.0
+	uznemirujući -> -1.0
+
+547: užas
+Items(5): 
+	užasava -> -1.0
+	užasna -> -1.0
+	užasne -> -1.0
+	užasni -> -1.0
+	užasno -> -1.0
+
+548: varvarsk
+Items(2): 
+	varvarski -> -1.0
+	varvarsko -> -1.0
+
+549: vis
+Items(2): 
+	visi -> -1.0
+	visiti -> -1.0
+
+550: vređan
+Items(2): 
+	vredjanom -> -1.0
+	vređanom -> -1.0
+
+551: zablud
+Items(5): 
+	zabluda -> -1.0
+	zablude -> -1.0
+	zabludi -> -1.0
+	zabludom -> -1.0
+	zabludu -> -1.0
+
+552: zabran
+Items(2): 
+	zabraniti -> -1.0
+	zabranjeno -> -1.0
+
+553: zabranj
+Items(2): 
+	zabranjuje -> -1.0
+	zabranjuju -> -1.0
+
+554: zabrin
+Items(2): 
+	zabrinuti -> -1.0
+	zabrinuto -> -1.0
+
+555: zadir
+Items(2): 
+	zadire -> -1.0
+	zadiru -> -1.0
+
+556: zagađivač
+Items(2): 
+	zagađivač -> -1.0
+	zagađivači -> -1.0
+
+557: zaglav
+Items(2): 
+	zaglavi -> -1.0
+	zaglaviti -> -1.0
+
+558: zajedljiv
+Items(2): 
+	zajedljiv -> -1.0
+	zajedljivo -> -1.0
+
+559: zamag
+Items(2): 
+	zamagljen -> -1.0
+	zamagljena -> -1.0
+
+560: zamor
+Items(2): 
+	zamor -> -1.0
+	zamorno -> -1.0
+
+561: zamrz
+Items(2): 
+	zamrzla -> -1.0
+	zamrzne -> -1.0
+
+562: zamrš
+Items(2): 
+	zamršen -> -1.0
+	zamršena -> -1.0
+
+563: zanemar
+Items(3): 
+	zanemaren -> -1.0
+	zanemariti -> -1.0
+	zanemaruju -> -1.0
+
+564: zapanj
+Items(2): 
+	zapanjiti -> -1.0
+	zapanjujući -> -1.0
+
+565: zaraz
+Items(2): 
+	zaraza -> -1.0
+	zarazno -> -1.0
+
+566: zastar
+Items(4): 
+	zastarela -> -1.0
+	zastarelo -> -1.0
+	zastareo -> -1.0
+	zastariti -> -1.0
+
+567: zastrašuj
+Items(2): 
+	zastrašujuće -> -1.0
+	zastrašujuću -> -1.0
+
+568: zategn
+Items(2): 
+	zategnuta -> -1.0
+	zategnuti -> -1.0
+
+569: zatur
+Items(2): 
+	zaturen -> -1.0
+	zaturiti -> -1.0
+
+570: zatvor
+Items(3): 
+	zatvor -> -1.0
+	zatvora -> -1.0
+	zatvoriti -> -1.0
+
+571: zaver
+Items(2): 
+	zavera -> -1.0
+	zaveru -> -1.0
+
+572: zavisni
+Items(2): 
+	zavisnici -> -1.0
+	zavisnik -> -1.0
+
+573: zbun
+Items(3): 
+	zbuniti -> -1.0
+	zbunjen -> -1.0
+	zbunjeni -> -1.0
+
+574: zbunj
+Items(2): 
+	zbunjuje -> -1.0
+	zbunjujući -> -1.0
+
+575: zlob
+Items(3): 
+	zloba -> -1.0
+	zlobe -> -1.0
+	zlobno -> -1.0
+
+576: zlonamer
+Items(2): 
+	zlonamerni -> -1.0
+	zlonamerno -> -1.0
+
+577: zlostavlja
+Items(3): 
+	zlostavljali -> -1.0
+	zlostavljano -> -1.0
+	zlostavljati -> -1.0
+
+578: zlostavljanj
+Items(2): 
+	zlostavljanja -> -1.0
+	zlostavljanje -> -1.0
+
+579: zloupotreb
+Items(3): 
+	zloupotreba -> -1.0
+	zloupotrebe -> -1.0
+	zloupotrebu -> -1.0
+
+580: čuda
+Items(2): 
+	čudak -> -1.0
+	čudan -> -1.0
+
+581: škrip
+Items(3): 
+	škripa -> -1.0
+	škripeći -> -1.0
+	škripi -> -1.0
+
+582: štet
+Items(4): 
+	šteta -> -1.0
+	štetna -> -1.0
+	štetne -> -1.0
+	štetno -> -1.0
+
+583: žaljenj
+Items(2): 
+	žaljenja -> -1.0
+	žaljenje -> -1.0
+
+584: žalos
+Items(2): 
+	žalosno -> -1.0
+	žalost -> -1.0
+
+585: žesto
+Items(2): 
+	žestok -> -1.0
+	žestoka -> -1.0
+
+586: žrtv
+Items(3): 
+	žrtva -> -1.0
+	žrtveni -> -1.0
+	žrtvovali -> -1.0

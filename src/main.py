@@ -64,35 +64,9 @@ def stem_dictionary(st_dict):
     return stemmed_dictionary
 
 
-# START MAIN
-# Load dictionaries
-# English
-engDict = buildEnglish()
-engDictStemmed = stem_dictionary(engDict)
-cnt = 0
-for item in engDictStemmed:
-    if len(engDictStemmed[item]) > 1:
-        print(cnt, item, engDictStemmed[item])
-        cnt += 1
-# German
-gerDict = build_german()
-gerDictStemmed = stem_dictionary(gerDict)
-cnt = 0
-for item in gerDictStemmed:
-    if len(gerDictStemmed[item]) > 1:
-        print(cnt, item, gerDictStemmed[item])
-        cnt += 1
-
-# Load data set
-data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
-# Iterate through data set
-for index, row in data_set.iterrows():
-    print(row[0])
-    text = row[0]
-    text = prepare_for_stemming(text)
-    text = call_stemmer(text)
+def zip_comment(raw_text):
     # Generate tokens for data set
-    tokens_original = tokenizer.text_to_tokens(row[0])
+    tokens_original = tokenizer.text_to_tokens(raw_text)
     token_text = ""
     for i in tokens_original:
         token_text = token_text + i + "\n"
@@ -105,6 +79,47 @@ for index, row in data_set.iterrows():
             del tokens_original[cnt]
         else:
             cnt += 1
-    for i, j in zip(tokens_stemmed, tokens_original):
-        print(i + " " + j)
-    print("Value: " + row[1])
+
+    zipped = zip(tokens_stemmed, tokens_original)
+    return zipped
+
+
+# START MAIN
+# Load dictionaries
+# English
+engDict = buildEnglish()
+engDictStemmed = stem_dictionary(engDict)
+# Log nonlinear stems in engDict
+cnt = 0
+with open("./stemmer/logs/log_nonlinear_eng.txt", "w", encoding="utf8") as f:
+    for item in engDictStemmed:
+        if len(engDictStemmed[item]) > 1:
+            f.write("\n\n" + str(cnt) + ": " + item)
+            f.write("\n" + "Items(" + str(len(engDictStemmed[item])) + "): ")
+            for key in engDictStemmed[item]:
+                f.write("\n\t" + key + " -> " + str(engDictStemmed[item][key]))
+            cnt += 1
+# German
+gerDict = build_german()
+gerDictStemmed = stem_dictionary(gerDict)
+# Log nonlinear stems in gerDict
+cnt = 0
+with open("./stemmer/logs/log_nonlinear_ger.txt", "w", encoding="utf8") as f:
+    for item in gerDictStemmed:
+        if len(gerDictStemmed[item]) > 1:
+            f.write("\n\n" + str(cnt) + ": " + item)
+            f.write("\n" + "Items(" + str(len(gerDictStemmed[item])) + "): ")
+            for key in gerDictStemmed[item]:
+                f.write("\n\t" + key + " -> " + str(gerDictStemmed[item][key]))
+            cnt += 1
+
+# Load data set
+data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
+# Iterate through data set
+for index, row in data_set.iterrows():
+    raw_text = row['Text']
+    zipped = zip(raw_text)
+    sentiment_class = row['class-att']
+    #TODO call comment_wait_calculation for engDict and gerDict
+
+print("Finished")
