@@ -38,7 +38,6 @@ class CommentProcessPool:
     # Start process threads to calculate specific data set
     def start(self, data_set):
         padding = int(len(data_set) / self.thread_num)
-        print(padding)
         start_index = 0
         end_index = padding
         cnt = 0

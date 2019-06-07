@@ -93,6 +93,7 @@ while work_flag == 1:
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
+            print("Number of comments: " + str(len(list_summ_ger)))
             print("List of sum eng dic:" + str(list_summ_eng))
             print("List of sum ger dic:" + str(list_summ_ger))
             print("List of should outcome:" + str(list_out))
@@ -113,12 +114,12 @@ while work_flag == 1:
                 thread_flag = 0
             except Exception as ex:
                 pass
-            process = comment_process_pool.CommentProcessPool(thread_num)
-            process.start(data_set)
-            data_processed = process.get_data()
-            with open("../movie_dataset/stemmed_dict.json", "w", encoding='utf-8') as f:
-                json.dump(data_processed, f)
-            data_set_json = data_processed
+        process = comment_process_pool.CommentProcessPool(thread_num)
+        process.start(data_set)
+        data_processed = process.get_data()
+        with open("../movie_dataset/stemmed_dict.json", "w", encoding='utf-8') as f:
+            json.dump(data_processed, f, ensure_ascii=False)
+        data_set_json = data_processed
         print("Process finished!")
     elif user_action is "4":
         work_flag = 0
