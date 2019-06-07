@@ -11,15 +11,22 @@ import plotting
 import logging
 from sklearn.metrics import accuracy_score
 
-logging.basicConfig(level=logging.DEBUG)
-
+fh = logging.FileHandler('spam.log')
+fh.setLevel(logging.DEBUG)
+logger = logging.getLogger('nas_loger')
+logging.basicConfig(filename='logfile.log', filemode='w', level=logging.DEBUG)
+logger.addHandler(fh)
 
 # Function for calculating sum of weights of comment from specific dictionary
 def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter, is_ger):
     summ = 0
+    negation_flag = False # TODO check if this works properly
+    br_poz = 0
+    br_neg = 0
     for token, stemm_token in zip(t_original, t_stemmed):
         # TODO do something with this kind of words
         if token == "ne":
+            negation_flag = True
             continue
         if stemm_token in dict_curr:
             min_distance = -1
@@ -36,11 +43,27 @@ def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter
                     temp_stem = stemm_token
                     temp_key = key
             if min_distance <= distance_filter:
-                # if temp_weight < 0:
-                #    temp_weight *= 0.44
+                if negation_flag:
+                    negation_flag=False
+                    temp_weight *= -1
+                if temp_weight < 0:
+                    br_neg+=1
+                    #temp_weight *= 0.7
+                else:
+                    br_poz+=1
                 summ += temp_weight
-                if is_ger:
-                    logging.debug("Comment word: " + temp_word + ", stem: " + temp_stem + ", paired word: " + temp_key + ", Weight: " + str(temp_weight) + ", distance: " + str(min_distance))
+                if not is_ger:
+                    pass
+                    #logging.debug("Comment word: " + temp_word + ", stem: " + temp_stem + ", paired word: " + temp_key + ", Weight: " + str(temp_weight) + ", distance: " + str(min_distance))
+        else:
+            negation_flag = False
+    if not is_ger:
+        logging.debug("Comment total: " + str(br_poz) + " positives, " + str(br_neg) + " negatives found")
+        pass
+    if br_poz+br_neg==0:
+        logging.debug(set(t_original))
+    if not is_ger:
+        logging.debug("\n\n")
     return summ
 
 
@@ -100,10 +123,10 @@ while work_flag == 1:
             list_out = []
             for data in data_set_json:
                 sentiment_class = data['class_att']
-                tokens_stemmed = data['tokens_original']
-                tokens_original = data['tokens_stemmed']
-                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 1, False)
-                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 1, True)
+                tokens_original = data['tokens_original']
+                tokens_stemmed = data['tokens_stemmed']
+                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 5, False)
+                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 5, True)
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
@@ -117,12 +140,12 @@ while work_flag == 1:
             y_eng = []
             y_true = []
             for y in list_summ_ger:
-                if y>0:
+                if y>=0:
                     y_ger.append(1)
                 else:
                     y_ger.append(-1)
             for y in list_summ_eng:
-                if y>0:
+                if y>=0:
                     y_eng.append(1)
                 else:
                     y_eng.append(-1)
