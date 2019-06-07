@@ -4,6 +4,8 @@ import tokenizer
 from eng_dict import buildEnglish
 from ger_dict import build_german
 
+from src.naive_bayes import naive_bayes
+
 
 def prepare_for_stemming(prep_text):
     prep_text = prep_text.replace("č", "cx")
@@ -108,3 +110,6 @@ for index, row in data_set.iterrows():
     for i, j in zip(tokens_stemmed, tokens_original):
         print(i + " " + j)
     print("Value: " + row[1])
+
+# Naive Bayes
+print(naive_bayes())
