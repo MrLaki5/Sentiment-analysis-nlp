@@ -16,3 +16,7 @@ src/stemmer/logs/*.txt
 src/__pycache__/
 
 src/stemmer/__pycache__/
+
+Untitled.ipynb
+
+.ipynb_checkpoints

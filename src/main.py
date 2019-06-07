@@ -6,6 +6,7 @@ from ger_dict import build_german
 import levenshtein
 import json
 
+from src.naive_bayes import naive_bayes
 
 # Function for calculating sum of weights of comment from specific dictionary
 def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter):
