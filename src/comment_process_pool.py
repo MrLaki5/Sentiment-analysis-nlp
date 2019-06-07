@@ -115,13 +115,3 @@ class ProcessWorker(threading.Thread):
             )
             data_cnt += 1
         logging.info("ProcessWorker: thread exiting, name: " + self.name)
-
-
-# Main part
-data_s = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
-process = CommentProcessPool(5)
-process.start(data_s)
-data_processed = process.get_data()
-with open("../movie_dataset/stemmed_dict.json", "w", encoding='utf-8') as f:
-    json.dump(data_processed, f)
-logging.info("Process finished!")
