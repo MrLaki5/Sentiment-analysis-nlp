@@ -9,9 +9,9 @@
 
 venv/
 
-src/stemmer/temp_in\.txt
+src/stemmer/*.txt
 
-src/stemmer/temp_out\.txt
+src/stemmer/logs/*.txt
 
 src/__pycache__/
 
