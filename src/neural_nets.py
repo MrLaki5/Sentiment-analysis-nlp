@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 import keras
@@ -6,7 +5,7 @@ from keras.layers import Input, Dense, concatenate
 from keras.models import Model
 from sklearn.model_selection import KFold
 from sentiment_logic import comment_weight_calculation
-from eng_dict import buildEnglish
+from eng_dict import build_english
 from ger_dict import build_german
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import cross_val_score
@@ -44,9 +43,9 @@ def build_adaline_with_bias():
 
 # For 2 class classification only
 def keras_adaline(data_set_json, bias=False):
-    engDict = buildEnglish()
+    engDict, _ = build_english()
     engDictStemmed = stemmer.stem_dictionary(engDict)
-    gerDict = build_german()
+    gerDict, _ = build_german()
     gerDictStemmed = stemmer.stem_dictionary(gerDict)
 
     train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')

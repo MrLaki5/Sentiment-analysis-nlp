@@ -1,6 +1,6 @@
 import pandas as pd
 from stemmer import stemmer
-from eng_dict import buildEnglish
+from eng_dict import build_english
 from ger_dict import build_german
 import sentiment_logic
 import json
@@ -34,8 +34,9 @@ if __name__ == '__main__':
 # START MAIN
 # Load dictionaries
 # English
-engDict = buildEnglish()
+engDict, engDictPreProc = build_english()
 engDictStemmed = stemmer.stem_dictionary(engDict)
+engDictPreProcStemmed = stemmer.stem_dictionary(engDictPreProc)
 # Log nonlinear stems in engDict
 cnt = 0
 with open("./stemmer/logs/log_nonlinear_eng.txt", "w", encoding="utf8") as f:
@@ -47,8 +48,9 @@ with open("./stemmer/logs/log_nonlinear_eng.txt", "w", encoding="utf8") as f:
                 f.write("\n\t" + key + " -> " + str(engDictStemmed[item][key]))
             cnt += 1
 # German
-gerDict = build_german()
+gerDict, gerDictPreProc = build_german()
 gerDictStemmed = stemmer.stem_dictionary(gerDict)
+gerDictPreProcStemmed = stemmer.stem_dictionary(gerDictPreProc)
 # Log nonlinear stems in gerDict
 cnt = 0
 with open("./stemmer/logs/log_nonlinear_ger.txt", "w", encoding="utf8") as f:
@@ -94,8 +96,8 @@ while work_flag == 1:
                 sentiment_class = data['class_att']
                 tokens_original = data['tokens_original']
                 tokens_stemmed = data['tokens_stemmed']
-                summ_eng = sentiment_logic.comment_weight_calculation(engDictStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
-                summ_ger = sentiment_logic.comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+                summ_eng = sentiment_logic.comment_weight_calculation(engDictPreProcStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+                summ_ger = sentiment_logic.comment_weight_calculation(gerDictPreProcStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
 
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
