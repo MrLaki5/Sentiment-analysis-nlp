@@ -11,6 +11,7 @@ import plotting
 import logging
 from sklearn.metrics import accuracy_score
 from datetime import datetime
+from neural_nets import keras_adaline
 
 
 # Logger configuration for both console and file
@@ -78,7 +79,9 @@ while work_flag == 1:
     print("2. Bayes-naive")
     print("3. Do tokenization of comments")
     print("4. Choose number of classes, current: " + str(classes_num))
-    print("5. Exit")
+    print("5. Adaline without bias")
+    print("6. Adaline with bias")
+    print("7. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action is "1":
@@ -209,4 +212,12 @@ while work_flag == 1:
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
     elif user_action is "5":
+        results = keras_adaline(data_set_json, bias=False)
+        print(results)
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
+    elif user_action is "6":
+        results = keras_adaline(data_set_json, bias=True)
+        print(results)
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
+    elif user_action is "7":
         work_flag = 0

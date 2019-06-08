@@ -14,7 +14,6 @@ def naive_bayes(class_num=2):
         train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')
     else:
         train_data = pd.read_csv('../movie_dataset/SerbMR-3C.csv')
-    #train_X, val_X, train_y, val_y = train_test_split(train_data['Text'], train_data['class-att'], test_size=0.2)
 
     splits = 5
     kf = KFold(n_splits=splits, shuffle=True)
