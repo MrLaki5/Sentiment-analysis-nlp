@@ -57,7 +57,6 @@ def SVM(class_num=2):
                         max_iter=5, tol=None)
     return training(svm, class_num)
 
-
 def naive_bayes(class_num=2):
     return training(MultinomialNB(), class_num)
 

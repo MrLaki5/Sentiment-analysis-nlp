@@ -22,7 +22,7 @@ stop_words = ["a", "ako", "ali", "bi", "bih", "bila", "bili", "bilo", "bio", "bi
 
 
 # Tokenize text to words
-def text_to_tokens(text):
+def tokenize(text, without_stop):
     # Tokenize
     tokens = nltk.word_tokenize(text)
     tokens = [x.lower() for x in tokens]
@@ -31,5 +31,16 @@ def text_to_tokens(text):
     punkt += '”'
     punkt += '“'
     punkt += "’"
-    tokens = [x for x in tokens if not re.fullmatch('[' + punkt + ']+', x) and x not in stop_words and len(x) > 1]
+    if without_stop:
+        tokens = [x for x in tokens if not re.fullmatch('[' + punkt + ']+', x) and x not in stop_words and len(x) > 1]
+    else:
+        tokens = [x for x in tokens if not re.fullmatch('[' + punkt + ']+', x) and len(x) > 1]
     return tokens
+
+def text_to_tokens(text):
+    return tokenize(text, True)
+
+def text_to_tokens_with_stop(text):
+    return tokenize(text, False)
+
+
