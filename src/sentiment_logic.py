@@ -1,7 +1,7 @@
 import levenshtein
 import logging
 from stemmer import stemmer
-from eng_dict import buildEnglish
+from eng_dict import build_english
 from ger_dict import build_german
 from comment_process_pool import zip_comment
 
@@ -58,7 +58,7 @@ def comment_weight_quick(comment, language):
     stemmed_dict = {}
     dict_name = ""
     if language is "eng":
-        dict = buildEnglish()
+        dict = build_english()
         stemmed_dict = stemmer.stem_dictionary(dict)
         dict_name = "English"
     else:

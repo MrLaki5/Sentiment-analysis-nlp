@@ -43,9 +43,9 @@ def build_adaline_with_bias():
 
 # For 2 class classification only
 def keras_adaline(data_set_json, bias=False):
-    engDict, _ = build_english()
+    _, engDict = build_english() # swap the dict if needed
     engDictStemmed = stemmer.stem_dictionary(engDict)
-    gerDict, _ = build_german()
+    _, gerDict= build_german() # swap the dict if needed
     gerDictStemmed = stemmer.stem_dictionary(gerDict)
 
     train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')
