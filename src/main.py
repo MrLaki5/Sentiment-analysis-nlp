@@ -4,15 +4,16 @@ from eng_dict import buildEnglish
 from ger_dict import build_german
 import sentiment_logic
 import json
-from src.naive_bayes import naive_bayes
+from src.ml_algorithms import naive_bayes
 import os.path
 import comment_process_pool
 import plotting
 import logging
+import numpy as np
 from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 from neural_nets import keras_adaline
-
 
 # Logger configuration for both console and file
 FILE_LOG = True
@@ -75,7 +76,7 @@ classes_num = 2
 while work_flag == 1:
     print("Choose action:")
     print("--------------------------")
-    print("1. Lexicon neural network")
+    print("1. Lexicon sum (no ML)")
     print("2. Bayes-naive")
     print("3. Do tokenization of comments")
     print("4. Choose number of classes, current: " + str(classes_num))
@@ -95,15 +96,29 @@ while work_flag == 1:
                 tokens_stemmed = data['tokens_stemmed']
                 summ_eng = sentiment_logic.comment_weight_calculation(engDictStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
                 summ_ger = sentiment_logic.comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
+
+            scaler = StandardScaler()
+            summ_eng = np.array(list_summ_eng).reshape(-1, 1)
+            summ_ger = np.array(list_summ_ger).reshape(-1, 1)
+            scaled_data_eng = scaler.fit_transform(summ_eng)
+            scaled_data_ger = scaler.fit_transform(summ_ger)
+            scaled_data_eng = scaled_data_eng.reshape(1, -1)
+            scaled_data_ger = scaled_data_ger.reshape(1, -1)
             print("Number of comments: " + str(len(list_summ_ger)))
-            print("List of sum eng dic:" + str(list_summ_eng))
-            print("List of sum ger dic:" + str(list_summ_ger))
+            print("List of sum eng dic:" + str(scaled_data_eng))
+            print("List of sum ger dic:" + str(scaled_data_ger))
             print("List of should outcome:" + str(list_out))
+            # Sum weights
+            summ = []
+            for ger_sum, eng_sum in zip(scaled_data_eng[0], scaled_data_ger[0]):
+                summ.append(ger_sum + eng_sum)
 
             # Calculate accuracy and confusion matrix
+            y_both = []
             y_ger = []
             y_eng = []
             y_true = []
@@ -120,6 +135,11 @@ while work_flag == 1:
                         y_eng.append(1)
                     else:
                         y_eng.append(-1)
+                for y in summ:
+                    if y >= 0:
+                        y_both.append(1)
+                    else:
+                        y_both.append(-1)
                 for y in list_out:
                     if y == 'POSITIVE':
                         y_true.append(1)
@@ -129,14 +149,16 @@ while work_flag == 1:
             # Three classes
 
             #TODO find propper boundary, these are just random estimates for now
-            boundary_eng = 3.0
-            boundary_ger = 1.0
+            boundary_eng = 4.6
+            boundary_ger_left = 0.38
+            boundary_ger_right = 0.45
+            boundary_both = 0.595
 
             if classes_num is 3:
                 for y in list_summ_ger:
-                    if y >= boundary_ger:
+                    if y >= boundary_ger_right:
                         y_ger.append(1)
-                    elif y > (-1)*boundary_ger:
+                    elif y > (-1)*boundary_ger_left:
                         y_ger.append(0)
                     else:
                         y_ger.append(-1)
@@ -147,6 +169,13 @@ while work_flag == 1:
                         y_eng.append(0)
                     else:
                         y_eng.append(-1)
+                for y in summ:
+                    if y >= boundary_both:
+                        y_both.append(1)
+                    elif y > (-1) * boundary_both:
+                        y_both.append(0)
+                    else:
+                        y_both.append(-1)
                 for y in list_out:
                     if y == 'POSITIVE':
                         y_true.append(1)
@@ -155,14 +184,15 @@ while work_flag == 1:
                     else:
                         y_true.append(-1)
 
-            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, classes_num, title="Eng leksikon")
+            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, classes_num, title="Eng lexicon")
             plotting.show_confusion_matrix()
             print(accuracy_score(y_true, y_eng))
-            cm2 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, classes_num, title="Ger leksikon")
+            cm2 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, classes_num, title="Ger lexicon")
             plotting.show_confusion_matrix()
             print(accuracy_score(y_true, y_ger))
-
-
+            cm3 = plotting.calculate_normalized_confusion_matrix(y_true, y_both, classes_num, title="Both lexicons")
+            plotting.show_confusion_matrix()
+            print(accuracy_score(y_true, y_both))
             print("Finished")
         else:
             print("Tokenization of comment has not been done.")

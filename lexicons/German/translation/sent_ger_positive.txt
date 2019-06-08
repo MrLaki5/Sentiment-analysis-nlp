@@ -634,7 +634,7 @@ superlativ,0.004
 suplement,0.004
 suplementi,0.004
 susedstvo,0.0911
-svetilište,40.0
+svetilište,0.40
 svečanost,0.004
 svidjanje,0.3349
 talenat,0.3352
