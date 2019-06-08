@@ -1497,7 +1497,7 @@ suspenzije,-0.0048
 suza,-0.0562
 suze,-0.0562
 suša,-0.0048
-svetilište,40.0
+svetilište,0.40
 svečanost,0.004
 svidjanje,0.3349
 taboo,-0.0048

@@ -10,7 +10,11 @@ def constructEngLexicon(positives, negatives):
             engDict[word] = 1
 
     with open(negatives, encoding='utf-8') as f2:
+        cnt = 0
         for line in f2:
+            cnt += 1
+            if cnt % 2 is 0:
+                continue
             word = line[:line.find("\n")]
             if word in engDict:
                 engDict[word] = 0
@@ -20,4 +24,3 @@ def constructEngLexicon(positives, negatives):
 
 def buildEnglish():
     return constructEngLexicon(pathPositive, pathNegative)
-
