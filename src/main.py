@@ -10,12 +10,16 @@ import comment_process_pool
 import plotting
 import logging
 from sklearn.metrics import accuracy_score
+from datetime import datetime
 
-fh = logging.FileHandler('spam.log')
-fh.setLevel(logging.DEBUG)
-logger = logging.getLogger('nas_loger')
-logging.basicConfig(filename='logfile.log', filemode='w', level=logging.DEBUG)
-logger.addHandler(fh)
+
+# Logger configuration for both console and file
+if __name__ == '__main__':
+    log_name = datetime.now().strftime('%Y-%m-%d--%H-%M-%S') + ".log"
+    logging.basicConfig(filename='./logs/' + log_name, level=logging.DEBUG)
+    logging.getLogger().addHandler(logging.StreamHandler())
+    logging.debug("Logger started!")
+
 
 # Function for calculating sum of weights of comment from specific dictionary
 def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter, is_ger):
@@ -96,10 +100,11 @@ with open("./stemmer/logs/log_nonlinear_ger.txt", "w", encoding="utf8") as f:
                 f.write("\n\t" + key + " -> " + str(gerDictStemmed[item][key]))
             cnt += 1
 
+
 # Load data set from json
 data_set_json = None
-if os.path.isfile("../movie_dataset/stemmed_dict.json"):
-    with open("../movie_dataset/stemmed_dict.json", encoding="utf8") as f:
+if os.path.isfile("../movie_dataset/stemmed_dict_2.json"):
+    with open("../movie_dataset/stemmed_dict_2.json", encoding="utf8") as f:
         data_set_json = json.load(f)
 
 # Load data set
@@ -107,13 +112,15 @@ data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 
 # Menu
 work_flag = 1
+classes_num = 2
 while work_flag == 1:
     print("Choose action:")
     print("--------------------------")
     print("1. Lexicon neural network")
     print("2. Bayes-naive")
     print("3. Do tokenization of comments")
-    print("4. Exit")
+    print("4. Choose number of classes, current: " + str(classes_num))
+    print("5. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action is "1":
@@ -182,9 +189,33 @@ while work_flag == 1:
         process = comment_process_pool.CommentProcessPool(thread_num)
         process.start(data_set)
         data_processed = process.get_data()
-        with open("../movie_dataset/stemmed_dict.json", "w", encoding='utf-8') as f:
+        with open("../movie_dataset/stemmed_dict_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
             json.dump(data_processed, f, ensure_ascii=False)
         data_set_json = data_processed
         print("Process finished!")
     elif user_action is "4":
+        class_flag = 1
+        class_temp = 1
+        while class_flag is 1:
+            print("Choose number of classes (2 or 3): ")
+            print("--------------------------")
+            class_temp = input("Action: ")
+            try:
+                class_temp = int(class_temp)
+                if class_temp is 2 or class_temp is 3:
+                    class_flag = 0
+            except Exception as ex:
+                pass
+        classes_num = class_temp
+        # Load data set from json
+        data_set_json = None
+        if os.path.isfile("../movie_dataset/stemmed_dict_" + str(classes_num) + ".json"):
+            with open("../movie_dataset/stemmed_dict_" + str(classes_num) + ".json", encoding="utf8") as f:
+                data_set_json = json.load(f)
+        else:
+            data_set_json = None
+
+        # Load data set
+        data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
+    elif user_action is "5":
         work_flag = 0

@@ -5,7 +5,8 @@ from stemmer import stemmer
 import json
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
 
 
 # Function for getting original and stemmed tokens of one comment
