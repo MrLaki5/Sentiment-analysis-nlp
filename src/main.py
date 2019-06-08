@@ -4,7 +4,7 @@ from eng_dict import buildEnglish
 from ger_dict import build_german
 import sentiment_logic
 import json
-from src.naive_bayes import naive_bayes
+from src.ml_algorithms import naive_bayes
 import os.path
 import comment_process_pool
 import plotting
