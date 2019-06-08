@@ -14,10 +14,18 @@ from datetime import datetime
 
 
 # Logger configuration for both console and file
+FILE_LOG = True
+CONSOLE_LOG = True
+
 if __name__ == '__main__':
     log_name = datetime.now().strftime('%Y-%m-%d--%H-%M-%S') + ".log"
-    logging.basicConfig(filename='./logs/' + log_name, level=logging.DEBUG)
-    logging.getLogger().addHandler(logging.StreamHandler())
+    if FILE_LOG:
+        logging.basicConfig(level=logging.DEBUG, handlers=[logging.FileHandler('./logs/' + log_name, 'w', 'utf-8')])
+        if CONSOLE_LOG:
+            logging.getLogger().addHandler(logging.StreamHandler())
+    else:
+        if CONSOLE_LOG:
+            logging.basicConfig(level=logging.DEBUG)
     logging.debug("Logger started!")
 
 
@@ -82,8 +90,8 @@ while work_flag == 1:
                 sentiment_class = data['class_att']
                 tokens_original = data['tokens_original']
                 tokens_stemmed = data['tokens_stemmed']
-                summ_eng = sentiment_logic.comment_weight_calculation(engDictStemmed, "English", tokens_original, tokens_stemmed, 5, False, False)
-                summ_ger = sentiment_logic.comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed, 5, False, False)
+                summ_eng = sentiment_logic.comment_weight_calculation(engDictStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+                summ_ger = sentiment_logic.comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)

@@ -11,10 +11,12 @@ def comment_weight_calculation(dict_curr, dict_name, t_original, t_stemmed, dist
     negation_flag = False # TODO check if this works properly
     br_poz = 0
     br_neg = 0
+    not_found_words = []
     for token, stemm_token in zip(t_original, t_stemmed):
         # TODO do something with this kind of words
-        if modification_use and token == "ne":
-            negation_flag = True
+        if token is "ne":
+            if modification_use:
+                negation_flag = True
             continue
         if stemm_token in dict_curr:
             min_distance = -1
@@ -42,6 +44,7 @@ def comment_weight_calculation(dict_curr, dict_name, t_original, t_stemmed, dist
                 logging.debug("Dictionary: " + dict_name + ", comment word: " + temp_word + ", stem: " + temp_stem + ", paired word: " + temp_key + ", Weight: " + str(temp_weight) + ", distance: " + str(min_distance))
         else:
             negation_flag = False
+            not_found_words.append(token)
     logging.debug("Dictionary: " + dict_name + ", comment total: " + str(br_poz) + " positives, " + str(br_neg) + " negatives found")
-    logging.debug("Dictionary: " + dict_name + ", words not found: " + str(set(t_original)))
+    logging.debug("Dictionary: " + dict_name + ", words not found: " + str(set(not_found_words)))
     return summ
