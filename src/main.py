@@ -104,25 +104,58 @@ while work_flag == 1:
             y_ger = []
             y_eng = []
             y_true = []
-            for y in list_summ_ger:
-                if y>=0:
-                    y_ger.append(1)
-                else:
-                    y_ger.append(-1)
-            for y in list_summ_eng:
-                if y>=0:
-                    y_eng.append(1)
-                else:
-                    y_eng.append(-1)
-            for y in list_out:
-                if y=='POSITIVE':
-                    y_true.append(1)
-                else:
-                    y_true.append(-1)
-            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, plotting.LABELS_TWO_CLASS, title="Eng leksikon")
+
+            # Two classes
+            if classes_num is 2:
+                for y in list_summ_ger:
+                    if y >= 0:
+                        y_ger.append(1)
+                    else:
+                        y_ger.append(-1)
+                for y in list_summ_eng:
+                    if y >= 0:
+                        y_eng.append(1)
+                    else:
+                        y_eng.append(-1)
+                for y in list_out:
+                    if y == 'POSITIVE':
+                        y_true.append(1)
+                    else:
+                        y_true.append(-1)
+
+            # Three classes
+
+            #TODO find propper boundary, these are just random estimates for now
+            boundary_eng = 3.0
+            boundary_ger = 1.0
+
+            if classes_num is 3:
+                for y in list_summ_ger:
+                    if y >= boundary_ger:
+                        y_ger.append(1)
+                    elif y > (-1)*boundary_ger:
+                        y_ger.append(0)
+                    else:
+                        y_ger.append(-1)
+                for y in list_summ_eng:
+                    if y >= boundary_eng:
+                        y_eng.append(1)
+                    elif y > (-1) * boundary_eng:
+                        y_eng.append(0)
+                    else:
+                        y_eng.append(-1)
+                for y in list_out:
+                    if y == 'POSITIVE':
+                        y_true.append(1)
+                    elif y == 'NEUTRAL':
+                        y_true.append(0)
+                    else:
+                        y_true.append(-1)
+
+            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_eng, classes_num, title="Eng leksikon")
             plotting.show_confusion_matrix()
             print(accuracy_score(y_true, y_eng))
-            cm1 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, plotting.LABELS_TWO_CLASS, title="Ger leksikon")
+            cm2 = plotting.calculate_normalized_confusion_matrix(y_true, y_ger, classes_num, title="Ger leksikon")
             plotting.show_confusion_matrix()
             print(accuracy_score(y_true, y_ger))
 
@@ -131,7 +164,7 @@ while work_flag == 1:
         else:
             print("Tokenization of comment has not been done.")
     elif user_action is "2":
-        print(naive_bayes())
+        print(naive_bayes(classes_num))
     elif user_action is "3":
         thread_flag = 1
         thread_num = 1
