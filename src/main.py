@@ -2,7 +2,7 @@ import pandas as pd
 from stemmer import stemmer
 from eng_dict import buildEnglish
 from ger_dict import build_german
-import levenshtein
+import sentiment_logic
 import json
 from src.naive_bayes import naive_bayes
 import os.path
@@ -19,56 +19,6 @@ if __name__ == '__main__':
     logging.basicConfig(filename='./logs/' + log_name, level=logging.DEBUG)
     logging.getLogger().addHandler(logging.StreamHandler())
     logging.debug("Logger started!")
-
-
-# Function for calculating sum of weights of comment from specific dictionary
-def comment_weight_calculation(dict_curr, t_original, t_stemmed, distance_filter, is_ger):
-    summ = 0
-    negation_flag = False # TODO check if this works properly
-    br_poz = 0
-    br_neg = 0
-    for token, stemm_token in zip(t_original, t_stemmed):
-        # TODO do something with this kind of words
-        if token == "ne":
-            negation_flag = True
-            continue
-        if stemm_token in dict_curr:
-            min_distance = -1
-            temp_weight = 0
-            temp_word = ""
-            temp_stem = ""
-            temp_key = ""
-            for key in dict_curr[stemm_token].keys():
-                curr_distance = levenshtein.iterative_levenshtein(key, token)
-                if curr_distance < min_distance or min_distance < 0:
-                    min_distance = curr_distance
-                    temp_weight = dict_curr[stemm_token][key]
-                    temp_word = token
-                    temp_stem = stemm_token
-                    temp_key = key
-            if min_distance <= distance_filter:
-                if negation_flag:
-                    negation_flag=False
-                    temp_weight *= -1
-                if temp_weight < 0:
-                    br_neg+=1
-                    #temp_weight *= 0.7
-                else:
-                    br_poz+=1
-                summ += temp_weight
-                if not is_ger:
-                    pass
-                    #logging.debug("Comment word: " + temp_word + ", stem: " + temp_stem + ", paired word: " + temp_key + ", Weight: " + str(temp_weight) + ", distance: " + str(min_distance))
-        else:
-            negation_flag = False
-    if not is_ger:
-        logging.debug("Comment total: " + str(br_poz) + " positives, " + str(br_neg) + " negatives found")
-        pass
-    if br_poz+br_neg==0:
-        logging.debug(set(t_original))
-    if not is_ger:
-        logging.debug("\n\n")
-    return summ
 
 
 # START MAIN
@@ -132,8 +82,8 @@ while work_flag == 1:
                 sentiment_class = data['class_att']
                 tokens_original = data['tokens_original']
                 tokens_stemmed = data['tokens_stemmed']
-                summ_eng = comment_weight_calculation(engDictStemmed, tokens_original, tokens_stemmed, 5, False)
-                summ_ger = comment_weight_calculation(gerDictStemmed,  tokens_original, tokens_stemmed, 5, True)
+                summ_eng = sentiment_logic.comment_weight_calculation(engDictStemmed, "English", tokens_original, tokens_stemmed, 5, False, False)
+                summ_ger = sentiment_logic.comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed, 5, False, False)
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
                 list_out.append(sentiment_class)
