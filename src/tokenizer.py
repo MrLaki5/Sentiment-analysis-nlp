@@ -18,7 +18,7 @@ stop_words = ["a", "ako", "ali", "bi", "bih", "bila", "bili", "bilo", "bio", "bi
               "se","sebe","sebi","si","smo","ste","su","sve","svi","svog","svoj","svoja","svoje","svom",
               "ta","tada","taj","tako","te","tebe","tebi","ti","to","toj","tome","tu","tvoj","tvoja",
               "tvoje","u","uz","vam","vama","vas","vaš","vaša","vaše","već","vi","vrlo","za","zar","će",
-              "ćemo","ćete","ćeš","ću","što"]
+              "ćemo","ćete","ćeš","ću","što","šta","ovo","ovaj","ovog"]
 
 
 # Tokenize text to words
