@@ -8,17 +8,33 @@
 
 ### Results:
 
-#### Lexicons only:
+#### Lexicons only, 2 classes:
 * Not using preprocessed lexicons:
 
 Negation\Levenshtein's distance | 0 | 1 | 2 | 3 | 4 | 5 | 6
---- | --- | --- | --- | --- | --- | --- | ---
-False | <img src="results/lex_only_2_classes/npp_f/Figure_1.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_2.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_3.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_4.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_5.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_6.png" width="150"/> | <img src="results/lex_only_2_classes/npp_f/Figure_7.png" width="150"/>
-True | <img src="results/lex_only_2_classes/npp_t/Figure_1.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_2.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_3.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_4.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_5.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_6.png" width="150"/> | <img src="results/lex_only_2_classes/npp_t/Figure_7.png" width="150"/>
+:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+False | <img src="results/lex_only_2_classes/npp_f/Figure_1.png" width="150"/> 59.2% | <img src="results/lex_only_2_classes/npp_f/Figure_2.png" width="150"/> 58.5% | <img src="results/lex_only_2_classes/npp_f/Figure_3.png" width="150"/> 56.6% | <img src="results/lex_only_2_classes/npp_f/Figure_4.png" width="150"/> 56.7% | <img src="results/lex_only_2_classes/npp_f/Figure_5.png" width="150"/> 56.2% | <img src="results/lex_only_2_classes/npp_f/Figure_6.png" width="150"/> 56.2% | <img src="results/lex_only_2_classes/npp_f/Figure_7.png" width="150"/> 55.6%
+True | <img src="results/lex_only_2_classes/npp_t/Figure_1.png" width="150"/> 59.5% | <img src="results/lex_only_2_classes/npp_t/Figure_2.png" width="150"/> 58.5% | <img src="results/lex_only_2_classes/npp_t/Figure_3.png" width="150"/> 56.7% | <img src="results/lex_only_2_classes/npp_t/Figure_4.png" width="150"/> 57.6% | <img src="results/lex_only_2_classes/npp_t/Figure_5.png" width="150"/> 55.8% | <img src="results/lex_only_2_classes/npp_t/Figure_6.png" width="150"/> 56.1% | <img src="results/lex_only_2_classes/npp_t/Figure_7.png" width="150"/> 55.5%
 
 * Using preprocessed lexicons:
 
 Negation\Levenshtein's distance | 0 | 1 | 2 | 3 | 4 | 5 | 6
 --- | --- | --- | --- | --- | --- | --- | ---
-False | <img src="results/lex_only_2_classes/pp_f/Figure_1.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_2.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_3.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_4.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_5.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_6.png" width="150"/> | <img src="results/lex_only_2_classes/pp_f/Figure_7.png" width="150"/>
-True | <img src="results/lex_only_2_classes/pp_t/Figure_1.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_2.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_3.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_4.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_5.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_6.png" width="150"/> | <img src="results/lex_only_2_classes/pp_t/Figure_7.png" width="150"/>
+False | <img src="results/lex_only_2_classes/pp_f/Figure_1.png" width="150"/> 58.8% | <img src="results/lex_only_2_classes/pp_f/Figure_2.png" width="150"/> 60.5% | <img src="results/lex_only_2_classes/pp_f/Figure_3.png" width="150"/> 58.2% | <img src="results/lex_only_2_classes/pp_f/Figure_4.png" width="150"/> 58% | <img src="results/lex_only_2_classes/pp_f/Figure_5.png" width="150"/> 58.9% | <img src="results/lex_only_2_classes/pp_f/Figure_6.png" width="150"/> 58.5% | <img src="results/lex_only_2_classes/pp_f/Figure_7.png" width="150"/> 58.4%
+True | <img src="results/lex_only_2_classes/pp_t/Figure_1.png" width="150"/> 60% | <img src="results/lex_only_2_classes/pp_t/Figure_2.png" width="150"/> 60.7% | <img src="results/lex_only_2_classes/pp_t/Figure_3.png" width="150"/> 59.1% | <img src="results/lex_only_2_classes/pp_t/Figure_4.png" width="150"/> 59.1% | <img src="results/lex_only_2_classes/pp_t/Figure_5.png" width="150"/> 59.3% | <img src="results/lex_only_2_classes/pp_t/Figure_6.png" width="150"/> 59.3% | <img src="results/lex_only_2_classes/pp_t/Figure_7.png" width="150"/> 59.4%
+
+
+#### Lexicons only, 3 classes:
+* Not using preprocessed lexicons:
+
+Negation\Levenshtein's distance | 0 | 1 | 2 | 3 | 4 | 5 | 6
+--- | --- | --- | --- | --- | --- | --- | ---
+False | <img src="results/lex_only_3_classes/npp_f/Figure_1.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_2.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_3.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_4.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_5.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_6.png" width="150"/> | <img src="results/lex_only_3_classes/npp_f/Figure_7.png" width="150"/>
+True | <img src="results/lex_only_3_classes/npp_t/Figure_1.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_2.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_3.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_4.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_5.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_6.png" width="150"/> | <img src="results/lex_only_3_classes/npp_t/Figure_7.png" width="150"/>
+
+* Using preprocessed lexicons:
+
+Negation\Levenshtein's distance | 0 | 1 | 2 | 3 | 4 | 5 | 6
+--- | --- | --- | --- | --- | --- | --- | ---
+False | <img src="results/lex_only_3_classes/pp_f/Figure_1.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_2.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_3.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_4.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_5.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_6.png" width="150"/> | <img src="results/lex_only_3_classes/pp_f/Figure_7.png" width="150"/>
+True | <img src="results/lex_only_3_classes/pp_t/Figure_1.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_2.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_3.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_4.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_5.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_6.png" width="150"/> | <img src="results/lex_only_3_classes/pp_t/Figure_7.png" width="150"/>
