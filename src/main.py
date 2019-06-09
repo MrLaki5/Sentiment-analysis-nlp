@@ -255,6 +255,6 @@ while work_flag == 1:
     elif user_action == "7":
         results = keras_1_layer_perceptron(data_set_json, classes_num)
         print(results)
-        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
     elif user_action is "8":
         work_flag = 0

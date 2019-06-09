@@ -12,7 +12,8 @@ from sklearn.model_selection import cross_val_score
 from stemmer import stemmer
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import np_utils
-
+from sklearn.metrics import confusion_matrix
+import plotting
 
 def class_encode(class_str):
     if class_str == 'NEGATIVE':
@@ -50,7 +51,6 @@ def keras_adaline(data_set_json, bias=False):
     engDictStemmed = stemmer.stem_dictionary(engDict)
     _, gerDict= build_german() # swap the dict if needed
     gerDictStemmed = stemmer.stem_dictionary(gerDict)
-
 
     if not bias:
         estimator = KerasClassifier(build_fn=build_adaline_no_bias, epochs=200, batch_size=5, verbose=0)
@@ -91,6 +91,7 @@ def build_1_layer_perceptron(num_of_classes):
 
     x = Dense(1, activation="linear")(inputA)
     x = Dense(num_of_classes, activation="sigmoid")(x)
+    x = Dense(num_of_classes, activation="softmax")(x)
 
     model = Model(inputs=inputA, outputs=x)
     model.compile(loss='categorical_crossentropy', optimizer="sgd", metrics=['accuracy'])
@@ -158,15 +159,55 @@ def keras_1_layer_perceptron(data_set_json, classes_num):
     else:
         model = build_1L_3C_perceptron()
 
-    # for train, test in kf.split(x, y):
-    #     print(train)
-    #     print(test)
+    # Version with our cross-validation:
+    cvscores = []
+    cms = []
+    cmdata = []
+    for train, test in kf.split(x, y):
 
+        # Fit the model
+        model.fit(x[train], y[train], epochs=100, batch_size=10, verbose=0)
+        # evaluate the model
+        scores = model.evaluate(x[test], y[test], verbose=0)
 
-    results = cross_val_score(estimator, x, y, cv=kf)
+        y_pred = model.predict(x[test])
+        y_pred_categorical = []
+        for row in y_pred:
+            pred_class = np.argmax(row)
+            y_pred_categorical.append(pred_class)
+        y_pred = np.array(y_pred_categorical)
 
-    return results
-    # return "Test dummy"
+        y_test = y[test]
+        y_test_categorical = []
+        for row in y_test:
+            pred_class = np.argmax(row)
+            y_test_categorical.append(pred_class)
+        y_test = np.array(y_test_categorical)
+
+        cm = confusion_matrix(y_test, y_pred)
+
+        cmdata.append([y_test, y_pred])
+        cms.append(cm)
+
+        print("%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
+        cvscores.append(scores[1] * 100)
+
+    print("%.2f%% (+/- %.2f%%)" % (np.mean(cvscores), np.std(cvscores)))
+
+    # results = cross_val_score(estimator, x, y, cv=kf)
+    cnt = 1
+    for cmpair in cmdata:
+        plotting.calculate_normalized_confusion_matrix(cmpair[0], cmpair[1], classes_num, title="Fold "+str(cnt)+", accuracy: "+ str(cvscores[cnt-1]))
+        cnt+=1
+        plotting.show_confusion_matrix()
+
+    return np.array(cvscores)
+
+def build_deep_mlp():
+    # define two sets of inputs
+    inputEng = keras.Input(shape=(2,))
+    inputGer = keras.Input(shape=(2,))
+    inputBag = keras.Input(shape=(2,))
 
 
 def keras_2_layer_perceptron():
