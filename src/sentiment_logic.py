@@ -92,5 +92,3 @@ def comment_weight_vector(dict_curr, t_original, t_stemmed, distance_filter):
             if min_distance <= distance_filter:
                 ret_vector[name_vector.index(stemm_token + temp_word)] += temp_weight
     return ret_vector
-
-
