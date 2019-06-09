@@ -13,7 +13,7 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from neural_nets import keras_adaline
+from neural_nets import keras_adaline, keras_1_layer_perceptron
 
 # Logger configuration for both console and file
 FILE_LOG = True
@@ -84,7 +84,8 @@ while work_flag == 1:
     print("4. Choose number of classes, current: " + str(classes_num))
     print("5. Adaline without bias")
     print("6. Adaline with bias")
-    print("7. Exit")
+    print("7. One layer perceptron")
+    print("8. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action is "1":
@@ -243,13 +244,17 @@ while work_flag == 1:
 
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
-    elif user_action is "5":
+    elif user_action == "5":
         results = keras_adaline(data_set_json, bias=False)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action is "6":
+    elif user_action == "6":
         results = keras_adaline(data_set_json, bias=True)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action is "7":
+    elif user_action == "7":
+        results = keras_1_layer_perceptron(data_set_json, classes_num)
+        print(results)
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
+    elif user_action is "8":
         work_flag = 0
