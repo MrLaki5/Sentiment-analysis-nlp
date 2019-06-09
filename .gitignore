@@ -9,6 +9,8 @@
 
 venv/
 
+venv_36/
+
 src/stemmer/*.txt
 
 src/stemmer/logs/*.txt
