@@ -9,6 +9,8 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
 
 
+negation_words = ["ne"]
+
 # Function for calculating sum of weights of comment from specific dictionary
 def comment_weight_calculation(dict_curr, dict_name, t_original, t_stemmed, distance_filter, modification_use=False, amplification_use=False):
     summ = 0
@@ -18,7 +20,7 @@ def comment_weight_calculation(dict_curr, dict_name, t_original, t_stemmed, dist
     not_found_words = []
     for token, stemm_token in zip(t_original, t_stemmed):
         # TODO do something with this kind of words
-        if token is "ne":
+        if token in negation_words:
             if modification_use:
                 negation_flag = True
             continue

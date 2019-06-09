@@ -76,6 +76,7 @@ data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 work_flag = 1
 classes_num = 2
 while work_flag == 1:
+    print("--------------------------")
     print("Choose action:")
     print("--------------------------")
     print("1. Lexicon sum (no ML)")
@@ -93,12 +94,71 @@ while work_flag == 1:
             list_summ_ger = []
             list_summ_eng = []
             list_out = []
+            # Should use preprocessed dict
+            preproc_flag = 1
+            preproc_num = 2
+            while preproc_flag == 1:
+                print("--------------------------")
+                print("Should lexicons be preprocessed:")
+                print("--------------------------")
+                print("1. Yes")
+                print("2. No")
+                print("--------------------------")
+                preproc_num = input("Choose: ")
+                try:
+                    preproc_num = int(preproc_num)
+                    if preproc_num is 1 or preproc_num is 2:
+                        preproc_flag = 0
+                except Exception as ex:
+                    pass
+            if preproc_num is 1:
+                eng_dict_curr = engDictPreProcStemmed
+                ger_dict_curr = gerDictPreProcStemmed
+            else:
+                eng_dict_curr = engDictStemmed
+                ger_dict_curr = gerDictStemmed
+            # Should use negation
+            negation_flag = 1
+            negation_num = 0
+            negation = False
+            while negation_flag == 1:
+                print("--------------------------")
+                print("Should use negation:")
+                print("--------------------------")
+                print("1. Yes")
+                print("2. No")
+                print("--------------------------")
+                negation_num = input("Choose: ")
+                try:
+                    negation_num = int(negation_num)
+                    if negation_num is 1 or negation_num is 2:
+                        negation_flag = 0
+                except Exception as ex:
+                    pass
+            if negation_num is 1:
+                negation = True
+            else:
+                negation = False
+            # Levenshtein's distance
+            leven_flag = 1
+            leven_num = 5
+            while leven_flag == 1:
+                print("--------------------------")
+                print("Choose Levenshtein's distance (optimal 5):")
+                print("--------------------------")
+                leven_num = input("Choose: ")
+                try:
+                    leven_num = int(leven_num)
+                    if leven_num >= 0:
+                        leven_flag = 0
+                except Exception as ex:
+                    pass
             for data in data_set_json:
                 sentiment_class = data['class_att']
                 tokens_original = data['tokens_original']
                 tokens_stemmed = data['tokens_stemmed']
-                summ_eng = sentiment_logic.comment_weight_calculation(engDictPreProcStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
-                summ_ger = sentiment_logic.comment_weight_calculation(gerDictPreProcStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+                summ_eng = sentiment_logic.comment_weight_calculation(eng_dict_curr, "English", tokens_original, tokens_stemmed, leven_num, modification_use=negation, amplification_use=False)
+                summ_ger = sentiment_logic.comment_weight_calculation(ger_dict_curr, "German", tokens_original, tokens_stemmed, leven_num, modification_use=negation, amplification_use=False)
 
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
