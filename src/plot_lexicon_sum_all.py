@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
 
-classes_num = 2
+classes_num = 3
 
 data_set_json = None
 if os.path.isfile("../movie_dataset/stemmed_dict_" + str(classes_num) + ".json"):
