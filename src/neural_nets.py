@@ -17,6 +17,7 @@ import plotting
 import ml_algorithms
 from sklearn.decomposition import TruncatedSVD, PCA
 from timeit import default_timer as timer
+import json
 
 ENG_DIM = 3132
 GER_DIM = 1784
@@ -325,6 +326,7 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedS
 
     ndim = ENG_DIM+GER_DIM+BAG_DIM
     x_train_fit = []
+    x_test_fit = []
     print("Current feature vector dimension: " + str(ndim))
     if order == "reduce_last":
         if reduction == "PCA":
@@ -354,16 +356,16 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedS
             start = timer()
             tsvd.fit(x_train)
             end = timer()
-            print("Successful fitting of TruncatedSVD reduction to "+str(tsvd.n_components_)+" components")
+            # print("Successful fitting of TruncatedSVD reduction to "+str(tsvd.n_components_)+" components")
             print("Fitting took " + str(end - start) + " seconds")
-            ndim = tsvd.n_components_
+            # ndim = tsvd.n_components_
 
             print("Attempting to reduce the training set and test set")
             start = timer()
             x_train_fit = tsvd.fit_transform(x_train)
             x_test_fit = tsvd.fit_transform(x_test)
             end = timer()
-            print("Successful reduction of training set to " + str(tsvd.n_components_) + " dimensions")
+            # print("Successful reduction of training set to " + str(tsvd.n_components_) + " dimensions")
             print("Reduction took " + str(end - start) + " seconds")
         else:
             print("No dim reduction will be performed")
@@ -424,13 +426,46 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedS
 
             print("All reductions successful, new size of feature vector is " + str(ndim))
 
-        print("Concatenating reduced feature vectors")
-        x_train_fit = np.concatenate((x_eng_train_fit, x_ger_train_fit), axis = 1)
-        x_train_fit = np.concatenate((x_train_fit, x_bag_train_fit), axis = 1)
-        x_test_fit = np.concatenate((x_eng_test_fit, x_ger_test_fit),  axis=1)
-        x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
-        print("Concatenation successful")
+            print("Concatenating reduced feature vectors")
+            x_train_fit = np.concatenate((x_eng_train_fit, x_ger_train_fit), axis = 1)
+            x_train_fit = np.concatenate((x_train_fit, x_bag_train_fit), axis = 1)
+            x_test_fit = np.concatenate((x_eng_test_fit, x_ger_test_fit),  axis=1)
+            x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
+            print("Concatenation successful")
+
+    return x_train_fit, x_test_fit,  y_train, y_test
 
 
-    return np.array([0.0, 0.0])
+def process_all_keras_mlp(file_path, data_set_json, classes_num=2, levenshtein=5):
+    reduction_all = ["TruncatedSVD", "PCA"]
+    order_all = ["reduce_last", "reduce_first"]
+    results = {}
+    for reduction in reduction_all:
+        for order in order_all:
+            x_train_fit, x_test_fit,  y_train, y_test = keras_mlp(data_set_json, classes_num, levenshtein, reduction, order)
+            if reduction not in results:
+                results[reduction] = {}
+            results[reduction][order] = {
+                "x_train_fit": x_train_fit.tolist(),
+                "x_test_fit": x_test_fit.tolist(),
+                "y_train": y_train,
+                "y_test": y_test
+            }
+            # TODO Remove this prints
+            print(x_test_fit)
+            print(x_train_fit)
+    with open(file_path, "w", encoding='utf-8') as f:
+        json.dump(results, f, ensure_ascii=False)
 
+
+# How to save file
+# with open("../movie_dataset/stemmed_dict_2.json", encoding="utf8") as f:
+#    data_set_json = json.load(f)
+# process_all_keras_mlp("test.json", data_set_json)
+
+
+# How to load file after
+# with open("test.json", encoding="utf8") as f:
+#    data_json = json.load(f)
+# num_arr = np.array(data_json["TruncatedSVD"]["reduce_last"]["x_train_fit"])
+# print(num_arr)
