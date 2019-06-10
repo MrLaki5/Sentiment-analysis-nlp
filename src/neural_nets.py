@@ -350,7 +350,7 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedS
             # 100 dimensions is recommended for LSA
             reduce_to = 100
             tsvd = TruncatedSVD(reduce_to)
-            print("Attempting to fit TruncatedSVD LSA to " + reduce_to + " dimensions")
+            print("Attempting to fit TruncatedSVD LSA to " + str(reduce_to) + " dimensions")
             start = timer()
             tsvd.fit(x_train)
             end = timer()
