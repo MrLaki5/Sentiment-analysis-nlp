@@ -69,6 +69,12 @@ if os.path.isfile("../movie_dataset/stemmed_dict_2.json"):
     with open("../movie_dataset/stemmed_dict_2.json", encoding="utf8") as f:
         data_set_json = json.load(f)
 
+# Load matrix mlp from json
+mlp_patrix_json = None
+if os.path.isfile("../movie_dataset/mlp_matrix_2.json"):
+    with open("../movie_dataset/mlp_matrix_2.json", encoding="utf8") as f:
+        mlp_patrix_json = json.load(f)
+
 # Load data set
 data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 
@@ -87,10 +93,11 @@ while work_flag == 1:
     print("6. Adaline with bias")
     print("7. One layer perceptron")
     print("8. MLP")
-    print("9. Exit")
+    print("9. Pre process MLP matrix")
+    print("10. Exit")
     print("--------------------------")
     user_action = input("Action: ")
-    if user_action is "1":
+    if user_action == "1":
         if data_set_json is not None:
             list_summ_ger = []
             list_summ_eng = []
@@ -260,9 +267,9 @@ while work_flag == 1:
             print("Finished")
         else:
             print("Tokenization of comment has not been done.")
-    elif user_action is "2":
+    elif user_action == "2":
         print(naive_bayes(classes_num))
-    elif user_action is "3":
+    elif user_action == "3":
         thread_flag = 1
         thread_num = 1
         while thread_flag is 1:
@@ -281,7 +288,7 @@ while work_flag == 1:
             json.dump(data_processed, f, ensure_ascii=False)
         data_set_json = data_processed
         print("Process finished!")
-    elif user_action is "4":
+    elif user_action == "4":
         class_flag = 1
         class_temp = 1
         while class_flag is 1:
@@ -361,9 +368,13 @@ while work_flag == 1:
             order = "reduce_first"
         else:
             order = "reduce_last"
-
-        results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
-        print(results)
-        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
-    elif user_action is "9":
+        # TODO add mlp function
+        # results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
+        # print(results)
+        # print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
+    elif user_action == "9":
+        mlp_patrix_json = keras_mlp(data_set_json, classes_num, 5)
+        with open("../movie_dataset/mlp_matrix_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
+            json.dump(mlp_patrix_json, f, ensure_ascii=False)
+    elif user_action == "10":
         work_flag = 0

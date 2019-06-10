@@ -245,10 +245,12 @@ def keras_2_layer_perceptron():
     # then output a single value
     model = Model(inputs=[x.input, y.input], outputs=z)
 
+
 def keras_mlp_prepare_data():
     pass
 
-def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedSVD", order="reduce_first"):
+
+def keras_mlp(data_set_json, classes_num=2, levenshtein=5):
     print("Preparing lexicons")
     _, engDict = build_english()  # swap the dict if needed
     engDictStemmed = stemmer.stem_dictionary(engDict)
@@ -322,127 +324,123 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5, reduction="TruncatedS
     # Split feature matrix into training (80%) and test (20%)
     # No kfolding because it would take too long to train, kfolding can be used on the training part (80%) to tune
     # the hyper parameters and pick the best model when the feature vector is already reduced to less dimensions
-    x_train, x_test, y_train, y_test, x_eng_train, x_eng_test, x_ger_train, x_ger_test, x_bag_train, x_bag_test  = train_test_split(x_composite_matrix, y, x_eng, x_ger, x_bag, test_size=0.2)
+    x_train, x_test, y_train, y_test, x_eng_train, x_eng_test, x_ger_train, x_ger_test, x_bag_train, x_bag_test = train_test_split(x_composite_matrix, y, x_eng, x_ger, x_bag, test_size=0.2)
 
-    ndim = ENG_DIM+GER_DIM+BAG_DIM
-    x_train_fit = []
-    x_test_fit = []
-    print("Current feature vector dimension: " + str(ndim))
-    if order == "reduce_last":
-        if reduction == "PCA":
-            # retain 95% variance
-            pca = PCA(0.95)
-            print("Attempting to fit PCA reduction with variance retain rate of 95%")
-            start = timer()
-            pca.fit(x_train)
-            end = timer()
-            print("Successful fitting of PCA reduction to "+str(pca.n_components_)+" components")
-            print("Fitting took "+str(end - start)+" seconds")
-            ndim = pca.n_components_
-
-            print("Attempting to reduce the training set and test set")
-            start = timer()
-            x_train_fit = pca.fit_transform(x_train)
-            x_test_fit = pca.fit_transform(x_test)
-            end = timer()
-            print("Successful reduction of training set to " + str(pca.n_components_) + " dimensions")
-            print("Reduction took " + str(end - start) + " seconds")
-
-        elif reduction == "TruncatedSVD":
-            # 100 dimensions is recommended for LSA
-            reduce_to = 100
-            tsvd = TruncatedSVD(reduce_to)
-            print("Attempting to fit TruncatedSVD LSA to " + str(reduce_to) + " dimensions")
-            start = timer()
-            tsvd.fit(x_train)
-            end = timer()
-            # print("Successful fitting of TruncatedSVD reduction to "+str(tsvd.n_components_)+" components")
-            print("Fitting took " + str(end - start) + " seconds")
-            # ndim = tsvd.n_components_
-
-            print("Attempting to reduce the training set and test set")
-            start = timer()
-            x_train_fit = tsvd.fit_transform(x_train)
-            x_test_fit = tsvd.fit_transform(x_test)
-            end = timer()
-            # print("Successful reduction of training set to " + str(tsvd.n_components_) + " dimensions")
-            print("Reduction took " + str(end - start) + " seconds")
-        else:
-            print("No dim reduction will be performed")
-    else: # reduce_first:
-        ndim = 0
-        if reduction == "PCA":
-            # retain 95% variance
-            pca = PCA(0.95)
-            x_bag_train = np.array(x_bag_train)
-
-            print("Attempting to fit PCA reduction with variance retain rate of 95% to x_eng_train vector")
-            start = timer()
-            pca.fit(x_eng_train)
-            end = timer()
-            print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
-            print("Fitting took " + str(end - start) + " seconds")
-            ndim += pca.n_components_
-
-            print("Attempting to reduce x_eng_train and x_eng_test")
-            start = timer()
-            x_eng_train_fit = pca.fit_transform(x_eng_train)
-            x_eng_test_fit = pca.fit_transform(x_eng_test)
-            end = timer()
-            print("Successful reduction of x_eng to " + str(pca.n_components_) + " dimensions")
-            print("Reduction took " + str(end - start) + " seconds")
-
-            print("Attempting to fit PCA reduction with variance retain rate of 95% to x_ger_train vector")
-            start = timer()
-            pca.fit(x_ger_train)
-            end = timer()
-            print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
-            print("Fitting took " + str(end - start) + " seconds")
-            ndim += pca.n_components_
-
-            print("Attempting to reduce x_ger_train and x_ger_test")
-            start = timer()
-            x_ger_train_fit = pca.fit_transform(x_ger_train)
-            x_ger_test_fit = pca.fit_transform(x_ger_test)
-            end = timer()
-            print("Successful reduction of x_ger to " + str(pca.n_components_) + " dimensions")
-            print("Reduction took " + str(end - start) + " seconds")
-
-            print("Attempting to fit PCA reduction with variance retain rate of 95% to x_bag_train")
-            start = timer()
-            pca.fit(x_bag)
-            end = timer()
-            print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
-            print("Fitting took " + str(end - start) + " seconds")
-            ndim += pca.n_components_
-
-            print("Attempting to reduce x_bag_train and x_bag_test")
-            start = timer()
-            x_bag_train_fit = pca.fit_transform(x_bag_train)
-            x_bag_test_fit = pca.fit_transform(x_bag_test)
-            end = timer()
-            print("Successful reduction of x_bag to " + str(pca.n_components_) + " dimensions")
-            print("Reduction took " + str(end - start) + " seconds")
-
-            print("All reductions successful, new size of feature vector is " + str(ndim))
-
-            print("Concatenating reduced feature vectors")
-            x_train_fit = np.concatenate((x_eng_train_fit, x_ger_train_fit), axis = 1)
-            x_train_fit = np.concatenate((x_train_fit, x_bag_train_fit), axis = 1)
-            x_test_fit = np.concatenate((x_eng_test_fit, x_ger_test_fit),  axis=1)
-            x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
-            print("Concatenation successful")
-
-    return x_train_fit, x_test_fit,  y_train, y_test
-
-
-def process_all_keras_mlp(file_path, data_set_json, classes_num=2, levenshtein=5):
     reduction_all = ["TruncatedSVD", "PCA"]
     order_all = ["reduce_last", "reduce_first"]
     results = {}
     for reduction in reduction_all:
         for order in order_all:
-            x_train_fit, x_test_fit,  y_train, y_test = keras_mlp(data_set_json, classes_num, levenshtein, reduction, order)
+
+            ndim = ENG_DIM+GER_DIM+BAG_DIM
+            x_train_fit = np.array([])
+            x_test_fit = np.array([])
+            print("Current feature vector dimension: " + str(ndim))
+            if order == "reduce_last":
+                if reduction == "PCA":
+                    # retain 95% variance
+                    pca = PCA(0.95)
+                    print("Attempting to fit PCA reduction with variance retain rate of 95%")
+                    start = timer()
+                    pca.fit(x_train)
+                    end = timer()
+                    print("Successful fitting of PCA reduction to "+str(pca.n_components_)+" components")
+                    print("Fitting took "+str(end - start)+" seconds")
+                    ndim = pca.n_components_
+
+                    print("Attempting to reduce the training set and test set")
+                    start = timer()
+                    x_train_fit = pca.fit_transform(x_train)
+                    x_test_fit = pca.fit_transform(x_test)
+                    end = timer()
+                    print("Successful reduction of training set to " + str(pca.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                elif reduction == "TruncatedSVD":
+                    # 100 dimensions is recommended for LSA
+                    reduce_to = 100
+                    tsvd = TruncatedSVD(reduce_to)
+                    print("Attempting to fit TruncatedSVD LSA to " + str(reduce_to) + " dimensions")
+                    start = timer()
+                    tsvd.fit(x_train)
+                    end = timer()
+                    # print("Successful fitting of TruncatedSVD reduction to "+str(tsvd.n_components_)+" components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    # ndim = tsvd.n_components_
+
+                    print("Attempting to reduce the training set and test set")
+                    start = timer()
+                    x_train_fit = tsvd.fit_transform(x_train)
+                    x_test_fit = tsvd.fit_transform(x_test)
+                    end = timer()
+                    # print("Successful reduction of training set to " + str(tsvd.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+                else:
+                    print("No dim reduction will be performed")
+            else: # reduce_first:
+                ndim = 0
+                if reduction == "PCA":
+                    # retain 95% variance
+                    pca = PCA(0.95)
+                    x_bag_train = np.array(x_bag_train)
+
+                    print("Attempting to fit PCA reduction with variance retain rate of 95% to x_eng_train vector")
+                    start = timer()
+                    pca.fit(x_eng_train)
+                    end = timer()
+                    print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += pca.n_components_
+
+                    print("Attempting to reduce x_eng_train and x_eng_test")
+                    start = timer()
+                    x_eng_train_fit = pca.fit_transform(x_eng_train)
+                    x_eng_test_fit = pca.fit_transform(x_eng_test)
+                    end = timer()
+                    print("Successful reduction of x_eng to " + str(pca.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("Attempting to fit PCA reduction with variance retain rate of 95% to x_ger_train vector")
+                    start = timer()
+                    pca.fit(x_ger_train)
+                    end = timer()
+                    print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += pca.n_components_
+
+                    print("Attempting to reduce x_ger_train and x_ger_test")
+                    start = timer()
+                    x_ger_train_fit = pca.fit_transform(x_ger_train)
+                    x_ger_test_fit = pca.fit_transform(x_ger_test)
+                    end = timer()
+                    print("Successful reduction of x_ger to " + str(pca.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("Attempting to fit PCA reduction with variance retain rate of 95% to x_bag_train")
+                    start = timer()
+                    pca.fit(x_bag)
+                    end = timer()
+                    print("Successful fitting of PCA reduction to " + str(pca.n_components_) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += pca.n_components_
+
+                    print("Attempting to reduce x_bag_train and x_bag_test")
+                    start = timer()
+                    x_bag_train_fit = pca.fit_transform(x_bag_train)
+                    x_bag_test_fit = pca.fit_transform(x_bag_test)
+                    end = timer()
+                    print("Successful reduction of x_bag to " + str(pca.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("All reductions successful, new size of feature vector is " + str(ndim))
+
+                    print("Concatenating reduced feature vectors")
+                    x_train_fit = np.concatenate((x_eng_train_fit, x_ger_train_fit), axis = 1)
+                    x_train_fit = np.concatenate((x_train_fit, x_bag_train_fit), axis = 1)
+                    x_test_fit = np.concatenate((x_eng_test_fit, x_ger_test_fit),  axis=1)
+                    x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
+                    print("Concatenation successful")
+
             if reduction not in results:
                 results[reduction] = {}
             results[reduction][order] = {
@@ -451,21 +449,4 @@ def process_all_keras_mlp(file_path, data_set_json, classes_num=2, levenshtein=5
                 "y_train": y_train,
                 "y_test": y_test
             }
-            # TODO Remove this prints
-            print(x_test_fit)
-            print(x_train_fit)
-    with open(file_path, "w", encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False)
-
-
-# How to save file
-# with open("../movie_dataset/stemmed_dict_2.json", encoding="utf8") as f:
-#    data_set_json = json.load(f)
-# process_all_keras_mlp("test.json", data_set_json)
-
-
-# How to load file after
-# with open("test.json", encoding="utf8") as f:
-#    data_json = json.load(f)
-# num_arr = np.array(data_json["TruncatedSVD"]["reduce_last"]["x_train_fit"])
-# print(num_arr)
+    return results
