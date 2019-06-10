@@ -13,7 +13,7 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from neural_nets import keras_adaline, keras_1_layer_perceptron
+from neural_nets import keras_adaline, keras_1_layer_perceptron, keras_mlp
 
 # Logger configuration for both console and file
 FILE_LOG = True
@@ -86,7 +86,8 @@ while work_flag == 1:
     print("5. Adaline without bias")
     print("6. Adaline with bias")
     print("7. One layer perceptron")
-    print("8. Exit")
+    print("8. MLP")
+    print("9. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action is "1":
@@ -316,5 +317,53 @@ while work_flag == 1:
         results = keras_1_layer_perceptron(data_set_json, classes_num)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
-    elif user_action is "8":
+    elif user_action == "8":
+        reduction_flag = 1
+        reduction_num = 0
+        reduction = "PCA"
+        while reduction_flag == 1:
+            print("--------------------------")
+            print("Choose feature vector dimensionality reduction algorithm:")
+            print("--------------------------")
+            print("1. PCA")
+            print("2. LSA - TruncatedSVD")
+            print("--------------------------")
+            reduction_num = input("Choose: ")
+            try:
+                reduction_num = int(reduction_num)
+                if reduction_num is 1 or reduction_num is 2:
+                    reduction_flag = 0
+            except Exception as ex:
+                pass
+        if reduction_num is 1:
+            reduction = "PCA"
+        else:
+            reduction = "TruncatedSVD"
+
+        order_flag = 1
+        order_num = 0
+        order = "reduce_first"
+        while order_flag == 1:
+            print("--------------------------")
+            print("Choose order of applying concatenation and reduction:")
+            print("--------------------------")
+            print("1. Reduce, then concatenate")
+            print("2. Concate, then reduce")
+            print("--------------------------")
+            order_num = input("Choose: ")
+            try:
+                order_num = int(order_num)
+                if order_num is 1 or order_num is 2:
+                    order_flag = 0
+            except Exception as ex:
+                pass
+        if order_num is 1:
+            order = "reduce_first"
+        else:
+            order = "reduce_last"
+
+        results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
+        print(results)
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
+    elif user_action is "9":
         work_flag = 0
