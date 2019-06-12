@@ -7,6 +7,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
 import numpy as np
@@ -40,17 +41,22 @@ def training(algorithm, class_num=2):
         train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')
     else:
         train_data = pd.read_csv('../movie_dataset/SerbMR-3C.csv')
+        # train_data = pd.read_csv('E:/Faks/M/OPJ/Projekat/bbc-text.csv')
 
-    splits = 2
+    splits = 5
     kf = KFold(n_splits=splits, shuffle=True)
     accuracy = 0
 
-    # KFold(n_splits=2, random_state=None, shuffle=False)
+    # kf = KFold(n_splits=splits, random_state=12)
     for train_index, test_index in kf.split(train_data):
         train_X = [train_data['Text'][i] for i in train_index]
         train_y = [train_data['class-att'][i] for i in train_index]
         val_X = [train_data['Text'][i] for i in test_index]
         val_y = [train_data['class-att'][i] for i in test_index]
+        # train_X = [train_data['text'][i] for i in train_index]
+        # train_y = [train_data['category'][i] for i in train_index]
+        # val_X = [train_data['text'][i] for i in test_index]
+        # val_y = [train_data['category'][i] for i in test_index]
 
         # parameters = {
         #     'vect__ngram_range': [(1, 1), (1, 2)],
@@ -59,7 +65,7 @@ def training(algorithm, class_num=2):
         # }
 
         text_clf = Pipeline([
-            ('vect', CountVectorizer(tokenizer=tokenizer.text_to_tokens)),
+            ('vect', CountVectorizer(tokenizer=tokenizer.text_to_tokens, min_df=3, ngram_range=(1, 2))),
             ('tfidf', TfidfTransformer()),
             # ('tfidf', TfidfVectorizer(sublinear_tf=True, min_df=5, norm='l2', encoding='latin-1', ngram_range=(1, 2), tokenizer=tokenizer.text_to_tokens)),
             ('clf', algorithm),
@@ -87,7 +93,12 @@ def training(algorithm, class_num=2):
 def SVM(class_num=2):
     svm = SGDClassifier(loss='hinge', penalty='l2',
                         alpha=1e-3, random_state=42,
-                        max_iter=5, tol=None)
+                        max_iter=1000)
+
+    # degrees = [0, 1, 2, 3, 4, 5, 6]
+    # for degree in degrees:
+    #     svc = SVC(kernel='poly', degree=degree)
+    #     print(str(degree) + ':' + str(training(svc, class_num)))
     svc = LinearSVC()
     return training(svm, class_num)
 
@@ -95,12 +106,12 @@ def naive_bayes(class_num=2):
     return training(MultinomialNB(), class_num)
 
 def log_reg(class_num=2):
-    return training(LogisticRegression(C=30, dual=True), class_num)
+    # tolerance = [1e-5, 1e-4, 1e-3, 1e-1]
+    # for t in tolerance:
+    #     logreg = LogisticRegression(C=50, tol=t, dual=True)
+    #     print((str(t) + ':' + str(training(logreg, class_num))))
+    return training(LogisticRegression(C=50, dual=True), class_num)
 
-def decision_tree(class_num=2):
-    return training(DecisionTreeClassifier(max_depth=100), class_num)
-
-# print(naive_bayes(3))
+# print(naive_bayes(2))
 # print(SVM(3))
 # print(log_reg(3))
-# print(decision_tree(2))

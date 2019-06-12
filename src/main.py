@@ -5,6 +5,8 @@ from ger_dict import build_german
 import sentiment_logic
 import json
 from src.ml_algorithms import naive_bayes
+from src.ml_algorithms import SVM
+from src.ml_algorithms import log_reg
 import os.path
 import comment_process_pool
 import plotting
@@ -80,12 +82,14 @@ while work_flag == 1:
     print("--------------------------")
     print("1. Lexicon sum (no ML)")
     print("2. Bayes-naive")
-    print("3. Do tokenization of comments")
-    print("4. Choose number of classes, current: " + str(classes_num))
-    print("5. Adaline without bias")
-    print("6. Adaline with bias")
-    print("7. One layer perceptron")
-    print("8. Exit")
+    print("3. SVM")
+    print("4. Logistic Regression")
+    print("5. Do tokenization of comments")
+    print("6. Choose number of classes, current: " + str(classes_num))
+    print("7. Adaline without bias")
+    print("8. Adaline with bias")
+    print("9. One layer perceptron")
+    print("10. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action is "1":
@@ -202,6 +206,10 @@ while work_flag == 1:
     elif user_action is "2":
         print(naive_bayes(classes_num))
     elif user_action is "3":
+        print(SVM(classes_num))
+    elif user_action is "4":
+        print(log_reg(classes_num))
+    elif user_action is "5":
         thread_flag = 1
         thread_num = 1
         while thread_flag is 1:
@@ -220,7 +228,7 @@ while work_flag == 1:
             json.dump(data_processed, f, ensure_ascii=False)
         data_set_json = data_processed
         print("Process finished!")
-    elif user_action is "4":
+    elif user_action is "6":
         class_flag = 1
         class_temp = 1
         while class_flag is 1:
@@ -244,17 +252,17 @@ while work_flag == 1:
 
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
-    elif user_action == "5":
+    elif user_action == "7":
         results = keras_adaline(data_set_json, bias=False)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "6":
+    elif user_action == "8":
         results = keras_adaline(data_set_json, bias=True)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "7":
+    elif user_action == "9":
         results = keras_1_layer_perceptron(data_set_json, classes_num)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action is "8":
+    elif user_action is "10":
         work_flag = 0
