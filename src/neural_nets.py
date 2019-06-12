@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 import keras
-from keras.layers import Input, Dense, concatenate
+from keras.layers import Input, Dense, concatenate, Sequential
 from keras.models import Model
-from sklearn.model_selection import KFold, train_test_split
+from sklearn.model_selection import KFold, train_test_split, StratifiedKFold
 from sentiment_logic import comment_weight_calculation, comment_weight_vector
 from eng_dict import build_english
 from ger_dict import build_german
@@ -60,14 +60,14 @@ def keras_adaline(data_set_json, bias=False):
     gerDictStemmed = stemmer.stem_dictionary(gerDict)
 
     if not bias:
-        estimator = KerasClassifier(build_fn=build_adaline_no_bias, epochs=200, batch_size=5, verbose=0)
+        estimator = KerasClassifier(build_fn=build_adaline_no_bias, epochs=100, batch_size=5, verbose=1)
     else:
-        estimator = KerasClassifier(build_fn=build_adaline_with_bias, epochs=200, batch_size=5, verbose=0)
+        estimator = KerasClassifier(build_fn=build_adaline_with_bias, epochs=100, batch_size=5, verbose=1)
 
     splits = 5
     seed = 7
     np.random.seed(seed)
-    kf = KFold(n_splits=splits, shuffle=True, random_state=seed)
+    kf = StratifiedKFold(n_splits=splits, shuffle=True, random_state=seed)
 
     x = []
     y = []
@@ -127,7 +127,7 @@ def keras_1_layer_perceptron(data_set_json, classes_num):
     splits = 5
     seed = 7
     np.random.seed(seed)
-    kf = KFold(n_splits=splits, shuffle=True, random_state=seed)
+    kf = StratifiedKFold(n_splits=splits, shuffle=True, random_state=seed)
 
     x = []
     y = []
@@ -154,6 +154,7 @@ def keras_1_layer_perceptron(data_set_json, classes_num):
     x = sc.transform(x)
 
     y = np.array(y)
+    old_y = y
     # One-hot encoding
     encoder = LabelEncoder()
     encoder.fit(y)
@@ -170,7 +171,7 @@ def keras_1_layer_perceptron(data_set_json, classes_num):
     cvscores = []
     cms = []
     cmdata = []
-    for train, test in kf.split(x, y):
+    for train, test in kf.split(x, old_y):
 
         # Fit the model
         model.fit(x[train], y[train], epochs=100, batch_size=10, verbose=0)
@@ -246,11 +247,11 @@ def keras_2_layer_perceptron():
     model = Model(inputs=[x.input, y.input], outputs=z)
 
 
-def keras_mlp_prepare_data():
+def keras_mlp():
     pass
 
 
-def keras_mlp(data_set_json, classes_num=2, levenshtein=5):
+def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
     print("Preparing lexicons")
     _, engDict = build_english()  # swap the dict if needed
     engDictStemmed = stemmer.stem_dictionary(engDict)
@@ -303,28 +304,18 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5):
         x_bag.append(x_bag_row)
         x_composite.append(x_eng_row + x_ger_row + x_bag_row)
 
+        # y is not one-hot encoded here
         y.append(class_encode(sentiment_class))
-
-        # DEBUGGING
-        # if dbg < 100:
-        #    dbg+=1
-        # else:
-        #    break
-        # if tmp:
-        #    tmp = False
-        #    print(len(x_eng_row))
-        #    print(x_eng_row)
-        #    print(len(x_ger_row))
-        #    print(x_ger_row)
-        #    print(len(x_bag_row))
-        #    print(x_bag_row)
 
     # Create a collected feature matrix, dim is num_of_comments x (ENG_DIM+GER_DIM+BAG_DIM)
     x_composite_matrix = np.array(x_composite)
     # Split feature matrix into training (80%) and test (20%)
+    # Using a stratified split with a fixed seed (for result repeatability and caching purposes)
     # No kfolding because it would take too long to train, kfolding can be used on the training part (80%) to tune
     # the hyper parameters and pick the best model when the feature vector is already reduced to less dimensions
-    x_train, x_test, y_train, y_test, x_eng_train, x_eng_test, x_ger_train, x_ger_test, x_bag_train, x_bag_test = train_test_split(x_composite_matrix, y, x_eng, x_ger, x_bag, test_size=0.2)
+    x_train, x_test, y_train, y_test, x_eng_train, x_eng_test, x_ger_train, x_ger_test, x_bag_train, x_bag_test = \
+        train_test_split(x_composite_matrix, y, x_eng, x_ger, x_bag, test_size=0.2, stratify=y, random_state=7)
+    print("Stratified split 80-20 with random seed 7 for reproducibility successful")
 
     reduction_all = ["TruncatedSVD", "PCA"]
     order_all = ["reduce_last", "reduce_first"]
@@ -358,22 +349,22 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5):
 
                 elif reduction == "TruncatedSVD":
                     # 100 dimensions is recommended for LSA
-                    reduce_to = 100
-                    tsvd = TruncatedSVD(reduce_to)
-                    print("Attempting to fit TruncatedSVD LSA to " + str(reduce_to) + " dimensions")
+                    ncomp = 100
+                    tsvd = TruncatedSVD(ncomp)
+                    print("Attempting to fit TruncatedSVD LSA to " + str(ncomp) + " dimensions")
                     start = timer()
                     tsvd.fit(x_train)
                     end = timer()
-                    # print("Successful fitting of TruncatedSVD reduction to "+str(tsvd.n_components_)+" components")
+                    print("Successful fitting of TruncatedSVD reduction to "+str(ncomp)+" components")
                     print("Fitting took " + str(end - start) + " seconds")
-                    # ndim = tsvd.n_components_
+                    ndim = ncomp
 
                     print("Attempting to reduce the training set and test set")
                     start = timer()
                     x_train_fit = tsvd.fit_transform(x_train)
                     x_test_fit = tsvd.fit_transform(x_test)
                     end = timer()
-                    # print("Successful reduction of training set to " + str(tsvd.n_components_) + " dimensions")
+                    print("Successful reduction of training set to " + str(ncomp) + " dimensions")
                     print("Reduction took " + str(end - start) + " seconds")
                 else:
                     print("No dim reduction will be performed")
@@ -430,6 +421,68 @@ def keras_mlp(data_set_json, classes_num=2, levenshtein=5):
                     x_bag_test_fit = pca.fit_transform(x_bag_test)
                     end = timer()
                     print("Successful reduction of x_bag to " + str(pca.n_components_) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("All reductions successful, new size of feature vector is " + str(ndim))
+
+                    print("Concatenating reduced feature vectors")
+                    x_train_fit = np.concatenate((x_eng_train_fit, x_ger_train_fit), axis = 1)
+                    x_train_fit = np.concatenate((x_train_fit, x_bag_train_fit), axis = 1)
+                    x_test_fit = np.concatenate((x_eng_test_fit, x_ger_test_fit),  axis=1)
+                    x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
+                    print("Concatenation successful")
+                elif reduction == "TruncatedSVD": # TruncatedSVD
+                    # retain 95% variance
+                    ncomp = 100
+                    tsvd = TruncatedSVD(ncomp)
+                    x_bag_train = np.array(x_bag_train)
+
+                    print("Attempting to fit TruncatedSVD reduction to 100 components to x_eng_train vector")
+                    start = timer()
+                    tsvd.fit(x_eng_train)
+                    end = timer()
+                    print("Successful fitting of TruncatedSVD reduction to " + str(ncomp) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += ncomp
+
+                    print("Attempting to reduce x_eng_train and x_eng_test")
+                    start = timer()
+                    x_eng_train_fit = tsvd.fit_transform(x_eng_train)
+                    x_eng_test_fit = tsvd.fit_transform(x_eng_test)
+                    end = timer()
+                    print("Successful reduction of x_eng to " + str(ncomp) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("Attempting to fit TruncatedSVD reduction to 100 components to x_ger_train vector")
+                    start = timer()
+                    tsvd.fit(x_ger_train)
+                    end = timer()
+                    print("Successful fitting of TruncatedSVD reduction to " + str(ncomp) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += ncomp
+
+                    print("Attempting to reduce x_ger_train and x_ger_test")
+                    start = timer()
+                    x_ger_train_fit = tsvd.fit_transform(x_ger_train)
+                    x_ger_test_fit = tsvd.fit_transform(x_ger_test)
+                    end = timer()
+                    print("Successful reduction of x_ger to " + str(ncomp) + " dimensions")
+                    print("Reduction took " + str(end - start) + " seconds")
+
+                    print("Attempting to fit TruncatedSVD reduction t0 100 components to x_bag_train")
+                    start = timer()
+                    tsvd.fit(x_bag)
+                    end = timer()
+                    print("Successful fitting of TruncatedSVD reduction to " + str(ncomp) + " components")
+                    print("Fitting took " + str(end - start) + " seconds")
+                    ndim += ncomp
+
+                    print("Attempting to reduce x_bag_train and x_bag_test")
+                    start = timer()
+                    x_bag_train_fit = tsvd.fit_transform(x_bag_train)
+                    x_bag_test_fit = tsvd.fit_transform(x_bag_test)
+                    end = timer()
+                    print("Successful reduction of x_bag to " + str(ncomp) + " dimensions")
                     print("Reduction took " + str(end - start) + " seconds")
 
                     print("All reductions successful, new size of feature vector is " + str(ndim))
