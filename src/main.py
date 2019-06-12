@@ -89,14 +89,16 @@ while work_flag == 1:
     print("--------------------------")
     print("1. Lexicon sum (no ML)")
     print("2. Bayes-naive")
-    print("3. Do tokenization of comments")
-    print("4. Choose number of classes, current: " + str(classes_num))
-    print("5. Adaline without bias")
-    print("6. Adaline with bias")
-    print("7. One layer perceptron")
-    print("8. MLP")
-    print("9. Pre process MLP matrix")
-    print("10. Exit")
+    print("3. SVM")
+    print("4. Logistic Regression")
+    print("5. Do tokenization of comments")
+    print("6. Choose number of classes, current: " + str(classes_num))
+    print("7. Adaline without bias")
+    print("8. Adaline with bias")
+    print("9. One layer perceptron")
+    print("10. MLP")
+    print("11. Pre process MLP matrix")
+    print("12. Exit")
     print("--------------------------")
     user_action = input("Action: ")
     if user_action == "1":
@@ -272,6 +274,10 @@ while work_flag == 1:
     elif user_action == "2":
         print(naive_bayes(classes_num))
     elif user_action == "3":
+        print(SVM(classes_num))
+    elif user_action == "4":
+        print(log_reg(classes_num))
+    elif user_action == "5":
         thread_flag = 1
         thread_num = 1
         while thread_flag is 1:
@@ -290,7 +296,7 @@ while work_flag == 1:
             json.dump(data_processed, f, ensure_ascii=False)
         data_set_json = data_processed
         print("Process finished!")
-    elif user_action == "4":
+    elif user_action == "6":
         class_flag = 1
         class_temp = 1
         while class_flag is 1:
@@ -314,19 +320,19 @@ while work_flag == 1:
 
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
-    elif user_action == "5":
+    elif user_action == "7":
         results = keras_adaline(data_set_json, bias=False)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "6":
+    elif user_action == "8":
         results = keras_adaline(data_set_json, bias=True)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "7":
+    elif user_action == "9":
         results = keras_1_layer_perceptron(data_set_json, classes_num)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
-    elif user_action == "8":
+    elif user_action == "10":
         reduction_flag = 1
         reduction_num = 0
         reduction = "PCA"
@@ -374,9 +380,9 @@ while work_flag == 1:
         # results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
         # print(results)
         # print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
-    elif user_action == "9":
+    elif user_action == "11":
         mlp_patrix_json = keras_mlp(data_set_json, classes_num, 5)
         with open("../movie_dataset/mlp_matrix_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
             json.dump(mlp_patrix_json, f, ensure_ascii=False)
-    elif user_action == "10":
+    elif user_action == "12":
         work_flag = 0
