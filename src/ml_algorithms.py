@@ -11,7 +11,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
 import numpy as np
-from sklearn.model_selection import KFold
+# from sklearn.model_selection import KFold
+from sklearn.model_selection import StratifiedKFold
 import tokenizer
 import plotting
 from sklearn.pipeline import Pipeline
@@ -44,11 +45,13 @@ def training(algorithm, class_num=2):
         # train_data = pd.read_csv('E:/Faks/M/OPJ/Projekat/bbc-text.csv')
 
     splits = 5
-    kf = KFold(n_splits=splits, shuffle=True)
+    kf = StratifiedKFold(n_splits=splits)
     accuracy = 0
 
-    # kf = KFold(n_splits=splits, random_state=12)
-    for train_index, test_index in kf.split(train_data):
+    train_data_X = train_data['Text']
+    train_data_y = train_data['class-att']
+
+    for train_index, test_index in kf.split(train_data_X, train_data_y):
         train_X = [train_data['Text'][i] for i in train_index]
         train_y = [train_data['class-att'][i] for i in train_index]
         val_X = [train_data['Text'][i] for i in test_index]
@@ -76,11 +79,11 @@ def training(algorithm, class_num=2):
         text_clf.fit(train_X, train_y)
         y_pred = text_clf.predict(val_X)
 
-        if class_num == 2:
-            plotting.calculate_normalized_confusion_matrix(val_y, y_pred, 2)
-        else:
-            plotting.calculate_normalized_confusion_matrix(val_y, y_pred, 3)
-        plotting.show_confusion_matrix()
+        # if class_num == 2:
+        #     plotting.calculate_normalized_confusion_matrix(val_y, y_pred, 2)
+        # else:
+        #     plotting.calculate_normalized_confusion_matrix(val_y, y_pred, 3)
+        # plotting.show_confusion_matrix()
 
         # print(gs_clf.best_score_)
         # for param_name in sorted(parameters.keys()):
