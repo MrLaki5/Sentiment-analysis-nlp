@@ -15,7 +15,7 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from neural_nets import keras_adaline, keras_1_layer_perceptron
+from neural_nets import keras_adaline, keras_1_layer_perceptron, keras_mlp
 
 # Logger configuration for both console and file
 FILE_LOG = True
@@ -71,6 +71,12 @@ if os.path.isfile("../movie_dataset/stemmed_dict_2.json"):
     with open("../movie_dataset/stemmed_dict_2.json", encoding="utf8") as f:
         data_set_json = json.load(f)
 
+# Load matrix mlp from json
+mlp_patrix_json = None
+if os.path.isfile("../movie_dataset/mlp_matrix_2.json"):
+    with open("../movie_dataset/mlp_matrix_2.json", encoding="utf8") as f:
+        mlp_patrix_json = json.load(f)
+
 # Load data set
 data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 
@@ -78,31 +84,91 @@ data_set = pd.read_csv("../movie_dataset/SerbMR-2C.csv")
 work_flag = 1
 classes_num = 2
 while work_flag == 1:
+    print("--------------------------")
     print("Choose action:")
     print("--------------------------")
     print("1. Lexicon sum (no ML)")
     print("2. Bayes-naive")
-    print("3. SVM")
-    print("4. Logistic Regression")
-    print("5. Do tokenization of comments")
-    print("6. Choose number of classes, current: " + str(classes_num))
-    print("7. Adaline without bias")
-    print("8. Adaline with bias")
-    print("9. One layer perceptron")
+    print("3. Do tokenization of comments")
+    print("4. Choose number of classes, current: " + str(classes_num))
+    print("5. Adaline without bias")
+    print("6. Adaline with bias")
+    print("7. One layer perceptron")
+    print("8. MLP")
+    print("9. Pre process MLP matrix")
     print("10. Exit")
     print("--------------------------")
     user_action = input("Action: ")
-    if user_action is "1":
+    if user_action == "1":
         if data_set_json is not None:
             list_summ_ger = []
             list_summ_eng = []
             list_out = []
+            # Should use preprocessed dict
+            preproc_flag = 1
+            preproc_num = 2
+            while preproc_flag == 1:
+                print("--------------------------")
+                print("Should lexicons be preprocessed:")
+                print("--------------------------")
+                print("1. Yes")
+                print("2. No")
+                print("--------------------------")
+                preproc_num = input("Choose: ")
+                try:
+                    preproc_num = int(preproc_num)
+                    if preproc_num is 1 or preproc_num is 2:
+                        preproc_flag = 0
+                except Exception as ex:
+                    pass
+            if preproc_num is 1:
+                eng_dict_curr = engDictPreProcStemmed
+                ger_dict_curr = gerDictPreProcStemmed
+            else:
+                eng_dict_curr = engDictStemmed
+                ger_dict_curr = gerDictStemmed
+            # Should use negation
+            negation_flag = 1
+            negation_num = 0
+            negation = False
+            while negation_flag == 1:
+                print("--------------------------")
+                print("Should use negation:")
+                print("--------------------------")
+                print("1. Yes")
+                print("2. No")
+                print("--------------------------")
+                negation_num = input("Choose: ")
+                try:
+                    negation_num = int(negation_num)
+                    if negation_num is 1 or negation_num is 2:
+                        negation_flag = 0
+                except Exception as ex:
+                    pass
+            if negation_num is 1:
+                negation = True
+            else:
+                negation = False
+            # Levenshtein's distance
+            leven_flag = 1
+            leven_num = 5
+            while leven_flag == 1:
+                print("--------------------------")
+                print("Choose Levenshtein's distance (optimal 5):")
+                print("--------------------------")
+                leven_num = input("Choose: ")
+                try:
+                    leven_num = int(leven_num)
+                    if leven_num >= 0:
+                        leven_flag = 0
+                except Exception as ex:
+                    pass
             for data in data_set_json:
                 sentiment_class = data['class_att']
                 tokens_original = data['tokens_original']
                 tokens_stemmed = data['tokens_stemmed']
-                summ_eng = sentiment_logic.comment_weight_calculation(engDictPreProcStemmed, "English", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
-                summ_ger = sentiment_logic.comment_weight_calculation(gerDictPreProcStemmed, "German", tokens_original, tokens_stemmed, 5, modification_use=False, amplification_use=False)
+                summ_eng = sentiment_logic.comment_weight_calculation(eng_dict_curr, "English", tokens_original, tokens_stemmed, leven_num, modification_use=negation, amplification_use=False)
+                summ_ger = sentiment_logic.comment_weight_calculation(ger_dict_curr, "German", tokens_original, tokens_stemmed, leven_num, modification_use=negation, amplification_use=False)
 
                 list_summ_eng.append(summ_eng)
                 list_summ_ger.append(summ_ger)
@@ -203,13 +269,9 @@ while work_flag == 1:
             print("Finished")
         else:
             print("Tokenization of comment has not been done.")
-    elif user_action is "2":
+    elif user_action == "2":
         print(naive_bayes(classes_num))
-    elif user_action is "3":
-        print(SVM(classes_num))
-    elif user_action is "4":
-        print(log_reg(classes_num))
-    elif user_action is "5":
+    elif user_action == "3":
         thread_flag = 1
         thread_num = 1
         while thread_flag is 1:
@@ -228,7 +290,7 @@ while work_flag == 1:
             json.dump(data_processed, f, ensure_ascii=False)
         data_set_json = data_processed
         print("Process finished!")
-    elif user_action is "6":
+    elif user_action == "4":
         class_flag = 1
         class_temp = 1
         while class_flag is 1:
@@ -252,17 +314,69 @@ while work_flag == 1:
 
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
-    elif user_action == "7":
+    elif user_action == "5":
         results = keras_adaline(data_set_json, bias=False)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "8":
+    elif user_action == "6":
         results = keras_adaline(data_set_json, bias=True)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action == "9":
+    elif user_action == "7":
         results = keras_1_layer_perceptron(data_set_json, classes_num)
         print(results)
-        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
-    elif user_action is "10":
+        print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
+    elif user_action == "8":
+        reduction_flag = 1
+        reduction_num = 0
+        reduction = "PCA"
+        while reduction_flag == 1:
+            print("--------------------------")
+            print("Choose feature vector dimensionality reduction algorithm:")
+            print("--------------------------")
+            print("1. PCA")
+            print("2. LSA - TruncatedSVD")
+            print("--------------------------")
+            reduction_num = input("Choose: ")
+            try:
+                reduction_num = int(reduction_num)
+                if reduction_num is 1 or reduction_num is 2:
+                    reduction_flag = 0
+            except Exception as ex:
+                pass
+        if reduction_num is 1:
+            reduction = "PCA"
+        else:
+            reduction = "TruncatedSVD"
+
+        order_flag = 1
+        order_num = 0
+        order = "reduce_first"
+        while order_flag == 1:
+            print("--------------------------")
+            print("Choose order of applying concatenation and reduction:")
+            print("--------------------------")
+            print("1. Reduce, then concatenate")
+            print("2. Concate, then reduce")
+            print("--------------------------")
+            order_num = input("Choose: ")
+            try:
+                order_num = int(order_num)
+                if order_num is 1 or order_num is 2:
+                    order_flag = 0
+            except Exception as ex:
+                pass
+        if order_num is 1:
+            order = "reduce_first"
+        else:
+            order = "reduce_last"
+        # TODO add mlp function
+        # results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
+        # print(results)
+        # print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
+    elif user_action == "9":
+        mlp_patrix_json = keras_mlp(data_set_json, classes_num, 5)
+        with open("../movie_dataset/mlp_matrix_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
+            json.dump(mlp_patrix_json, f, ensure_ascii=False)
+    elif user_action == "10":
         work_flag = 0
