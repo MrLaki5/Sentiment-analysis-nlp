@@ -1,10 +1,21 @@
 ## Sentiment-analysis-nlp
 
+### About:
+* Project done for faculty course [natural language processing](https://rti.etf.bg.ac.rs/rti/ms1opj/). Subject of project was to do sentiment analysis of movie comments in Serbian. Sentiment analysis was done in few ways: with prepared lexicons only, with ML only and with mix of neural networks and prepared lexicons.
+
 ### How to run:
-* Install python 3.6.1 (tensorflow not supporting 3.7 currently)
+* Install python 3.6.1
 * Install needed modules with: pip install -r src/requirements.txt
 * Change dir from root to /src
 * Run project with: python main.py
+
+### References:
+* Stemmer used in project, [link](http://vukbatanovic.github.io/SCStemmers/)
+* Dataset with movie comments used in project, [link](https://vukbatanovic.github.io/SerbMR/)
+* German lexicon used in project, [link](https://www.kaggle.com/rtatman/german-sentiment-analysis-toolkit)
+    * R. Remus, U. Quasthoff & G. Heyer: SentiWS - a Publicly Available German-language Resource for Sentiment Analysis. In: Proceedings of the 7th International Language Ressources and Evaluation (LREC'10), 2010
+This version of the data set was last updated in March 2012.
+* English lexicon used in project, [link]()
 
 ### Results:
 
