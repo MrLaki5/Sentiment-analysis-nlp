@@ -51,6 +51,10 @@ def training(algorithm, class_num=2):
     train_data_X = train_data['Text']
     train_data_y = train_data['class-att']
 
+    # X_train, X_test, y_train, y_test = train_test_split(train_data_X, train_data_y, test_size=0.2, random_state=7, stratify=train_data_y);
+    #
+    # X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=7, stratify=y_train);
+
     for train_index, test_index in kf.split(train_data_X, train_data_y):
         train_X = [train_data['Text'][i] for i in train_index]
         train_y = [train_data['class-att'][i] for i in train_index]
@@ -94,16 +98,52 @@ def training(algorithm, class_num=2):
     return accuracy/splits
 
 def SVM(class_num=2):
-    svm = SGDClassifier(loss='hinge', penalty='l2',
-                        alpha=1e-3, random_state=42,
+    if class_num == 2:
+        train_data = pd.read_csv('../movie_dataset/SerbMR-2C.csv')
+    else:
+        train_data = pd.read_csv('../movie_dataset/SerbMR-3C.csv')
+        # train_data = pd.read_csv('E:/Faks/M/OPJ/Projekat/bbc-text.csv')
+
+    train_data_X = train_data['Text']
+    train_data_y = train_data['class-att']
+
+    X_train, X_test, y_train, y_test = train_test_split(train_data_X, train_data_y, test_size=0.2, random_state=7, stratify=train_data_y)
+
+    # X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=7, stratify=y_train)
+
+    svm = SGDClassifier(loss='hinge', random_state=42,
                         max_iter=1000)
 
-    # degrees = [0, 1, 2, 3, 4, 5, 6]
-    # for degree in degrees:
-    #     svc = SVC(kernel='poly', degree=degree)
-    #     print(str(degree) + ':' + str(training(svc, class_num)))
-    svc = LinearSVC()
-    return training(svm, class_num)
+    parameters = {
+        'svm__penalty': ('l1', 'l2'),
+        'svm__alpha': (1e-2, 1e-3, 1e-4, 1e-5)
+    }
+
+    text_clf = Pipeline([
+        # ('vect', CountVectorizer(tokenizer=tokenizer.text_to_tokens, min_df=3, ngram_range=(1, 2))),
+        # ('tfidf', TfidfTransformer()),
+        ('tfidf', TfidfVectorizer(min_df=3, ngram_range=(1, 2), tokenizer=tokenizer.text_to_tokens)),
+        ('svm', svm),
+    ])
+
+    gs_clf = GridSearchCV(text_clf, parameters, cv=5, n_jobs=-1)
+
+    gs_clf = gs_clf.fit(X_train, y_train)       # it returns optimized classifier that we can use to predict
+    print(gs_clf.best_score_)
+    for param_name in sorted(parameters.keys()):
+        print("%s: %r" % (param_name, gs_clf.best_params_[param_name]))
+    print(gs_clf.cv_results_)
+
+
+    y_pred = gs_clf.predict(X_test)
+
+    if class_num == 2:
+        plotting.calculate_normalized_confusion_matrix(y_test, y_pred, 2)
+    else:
+        plotting.calculate_normalized_confusion_matrix(y_test, y_pred, 3)
+    plotting.show_confusion_matrix()
+
+    return accuracy_score(y_test, y_pred)
 
 def naive_bayes(class_num=2):
     return training(MultinomialNB(), class_num)
@@ -116,5 +156,5 @@ def log_reg(class_num=2):
     return training(LogisticRegression(C=50, dual=True), class_num)
 
 # print(naive_bayes(2))
-# print(SVM(3))
+print(SVM(2))
 # print(log_reg(3))
