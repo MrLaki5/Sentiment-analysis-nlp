@@ -267,9 +267,16 @@ def keras_mlp_loop_all(classes_num):
     layer3_num = [0, 10]
     layer3_activation = ["relu", "sigmoid"]
 
-    accuracy_list = []
-    model_list = []
-    hacklist = []
+    best_acc = -3
+    curr_y_test = []
+    curr_x_test = []
+    curr_order = ""
+    curr_reduction = ""
+    curr_num_of_featchures = 0
+    curr_l2num = 0
+    curr_13num = 0
+    curr_l3act = 0
+    best_model = None
     orders = ["reduce_first", "reduce_last"]
     reductions = ["PCA", "TruncatedSVD"]
     for reduction in reductions:
@@ -284,11 +291,12 @@ def keras_mlp_loop_all(classes_num):
             with open("../movie_dataset/mlp_matrix_" + str(classes_num) + "_"+ order + "_" + reduction + ".json", "r", encoding='utf-8') as f:
                 results = json.load(f)
                 x_train = results["x_train_fit"]
-                x_test = results["x_test_fit"]
+                # x_test = results["x_test_fit"]
                 y_train = results["y_train"]
-                y_test = y_test_old = results["y_test"]
+                # y_test = results["y_test"]
 
-                x_train_60, x_validate, y_train_60, y_validate = train_test_split(x_train, y_train, test_size=0.25, stratify=y_train, random_state=7)
+                x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=0.15, stratify=y_train, random_state=7)
+                x_train_60, x_validate, y_train_60, y_validate = train_test_split(x_train, y_train, test_size=0.20, stratify=y_train, random_state=7)
 
                 # One-hot encoding
                 encoder = LabelEncoder()
@@ -323,32 +331,37 @@ def keras_mlp_loop_all(classes_num):
                             y_validate = np.array(y_validate)
                             es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=10)
                             # ToDo Checkpointing mc = ModelCheckpoint('best_model.h5', monitor='val_loss', mode='min', verbose=1)
-                            history = model.fit(x_train_60, y_train_60, validation_data=(x_validate, y_validate),  verbose=1, epochs=1, callbacks = [es])
+                            history = model.fit(x_train_60, y_train_60, validation_data=(x_validate, y_validate),  verbose=1, epochs=100, callbacks = [es])
                             _, validation_accuracy = model.evaluate(x_validate, y_validate)
                             _, train_accuracy = model.evaluate(x_train_60, y_train_60)
                             print('Train: %.3f, Test: %.3f' % (train_accuracy, validation_accuracy))
                             print("------------------------")
-                            accuracy_list.append(validation_accuracy)
-                            model_list.append(model)
-                            hacklist.append([x_test, y_test])
-
+                            if validation_accuracy > best_acc:
+                                curr_y_test = y_test
+                                curr_x_test = x_test
+                                best_model = model
+                                best_acc = validation_accuracy
+                                curr_order = order
+                                curr_reduction = reduction
+                                curr_num_of_featchures = number_of_features
+                                curr_l2num = l2num
+                                curr_13num = l3num
+                                curr_l3act = l3act
 
     print("###################")
     print("Final evaluation: ")
+    print("Best validation acc: " + str(best_acc))
+    print("Class of models: "+curr_order+" "+curr_reduction)
+    print("Input layer: " + str(curr_num_of_featchures) + " neurons")
+    print("First hidden layer: " + str(curr_l2num) + " neurons")
+    if not curr_13num == 0:
+        print("Second hidden layer: " + str(curr_13num) + " neurons, " + curr_l3act + " activations")
+    else:
+        print("No second hidden layer")
+    print("------------------------")
+    x_test = curr_x_test
+    y_test = curr_y_test
 
-    best_index = np.argmax(accuracy_list)
-
-    #get from hacklist
-    x_test = hacklist[best_index][0]
-    y_test = hacklist[best_index][1]
-    #with open("../movie_dataset/mlp_matrix_" + str(classes_num) + "_" + order + "_" + reduction + ".json", "r",
-    #          encoding='utf-8') as f:
-    #    results = json.load(f)
-    #    x_test = results["x_test_fit"]
-    #    y_test = results["y_test"]
-
-
-    best_model = model_list[best_index]
     print("Testing best model: ")
     _, test_accuracy = best_model.evaluate(np.array(x_test), np.array(y_test))
     print('Accuracy on test set: %.3f' % test_accuracy)
