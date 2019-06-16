@@ -15,7 +15,7 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from neural_nets import keras_adaline, keras_1_layer_perceptron, keras_mlp, keras_mlp_prepare_data
+from neural_nets import keras_adaline, keras_1_layer_perceptron, keras_mlp_loop_all, keras_mlp_prepare_data
 
 # Logger configuration for both console and file
 FILE_LOG = True
@@ -377,13 +377,14 @@ while work_flag == 1:
         else:
             order = "reduce_last"
         # TODO add mlp function
-        keras_mlp()
+        keras_mlp_loop_all()
         # results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
         # print(results)
         # print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
     elif user_action == "11":
-        mlp_patrix_json = keras_mlp_prepare_data(data_set_json, classes_num, 5)
-        with open("../movie_dataset/mlp_matrix_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
-            json.dump(mlp_patrix_json, f, ensure_ascii=False)
+        # mlp_patrix_json =
+        keras_mlp_prepare_data(data_set_json, classes_num, 5)
+        # with open("../movie_dataset/mlp_matrix_" + str(classes_num) + ".json", "w", encoding='utf-8') as f:
+        #     json.dump(mlp_patrix_json, f, ensure_ascii=False)
     elif user_action == "12":
         work_flag = 0

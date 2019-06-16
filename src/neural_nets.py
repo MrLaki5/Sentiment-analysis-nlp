@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 import keras
-from keras.layers import Input, Dense, concatenate, Sequential
-from keras.models import Model
+from keras.layers import Input, Dense, concatenate
+from keras.models import Model, Sequential
 from sklearn.model_selection import KFold, train_test_split, StratifiedKFold
 from sentiment_logic import comment_weight_calculation, comment_weight_vector
 from eng_dict import build_english
@@ -18,6 +18,8 @@ import ml_algorithms
 from sklearn.decomposition import TruncatedSVD, PCA
 from timeit import default_timer as timer
 import json
+from sklearn.feature_extraction.text import TfidfVectorizer
+from tokenizer import text_to_tokens
 
 ENG_DIM = 3132
 GER_DIM = 1784
@@ -211,11 +213,20 @@ def keras_1_layer_perceptron(data_set_json, classes_num):
 
     return np.array(cvscores)
 
-def build_deep_mlp():
-    # define two sets of inputs
-    inputEng = keras.Input(shape=(2,))
-    inputGer = keras.Input(shape=(2,))
-    inputBag = keras.Input(shape=(2,))
+
+# if dim_layer3 == 0, no second hidden layer
+# dim_output is the number of classes
+def build_mlp(dim_layer1, dim_layer2, dim_layer3, activation_layer3, dim_output):
+
+    model = Sequential()
+    model.add(Dense(dim_layer1, activation="relu", input_dim=dim_layer1))
+    model.add(Dense(dim_layer2, activation="relu"))
+    if not dim_layer3 == 0:
+        model.add(Dense(dim_layer3, activation=activation_layer3))
+    model.add(Dense(dim_output, activation="softmax"))
+    model.compile(loss='categorical-crossentropy', optimizer='sgd', metrics=['accuracy'])
+
+    return model
 
 
 def keras_2_layer_perceptron():
@@ -247,10 +258,35 @@ def keras_2_layer_perceptron():
     model = Model(inputs=[x.input, y.input], outputs=z)
 
 
-def keras_mlp():
-    pass
+def keras_mlp_loop_all(classes_num):
+    layer2_num = [10, 20, 50]
+    layer3_num = [0, 10]
+    layer3_activation = ["relu", "sigmoid"]
 
+    orders = ["reduce_first", "reduce_last"]
+    reductions = ["PCA", "TruncatedSVD"]
+    for reduction in reductions:
+        for order in orders:
+            with open("../movie_dataset/mlp_matrix_" + str(classes_num) + "_"+ order + "_" + reduction + ".json", "r", encoding='utf-8') as f:
+                results = json.load(f)
+                x_train = results["x_train_fit"]
+                x_test = results["x_test_fit"]
+                y_train = results["y_train"]
+                y_test = results["y_test"]
 
+                x_train_60, x_validate, y_train_60, y_validate = train_test_split(x_train, y_train, test_size=0.25, stratify=y_train, random_state=7)
+
+                number_of_features = len(x_train[0])
+
+                for l2num in layer2_num:
+                    for l3num in layer3_num:
+                        if not l3num == 0:
+                            for l3act in layer3_activation:
+                                model = build_mlp(number_of_features, l2num, l3num, l3act, classes_num)
+                                # ToDo EarlyStopping
+                                # ToDo Checkpointing mc = ModelCheckpoint('best_model.h5', monitor='val_loss', mode='min', verbose=1)
+                                model.fit(x_train_60, y_train_60, validation_data= x_validate)
+# TODO fix memory error
 def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
     print("Preparing lexicons")
     _, engDict = build_english()  # swap the dict if needed
@@ -259,7 +295,18 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
     gerDictStemmed = stemmer.stem_dictionary(gerDict)
     print("Lexicons ready")
     print("Beginning to build feature vectors")
-    count_vect = ml_algorithms.getCountVector(classes_num)
+
+    # put back together list of comments to be used with TfidfVectorizer
+    comment_list = []
+    for data in data_set_json:
+        glued_comment = " ".join(data['tokens_original'])
+        comment_list.append(glued_comment)
+
+    print("Comments glued back together")
+    tf_idf_vectorizer = TfidfVectorizer(tokenizer=text_to_tokens)
+    tfidf_vectors = tf_idf_vectorizer.fit_transform(comment_list)
+
+    # count_vect = ml_algorithms.getCountVector(classes_num)
 
     x_eng = []
     x_ger = []
@@ -267,10 +314,14 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
     x_composite = []
     y = []
 
-    tmp = True # for Debugging only
-    dbg = 0
+    xbags = tfidf_vectors.toarray().tolist()
+    comment_list = []
+    print("Starting comment parsing loop")
+    cnt = 1
 
-    for data in data_set_json:
+    for data, x_bag_row in zip(data_set_json, xbags):
+        print("Comment "+str(cnt) + "/" +str(len(xbags)))
+        cnt += 1
         sentiment_class = data['class_att']
         tokens_original = data['tokens_original']
         tokens_stemmed = data['tokens_stemmed']
@@ -280,24 +331,24 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
         # Get features from german lexicon
         x_ger_row = comment_weight_vector(gerDictStemmed, tokens_original, tokens_stemmed, levenshtein)
 
-        # Get cumulative predictors from german and english lexicons
-        summ_eng = comment_weight_calculation(engDictStemmed, "English", tokens_original,
-                                              tokens_stemmed, 5, modification_use=False,
-                                              amplification_use=False)
-        summ_ger = comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed,
-                                              5, modification_use=False, amplification_use=False)
+        # Get cumulative predictors from German and English lexicons, currently not used
+        # summ_eng = comment_weight_calculation(engDictStemmed, "English", tokens_original,
+        #                                      tokens_stemmed, 5, modification_use=False,
+        #                                      amplification_use=False)
+        # summ_ger = comment_weight_calculation(gerDictStemmed, "German", tokens_original, tokens_stemmed,
+        #                                      5, modification_use=False, amplification_use=False)
 
         # Get bag of words feature vector
-        # TODO transform to tf-idf form!
-        comment = ""
-        for word in tokens_original:
-            comment += " "+word
-        dict = ml_algorithms.getOccurNumberDictionary(comment, count_vect)
-        keys_list = list(dict.keys())
-        keys_list.sort()
-        x_bag_row = []
-        for word in keys_list:
-            x_bag_row.append(dict[word])
+
+        # comment = ""
+        # for word in tokens_original:
+        #   comment += " "+word
+        # dict = ml_algorithms.getOccurNumberDictionary(comment, count_vect)
+        # keys_list = list(dict.keys())
+        # keys_list.sort()
+        # x_bag_row = []
+        # for word in keys_list:
+        #    x_bag_row.append(dict[word])
 
         x_eng.append(x_eng_row)
         x_ger.append(x_ger_row)
@@ -307,6 +358,7 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
         # y is not one-hot encoded here
         y.append(class_encode(sentiment_class))
 
+    xbags = [] #clear memory
     # Create a collected feature matrix, dim is num_of_comments x (ENG_DIM+GER_DIM+BAG_DIM)
     x_composite_matrix = np.array(x_composite)
     # Split feature matrix into training (80%) and test (20%)
@@ -319,9 +371,14 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
 
     reduction_all = ["TruncatedSVD", "PCA"]
     order_all = ["reduce_last", "reduce_first"]
-    results = {}
+
     for reduction in reduction_all:
         for order in order_all:
+            # until fixed
+            if not reduction == "TruncatedSVD":
+                continue
+
+            results = {}
 
             ndim = ENG_DIM+GER_DIM+BAG_DIM
             x_train_fit = np.array([])
@@ -494,12 +551,14 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
                     x_test_fit = np.concatenate((x_test_fit, x_bag_test_fit), axis = 1)
                     print("Concatenation successful")
 
-            if reduction not in results:
-                results[reduction] = {}
-            results[reduction][order] = {
+            results = {
                 "x_train_fit": x_train_fit.tolist(),
                 "x_test_fit": x_test_fit.tolist(),
                 "y_train": y_train,
                 "y_test": y_test
             }
-    return results
+            print("Writing to json file")
+            with open("../movie_dataset/mlp_matrix_" + str(classes_num) + "_"+ order + "_" + reduction + ".json", "w", encoding='utf-8') as f:
+                json.dump(results, f, ensure_ascii=False)
+
+
