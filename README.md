@@ -71,8 +71,20 @@
       :---: | :---: | :---: | :---: | :---: | :---:
       | | <img src="results/1_layer_perceptron_2_classes/Fold_1.png" width="150"/> 55.3% | <img src="results/1_layer_perceptron_2_classes/Fold_2.png" width="150"/> 53.6% | <img src="results/1_layer_perceptron_2_classes/Fold_3.png" width="150"/> 53.8% | <img src="results/1_layer_perceptron_2_classes/Fold_4.png" width="150"/> 58.9% | <img src="results/1_layer_perceptron_2_classes/Fold_5.png" width="150"/> 58.3%
       
-#### Neural network with Lexicons, 3 classes:
+* **Multiple layer perceptron**
+    * Epoch number 100, with option to stop if overfitt starts 
+    * Hyperparameters choosen for best accuracy with grid search
+    * Cross validation
+    * Stratification
+    * Class of models: reduce_first PCA
+    * Input layer: 1839 neurons
+    * First hidden layer: 10 neurons
+    * No second hidden layer
+    * Accuracy on test set: 73.8%
+    </br>
+      <img src="results/mlp/mlp_2_classes.png" width="200"/>
       
+#### Neural network with Lexicons, 3 classes:
 * **1 layer perceptron**
     * Cross validation, with 5 splits
     * Stratification
@@ -82,3 +94,15 @@
       Split num | 0 | 1 | 2 | 3 | 4
       :---: | :---: | :---: | :---: | :---: | :---:
       | | <img src="results/1_layer_perceptron_3_classes/Fold_1.png" width="150"/> 36.3% | <img src="results/1_layer_perceptron_3_classes/Fold_2.png" width="150"/> 38.5% | <img src="results/1_layer_perceptron_3_classes/Fold_3.png" width="150"/> 41.5% | <img src="results/1_layer_perceptron_3_classes/Fold_4.png" width="150"/> 40.1% | <img src="results/1_layer_perceptron_3_classes/Fold_5.png" width="150"/> 41.3%
+* **Multiple layer perceptron**
+    * Epoch number 100, with option to stop if overfitt starts 
+    * Hyperparameters choosen for best accuracy with grid search
+    * Cross validation
+    * Stratification
+    * Class of models: reduce_last TruncatedSVD
+    * Input layer: 100 neurons
+    * First hidden layer: 20 neurons
+    * Second hidden layer: 10 neurons, sigmoid activation
+    * Accuracy on test set: 45.9%
+    </br>
+      <img src="results/mlp/mlp_3_classes.png" width="200"/>
