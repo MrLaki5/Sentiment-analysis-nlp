@@ -156,5 +156,5 @@ def log_reg(class_num=2):
     return training(LogisticRegression(C=50, dual=True), class_num)
 
 # print(naive_bayes(2))
-print(SVM(2))
+# print(SVM(2))
 # print(log_reg(3))
