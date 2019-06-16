@@ -1,0 +1,20 @@
+----------------------------Adeline no bias
+2 classes
+100 epochs, splits num 5, with stratified cross validation
+[0.58875741 0.61607144 0.61904763 0.61011906 0.61011906]
+Accuracy: 60.88% (1.06%)
+----------------------------Adeline with bias
+2 classes
+100 epochs, splits num 5, with stratified cross validation
+[0.59171599 0.61011906 0.61904763 0.61011906 0.60416668]
+Accuracy: 60.70% (0.90%)
+----------------------------1 layer perceptron
+2 classes
+100 epochs, splits num 5, with stratified cross validation
+[55.32544368 53.57142857 53.86904762 58.92857143 58.33333333]
+Accuracy: 56.01% (2.23%)
+
+3 classes
+100 epochs, splits num 5, with stratified cross validation
+[36.29191321 38.49206349 41.46825397 40.07936517 41.26984118]
+Accuracy: 39.52% (1.93%)
