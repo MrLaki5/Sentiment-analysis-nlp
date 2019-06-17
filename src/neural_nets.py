@@ -20,6 +20,7 @@ from timeit import default_timer as timer
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tokenizer import text_to_tokens
+from keras.callbacks import EarlyStopping
 
 ENG_DIM = 3132
 GER_DIM = 1784
@@ -224,38 +225,12 @@ def build_mlp(dim_layer1, dim_layer2, dim_layer3, activation_layer3, dim_output)
     if not dim_layer3 == 0:
         model.add(Dense(dim_layer3, activation=activation_layer3))
     model.add(Dense(dim_output, activation="softmax"))
-    model.compile(loss='categorical-crossentropy', optimizer='sgd', metrics=['accuracy'])
+
+    # es = EarlyStopping(monitor='val_loss', mode='min', verbose = 1, patience=10)
+
+    model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 
     return model
-
-
-def keras_2_layer_perceptron():
-    # define two sets of inputs
-    inputA = keras.Input(shape=(2,))
-    inputB = keras.Input(shape=(2,))
-
-    # the first branch operates on the first input
-    x = Dense(1, activation="relu")(inputA)
-    x = Dense(4, activation="relu")(x)
-    x = Model(inputs=inputA, outputs=x)
-
-    # the second branch opreates on the second input
-    y = Dense(64, activation="relu")(inputB)
-    y = Dense(32, activation="relu")(y)
-    y = Dense(4, activation="relu")(y)
-    y = Model(inputs=inputB, outputs=y)
-
-    # combine the output of the two branches
-    combined = concatenate([x.output, y.output])
-
-    # apply a FC layer and then a regression prediction on the
-    # combined outputs
-    z = Dense(2, activation="relu")(combined)
-    z = Dense(1, activation="linear")(z)
-
-    # our model will accept the inputs of the two branches and
-    # then output a single value
-    model = Model(inputs=[x.input, y.input], outputs=z)
 
 
 def keras_mlp_loop_all(classes_num):
@@ -263,29 +238,127 @@ def keras_mlp_loop_all(classes_num):
     layer3_num = [0, 10]
     layer3_activation = ["relu", "sigmoid"]
 
+    best_acc = -3
+    curr_y_test = []
+    curr_x_test = []
+    curr_order = ""
+    curr_reduction = ""
+    curr_num_of_featchures = 0
+    curr_l2num = 0
+    curr_13num = 0
+    curr_l3act = 0
+    best_model = None
     orders = ["reduce_first", "reduce_last"]
     reductions = ["PCA", "TruncatedSVD"]
     for reduction in reductions:
         for order in orders:
+            print("###########")
+            print("Class of models: "+order+" "+reduction)
+            print("###########")
+            if classes_num == 3 and not (order == "reduce_last" and reduction == "TruncatedSVD"):
+                print("Not enough RAM memory to support "+order+" "+reduction)
+                continue
+
             with open("../movie_dataset/mlp_matrix_" + str(classes_num) + "_"+ order + "_" + reduction + ".json", "r", encoding='utf-8') as f:
                 results = json.load(f)
                 x_train = results["x_train_fit"]
-                x_test = results["x_test_fit"]
+                # x_test = results["x_test_fit"]
                 y_train = results["y_train"]
-                y_test = results["y_test"]
+                # y_test = results["y_test"]
 
-                x_train_60, x_validate, y_train_60, y_validate = train_test_split(x_train, y_train, test_size=0.25, stratify=y_train, random_state=7)
+                x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=0.15, stratify=y_train, random_state=7)
+                x_train_60, x_validate, y_train_60, y_validate = train_test_split(x_train, y_train, test_size=0.20, stratify=y_train, random_state=7)
+
+                # One-hot encoding
+                encoder = LabelEncoder()
+                encoder.fit(y_train)
+                encoded_Y_60 = encoder.transform(y_train_60)
+                encoded_y_validate = encoder.transform(y_validate)
+                encoded_y_test = encoder.transform(y_test)
+                # convert integers to dummy variables (i.e. one hot encoded)
+                y_train_60 = np_utils.to_categorical(encoded_Y_60)
+                y_validate = np_utils.to_categorical(encoded_y_validate)
+                y_test = np_utils.to_categorical(encoded_y_test)
 
                 number_of_features = len(x_train[0])
 
                 for l2num in layer2_num:
                     for l3num in layer3_num:
-                        if not l3num == 0:
-                            for l3act in layer3_activation:
-                                model = build_mlp(number_of_features, l2num, l3num, l3act, classes_num)
-                                # ToDo EarlyStopping
-                                # ToDo Checkpointing mc = ModelCheckpoint('best_model.h5', monitor='val_loss', mode='min', verbose=1)
-                                model.fit(x_train_60, y_train_60, validation_data= x_validate)
+                        for l3act in layer3_activation:
+                            print("")
+                            print("Model description: ")
+                            print("Input layer: " + str(number_of_features)+ " neurons")
+                            print("First hidden layer: " + str(l2num) + " neurons")
+                            if not l3num == 0:
+                                print("Second hidden layer: " + str(l3num) + " neurons, " +l3act+ " activations")
+                            else:
+                                print("No second hidden layer")
+                            print("------------------------")
+                            model = build_mlp(number_of_features, l2num, l3num, l3act, classes_num)
+
+                            x_train_60 = np.array(x_train_60)
+                            y_train_60 = np.array(y_train_60)
+                            x_validate = np.array(x_validate)
+                            y_validate = np.array(y_validate)
+                            es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=10)
+                            # ToDo Checkpointing mc = ModelCheckpoint('best_model.h5', monitor='val_loss', mode='min', verbose=1)
+                            history = model.fit(x_train_60, y_train_60, validation_data=(x_validate, y_validate),  verbose=1, epochs=100, callbacks = [es])
+                            _, validation_accuracy = model.evaluate(x_validate, y_validate)
+                            _, train_accuracy = model.evaluate(x_train_60, y_train_60)
+                            print('Train: %.3f, Test: %.3f' % (train_accuracy, validation_accuracy))
+                            print("------------------------")
+                            if validation_accuracy > best_acc:
+                                curr_y_test = y_test
+                                curr_x_test = x_test
+                                best_model = model
+                                best_acc = validation_accuracy
+                                curr_order = order
+                                curr_reduction = reduction
+                                curr_num_of_featchures = number_of_features
+                                curr_l2num = l2num
+                                curr_13num = l3num
+                                curr_l3act = l3act
+
+    print("###################")
+    print("Final evaluation: ")
+    print("Best validation acc: " + str(best_acc))
+    print("Class of models: "+curr_order+" "+curr_reduction)
+    print("Input layer: " + str(curr_num_of_featchures) + " neurons")
+    print("First hidden layer: " + str(curr_l2num) + " neurons")
+    if not curr_13num == 0:
+        print("Second hidden layer: " + str(curr_13num) + " neurons, " + curr_l3act + " activations")
+    else:
+        print("No second hidden layer")
+    print("------------------------")
+    x_test = curr_x_test
+    y_test = curr_y_test
+
+    print("Testing best model: ")
+    _, test_accuracy = best_model.evaluate(np.array(x_test), np.array(y_test))
+    print('Accuracy on test set: %.3f' % test_accuracy)
+    print("------------------------")
+
+    y_pred = best_model.predict(np.array(x_test))
+    y_pred_categorical = []
+    for row in y_pred:
+        pred_class = np.argmax(row)
+        y_pred_categorical.append(pred_class)
+    y_pred = np.array(y_pred_categorical)
+
+    y_test_old = y_test
+    y_test_categorical = []
+    for row in y_test_old:
+        pred_class = np.argmax(row)
+        y_test_categorical.append(pred_class)
+    y_test_old = np.array(y_test_categorical)
+
+    plotting.calculate_normalized_confusion_matrix(y_test_old, y_pred, class_num=classes_num,
+                                                   title="Best hyperparameters combination")
+    plotting.show_confusion_matrix()
+
+
+
+
 # TODO fix memory error
 def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
     print("Preparing lexicons")
@@ -374,9 +447,6 @@ def keras_mlp_prepare_data(data_set_json, classes_num=2, levenshtein=5):
 
     for reduction in reduction_all:
         for order in order_all:
-            # until fixed
-            if not reduction == "TruncatedSVD":
-                continue
 
             results = {}
 

@@ -39,30 +39,11 @@ if __name__ == '__main__':
 engDict, engDictPreProc = build_english()
 engDictStemmed = stemmer.stem_dictionary(engDict)
 engDictPreProcStemmed = stemmer.stem_dictionary(engDictPreProc)
-# Log nonlinear stems in engDict
-cnt = 0
-with open("./stemmer/logs/log_nonlinear_eng.txt", "w", encoding="utf8") as f:
-    for item in engDictStemmed:
-        if len(engDictStemmed[item]) > 1:
-            f.write("\n\n" + str(cnt) + ": " + item)
-            f.write("\n" + "Items(" + str(len(engDictStemmed[item])) + "): ")
-            for key in engDictStemmed[item]:
-                f.write("\n\t" + key + " -> " + str(engDictStemmed[item][key]))
-            cnt += 1
+
 # German
 gerDict, gerDictPreProc = build_german()
 gerDictStemmed = stemmer.stem_dictionary(gerDict)
 gerDictPreProcStemmed = stemmer.stem_dictionary(gerDictPreProc)
-# Log nonlinear stems in gerDict
-cnt = 0
-with open("./stemmer/logs/log_nonlinear_ger.txt", "w", encoding="utf8") as f:
-    for item in gerDictStemmed:
-        if len(gerDictStemmed[item]) > 1:
-            f.write("\n\n" + str(cnt) + ": " + item)
-            f.write("\n" + "Items(" + str(len(gerDictStemmed[item])) + "): ")
-            for key in gerDictStemmed[item]:
-                f.write("\n\t" + key + " -> " + str(gerDictStemmed[item][key]))
-            cnt += 1
 
 
 # Load data set from json
@@ -222,8 +203,6 @@ while work_flag == 1:
                         y_true.append(-1)
 
             # Three classes
-
-            #TODO find propper boundary, these are just random estimates for now
             boundary_eng = 4.6
             boundary_ger_left = 0.38
             boundary_ger_right = 0.45
@@ -321,10 +300,16 @@ while work_flag == 1:
         # Load data set
         data_set = pd.read_csv("../movie_dataset/SerbMR-" + str(classes_num) + "C.csv")
     elif user_action == "7":
+        if classes_num != 2:
+            print("Adeline works only with 2 classes")
+            continue
         results = keras_adaline(data_set_json, bias=False)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
     elif user_action == "8":
+        if classes_num != 2:
+            print("Adeline works only with 2 classes")
+            continue
         results = keras_adaline(data_set_json, bias=True)
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean() * 100, results.std() * 100))
@@ -333,51 +318,51 @@ while work_flag == 1:
         print(results)
         print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))
     elif user_action == "10":
-        reduction_flag = 1
-        reduction_num = 0
-        reduction = "PCA"
-        while reduction_flag == 1:
-            print("--------------------------")
-            print("Choose feature vector dimensionality reduction algorithm:")
-            print("--------------------------")
-            print("1. PCA")
-            print("2. LSA - TruncatedSVD")
-            print("--------------------------")
-            reduction_num = input("Choose: ")
-            try:
-                reduction_num = int(reduction_num)
-                if reduction_num is 1 or reduction_num is 2:
-                    reduction_flag = 0
-            except Exception as ex:
-                pass
-        if reduction_num is 1:
-            reduction = "PCA"
-        else:
-            reduction = "TruncatedSVD"
-
-        order_flag = 1
-        order_num = 0
-        order = "reduce_first"
-        while order_flag == 1:
-            print("--------------------------")
-            print("Choose order of applying concatenation and reduction:")
-            print("--------------------------")
-            print("1. Reduce, then concatenate")
-            print("2. Concate, then reduce")
-            print("--------------------------")
-            order_num = input("Choose: ")
-            try:
-                order_num = int(order_num)
-                if order_num is 1 or order_num is 2:
-                    order_flag = 0
-            except Exception as ex:
-                pass
-        if order_num is 1:
-            order = "reduce_first"
-        else:
-            order = "reduce_last"
+        #reduction_flag = 1
+        #reduction_num = 0
+        #reduction = "PCA"
+        #while reduction_flag == 1:
+        #    print("--------------------------")
+        #    print("Choose feature vector dimensionality reduction algorithm:")
+        #    print("--------------------------")
+        #    print("1. PCA")
+        #    print("2. LSA - TruncatedSVD")
+        #    print("--------------------------")
+        #    reduction_num = input("Choose: ")
+        #    try:
+        #        reduction_num = int(reduction_num)
+        #        if reduction_num is 1 or reduction_num is 2:
+        #            reduction_flag = 0
+        #    except Exception as ex:
+        #        pass
+        #if reduction_num is 1:
+        #    reduction = "PCA"
+        #else:
+        #    reduction = "TruncatedSVD"
+#
+        #order_flag = 1
+        #order_num = 0
+        #order = "reduce_first"
+        #while order_flag == 1:
+        #    print("--------------------------")
+        #    print("Choose order of applying concatenation and reduction:")
+        #    print("--------------------------")
+        #    print("1. Reduce, then concatenate")
+        #    print("2. Concate, then reduce")
+        #    print("--------------------------")
+        #    order_num = input("Choose: ")
+        #    try:
+        #        order_num = int(order_num)
+        #        if order_num is 1 or order_num is 2:
+        #            order_flag = 0
+        #    except Exception as ex:
+        #        pass
+        #if order_num is 1:
+        #    order = "reduce_first"
+        #else:
+        #    order = "reduce_last"
         # TODO add mlp function
-        keras_mlp_loop_all()
+        keras_mlp_loop_all(classes_num)
         # results = keras_mlp(data_set_json, classes_num, 5, reduction, order)
         # print(results)
         # print("Accuracy: %.2f%% (%.2f%%)" % (results.mean(), results.std()))

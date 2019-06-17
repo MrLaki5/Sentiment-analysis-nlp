@@ -1,0 +1,18 @@
+------------------------------------------------2 classes
+Epoch number 100
+Final evaluation: 
+Best validation acc: 0.6899563320078704
+Class of models: reduce_first PCA
+Input layer: 1839 neurons
+First hidden layer: 10 neurons
+No second hidden layer
+Accuracy on test set: 0.738
+------------------------------------------------3 classes
+Epoch number 100
+Final evaluation: 
+Best validation acc: 0.4256559763288359
+Class of models: reduce_last TruncatedSVD
+Input layer: 100 neurons
+First hidden layer: 20 neurons
+Second hidden layer: 10 neurons, sigmoid activations
+Accuracy on test set: 0.459

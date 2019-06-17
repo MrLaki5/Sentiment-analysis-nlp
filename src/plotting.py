@@ -41,10 +41,3 @@ def calculate_normalized_confusion_matrix(y_true, y_pred, class_num, title="Norm
 
 def show_confusion_matrix():
     plt.show()
-
-#y_true = [1, 1, 2, 2, 1, 0]
-#y_pred = [1, 1, 2, 1, 2, 0]
-#calculate_normalized_confusion_matrix(y_true, y_pred, LABELS_THREE_CLASS)
-#show_confusion_matrix()
-#calculate_confusion_matrix(y_true2, y_pred2, LABELS_TWO_CLASS)
-#show_confusion_matrix()
