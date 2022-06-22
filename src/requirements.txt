@@ -1,5 +1,5 @@
 nltk==3.6.6
-numpy==1.21.0
+numpy==1.22.0
 pandas==0.24.2
 plotting==0.1.0
 matplotlib==2.2.3
